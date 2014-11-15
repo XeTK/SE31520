@@ -1,0 +1,61 @@
+<div>
+  <h1><%= I18n.t('users.editing-account')%></h1>
+
+  <%= form_for(@user, html: {multipart: true }) do |f| %>
+      <% if @user.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+            <ul>
+              <% @user.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+      <div>
+        <%=  image_for(@user, :large) %> <br /><br />
+      </div>
+
+      <div>
+        <%= hidden_field_tag 'page', @current_page %>
+        <div>
+          <b><%= f.label :firstname, I18n.t('firstname') %></b><br />
+          <%= f.text_field :firstname, autofocus: 'autofocus' %><br /><br />
+        </div>
+        <div>
+          <b><%= f.label :surname, I18n.t('surname') %></b><br />
+          <%= f.text_field :surname %><br /><br />
+        </div>
+        <div>
+          <b><%= f.label :email, I18n.t('email') %></b><br />
+          <%= f.email_field :email %><br /><br />
+        </div>
+        <div>
+          <b><%= f.label :phone, I18n.t('phone') %></b><br />
+          <%= f.phone_field :phone %><br /><br />
+        </div>
+        <div>
+          <b><%= f.label :grad_year, I18n.t('grad-year') %></b><br />
+          <%= f.text_field :grad_year %><br /><br />
+        </div>
+        <div>
+          <b><%= f.label :jobs, I18n.t('jobs') %></b>
+          <%= f.check_box :jobs %><br /><br />
+        </div>
+        <div>
+          <b><%= label :user, I18n.t('image') %></b><br />
+          <%= file_field_tag :image_file %>
+        </div>
+        <br />
+        <%= f.submit I18n.t('update') %> |
+        <%= link_to I18n.t('show'), user_path(@user, page: @current_page) %> |
+        <% if is_admin? %>
+            <%= link_to I18n.t('back'), users_path(page: @current_page) %>
+        <% else %>
+            <%= link_to I18n.t('back'), home_path %>
+        <% end %>
+  <% end %>
+  </div>
+
+</div>

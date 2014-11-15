@@ -1,0 +1,15 @@
+<div class="content-area">
+  <h2><%= user.firstname %>  <%= user.surname %></h2>
+
+  <div class="content-image">
+    <%= image_for(user, :large) %>
+    <div class="content-links">
+      <%= link_to I18n.t('edit'), edit_user_path(user, page: current_page) %> |
+      <%= link_to I18n.t('close'), '', rel: 'nofollow', id: 'close-user-detail' %>
+    </div>
+  </div>
+
+  <div class="content-detail">
+    <%= render partial: 'show', locals: {user: user} %>
+  </div>
+</div>

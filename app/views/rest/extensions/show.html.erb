@@ -1,0 +1,13 @@
+<div>
+
+  <% @feeds.each do |feed| %>
+    <h1><%= feed.Name %>  <%= feed.Email %></h1>
+    <div>
+      <p><%= feed.Content %></p>
+      <p><%= feed.Created %></p>
+      <p><%= feed.Modified %></p>
+    </div>
+  <% end %>
+
+</div>
+

@@ -1,0 +1,270 @@
+/* Global styles */
+* {
+  margin: 0;
+  font-family: "Arial";
+}
+
+body {
+  background-color: #C5F1F9;
+}
+
+h1 {
+  padding-top: 1em;
+}
+
+/* Application layout classes */
+.header {
+  height: 5em;
+  background-color: #115859;
+  width: 100%;
+}
+
+.content {
+  margin-left: 1em;
+}
+
+.locale {
+  float:left;
+  padding-top: 0.2em;
+  font-size: 0.75em;
+}
+
+.flash_notice {
+  color: #ccffaa;
+}
+
+.flash_error {
+  color: #ff8899;
+}
+
+.flash_message {
+  position: absolute;
+  top: 1.2em;
+  left: 0.5em;
+}
+
+.main-input-area{
+  padding-top:1em;
+  float: left;
+  display:block;
+}
+
+.sub-input-area  {
+  float:left;
+  margin-right: 1em;
+  margin-left: 2em;
+  padding-top:1em;
+  display:block;
+
+  .checkboxes p {
+    padding-bottom: 0.5em;
+  }
+
+  .checkboxes {
+    margin-right: 0;
+  }
+}
+
+/* Following is CSS for tabbing taken from: http://clagnut.com/sandbox/csstabs/*/
+
+.navigation {
+  ul {
+    float: left;
+    padding-top: 1em;
+    padding-left: 0;
+    margin: 2em 0 0 0;
+    line-height: 1em;
+    list-style: none;
+  }
+
+  li {
+    float: left;
+    margin: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.6em;
+  }
+
+  a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .selected {
+    background-color: #C5F1F9;
+  }
+
+  a:hover,
+  a:active,
+  a.here:link,
+  a.here:visited {
+    color: #888888;
+  }
+
+  a.here:link,
+  a.here:visited {
+    position: relative;
+    z-index: 102;
+  }
+}
+
+.login-form {
+  float: right;
+  padding-right: 1em;
+
+  div {
+    margin-right: 0.5em;
+    margin-top: 2em;
+  }
+
+  p {
+    color: #C5F1F9;
+  }
+}
+
+.register {
+  color: #aaaaaa;
+  text-align: center;
+  font-size: 0.75em;
+  float: right;
+  padding-right: 1em;
+
+  p {
+    display: block;
+    color: #C5F1F9;
+    padding-bottom: 0.5em;
+    font-size: 1.25em;
+  }
+
+  a {
+    color: #aaaaaa;
+    display: block;
+    text-decoration: underline;
+  }
+
+  a:link,
+  a:hover,
+  a:active,
+  a.here:link,
+  a.here:visited {
+    color: #888888;
+  }
+}
+
+.list-line-even {
+  background: #cccccc;
+}
+
+.list-line-odd {
+  background: #dddddd;
+}
+
+/* Digg style pagination taken from mislav-will_paginate rails gem doc */
+.digg_pagination {
+  /*background: white;*/
+  /* self-clearing method: */
+}
+
+.digg_pagination a, .digg_pagination span, .digg_pagination em {
+  padding: .2em .5em;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+
+.digg_pagination span.disabled {
+  color: #999;
+  border: 1px solid #DDD;
+}
+
+.digg_pagination em.current {
+  font-weight: bold;
+  background: #2E6AB1;
+  color: white;
+  border: 1px solid #2E6AB1;
+}
+
+.digg_pagination a {
+  text-decoration: none;
+  color: #105CB6;
+  border: 1px solid #9AAFE5;
+}
+
+.digg_pagination a:hover, .digg_pagination a:focus {
+  color: #003;
+  border-color: #003;
+}
+
+.digg_pagination .page_info {
+  background: #2E6AB1;
+  color: white;
+  padding: .4em .6em;
+  width: 22em;
+  margin-bottom: .3em;
+  text-align: center;
+}
+
+.digg_pagination .page_info b {
+  color: #003;
+  background: #6aa6ed;
+  padding: .1em .25em;
+}
+
+.digg_pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+* html .digg_pagination {
+  height: 1%;
+}
+
+*:first-child+html .digg_pagination {
+  overflow: hidden;
+}
+
+/* Error box and highlighting */
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+
+

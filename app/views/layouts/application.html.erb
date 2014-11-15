@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Csa</title>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body id="<%= params[:controller].parameterize %>_controller">
+
+<div class="header">
+  <%= render :partial => 'sessions/login' %>
+  <div class="navigation">
+    <%= render_navigation %>
+  </div>
+
+  <% flash.each do |key, value| %>
+        <span class="flash_<%= key %>">
+          <span class="flash_message"><%= value %></span>
+        </span>
+  <% end %>
+
+  <!-- Blank URI so browser will request current page when form submitted -->
+  <%= form_tag '', method: 'GET', class: 'locale' do %>
+      <%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale), \
+                       onchange: 'this.form.submit()' %>
+      <%= submit_tag 'Submit', id: 'locale-submit' %>
+  <% end %>
+
+</div>
+<div class="content">
+  <%= yield %>
+</div>
+
+<div id="footer">
+</div>
+
+</body>
+</html>

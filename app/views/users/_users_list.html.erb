@@ -1,0 +1,56 @@
+<% if users_list.length > 0 %>
+    <table class="sortable" id="sortabletable">
+
+      <thead>
+      <tr class="list-line-even">
+        <th class="unsortable"></th>
+        <!-- No header for the image -->
+        <th><%= I18n.t('surname') %></th>
+        <th><%= I18n.t('firstname') %></th>
+        <th><%= I18n.t('email') %></th>
+        <th><%= I18n.t('grad-year') %></th>
+        <th class="unsortable"></th>
+        <th class="unsortable"></th>
+        <th class="unsortable"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <% users_list.each do |user| %>
+          <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+
+            <td><%= image_for(user, :medium) %></td>
+            <td><%= user.surname %></td>
+            <td><%= user.firstname %></td>
+            <td><%= user.email %></td>
+            <td><%= user.grad_year %></td>
+            <td><%= link_to image_tag('eye.jpg', alt: I18n.t('show'),
+                                      title: I18n.t('show-details'), border: '0'),
+                            user_path(user, page: users_list.current_page),
+                            class: 'image-tag',
+                            method: :get,
+                            remote: true %></td>
+            <td><%= link_to image_tag('edit.png', alt: I18n.t('edit'),
+                                      title: I18n.t('edit-item'), border: '0'),
+                            edit_user_path(user, page: users_list.current_page) %></td>
+            <td><%= link_to image_tag('destroy.gif', alt: I18n.t('destroy'),
+                                      title: I18n.t('destroy-item'), border: '0'),
+                            user_path(user, page: users_list.current_page),
+                            data: {confirm: I18n.t('are-you-sure')},
+                            method: :delete %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <br/>
+<% end %>
+<div class="digg_pagination">
+  <div>
+    <%= page_entries_info users_list %>
+  </div>
+  <%= will_paginate users_list, container: false %>
+</div>
+
+<br/>
+<%= link_to 'New User', new_user_path(page: users_list.current_page) %>
+

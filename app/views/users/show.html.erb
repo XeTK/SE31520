@@ -1,0 +1,19 @@
+<div>
+  <h1><%= @user.firstname %>  <%= @user.surname %></h1>
+  <div class='content-image'>
+    <%=  image_for(@user, :large) %>
+    <div class='content-links'>
+      <%= link_to I18n.t('edit'), edit_user_path(@user, page: @current_page)%> |
+      <% if is_admin? %>
+          <%= link_to I18n.t('back'), users_path(page: @current_page) %>
+      <% else %>
+          <%= link_to I18n.t('back'), home_path %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class='content-detail'>
+    <%=  render partial: 'show', locals: {user: @user} %>
+  </div>
+</div>
+
