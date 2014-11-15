@@ -1,6 +1,6 @@
 class ExtensionFeed < ActiveRecord::Base
 
-=begin
+begin
 	validates_presence_of :name, :email, :content
 
 	def name=(value)
@@ -14,6 +14,6 @@ class ExtensionFeed < ActiveRecord::Base
 	def content=(value)
 		write_attribute :content, (value ? value.humanize : nil)
 	end
-=end
+end
 
 end

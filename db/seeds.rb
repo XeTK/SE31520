@@ -37,11 +37,11 @@ User.transaction do
 
   User.connection.execute(
     'CREATE VIEW extension_feeds as
-    select us.firstname || \' \' || us.surname \'Name\',
-           us.email                          \'Email\',
-           bc.content                        \'Content\',
-           bc.created_at                     \'Created\',
-           bc.updated_at                     \'Modified\'
+    select us.firstname || \' \' || us.surname \'name\',
+           us.email                          \'email\',
+           bc.content                        \'content\',
+           bc.created_at                     \'created\',
+           bc.updated_at                     \'modified\'
     from   users            us,
            broadcasts       bc,
            feeds            fe,

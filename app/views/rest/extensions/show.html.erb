@@ -1,11 +1,11 @@
 <div>
 
   <% @feeds.each do |feed| %>
-    <h1><%= feed.Name %>  <%= feed.Email %></h1>
+    <h1><%= feed.name %>  <%= feed.email %></h1>
     <div>
-      <p><%= feed.Content %></p>
-      <p><%= feed.Created %></p>
-      <p><%= feed.Modified %></p>
+      <p><%= feed.content %></p>
+      <p><%= feed.created %></p>
+      <p><%= feed.modified %></p>
     </div>
   <% end %>
 

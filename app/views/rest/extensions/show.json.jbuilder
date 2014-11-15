@@ -1,1 +1,3 @@
-json.extract! @feeds, :Name, :Email, :Content, :Created, :Modified
+json.array!(@feeds)  do |json, feed|
+	json.extract! feed, :name, :email, :content, :created, :modified
+end
