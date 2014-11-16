@@ -1,0 +1,32 @@
+<h1><%=I18n.t('users.accounts')%></h1>
+
+<div class='main-input-area'>
+  <%=  render partial: 'users_list', object: @users %>
+</div>
+
+<div class='sub-input-area'>
+  <%= form_tag search_users_path, title: I18n.t('users.search-accounts'), method: :get do %>
+      <div class='checkboxes'>
+        <%= checkbox_search_fields %>
+      </div>
+      <div id='search-submit'>
+        <%= submit_tag I18n.t('users.search') %>
+        <%= text_field_tag :q,  nil, class: 'ui-autocomplete-input', title: I18n.t('users.search-accounts'), autofocus: 'autofocus' %>
+        <img id='surname-spinner' src='/assets/spinner.gif' style='display:none;' alt=<%=I18n.t('please-wait')%>/>
+      </div>
+  <% end %>
+
+  <div id="user-detail">
+  </div>
+
+</div>
+
+
+
+ 
+
+ 
+
+
+ 
+

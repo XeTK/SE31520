@@ -1,0 +1,95 @@
+<h1>New broadcast</h1>
+
+<%= form_for(@broadcast) do |f| %>
+    <% if @broadcast.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@broadcast.errors.count, "error") %> prohibited this broadcast from being saved:</h2>
+
+          <ul>
+            <% @broadcast.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <%= hidden_field_tag 'page', @current_page %>
+
+    <div id="broadcast-area" class="main-input-area">
+      <p>
+        <%= f.text_area :content, cols: "100%", rows: "10",
+                        title: "Broadcast text goes here", autofocus: 'autofocus' %>
+      </p>
+
+      <div id="url-part">
+        <%= link_to("Shortens URL",
+                    id: "split-arrow",
+                    title: "Press this to shorten the URL") %>
+        <%= text_field_tag :shorten_url, nil,
+                           title: "Enter URL that you wish to shorten",
+                           size: "50%" %>
+
+      </div>
+      <br/>
+
+      <div id="">
+        <%= f.submit 'Broadcast', confirm: 'Do you really want to broadcast?' %> |
+        <%= link_to 'Back', broadcasts_path(page: @current_page) %>
+      </div>
+
+    </div>
+
+    <div class="sub-input-area">
+      <div class="checkboxes">
+        <p>
+          <%= radio_button_tag 'feeds[alumni_email]', 'cs-alumni', true, title: "Select to broadcast general news" %>
+          <%= label_tag 'feeds_alumni_email_alumni', 'General news' %>
+        </p>
+
+        <p>
+          <%= radio_button_tag 'feeds[alumni_email]', 'cs-alumni-jobs', false, title: "Select to broadcast jobs news" %>
+          <%= label_tag 'feeds_alumni_email_alumni-jobs', 'Jobs news' %>
+        </p>
+
+        <p>
+          <%= check_box_tag 'feeds[email]', '1', true, title: "Select to choose Email feed" %>
+          <%= label_tag 'email', 'Email' %>
+        </p>
+
+        <!--<p>
+          <%= check_box_tag 'feeds[facebook]', '1', true, title: "Select to choose Facebook feed" %>
+          <%= label_tag 'facebook', 'Facebook' %>
+        </p>
+
+        <p>
+          <%= check_box_tag 'feeds[RSS]', '1', true, title: "Select to choose RSS feed" %>
+          <%= label_tag 'RSS', 'RSS' %>
+        </p>
+
+        <p>
+          <%= check_box_tag 'feeds[atom]', '1', true, title: "Select to choose Atom feed" %>
+          <%= label_tag 'atom', 'Atom' %>
+        </p>-->
+
+        <p>
+          <%= check_box_tag 'feeds[extension]', '1', true, title: "Select to choose Extension feed" %>
+          <%= label_tag 'extension', 'Extension' %>
+        </p>
+
+        <p>
+          <!--  When TinyMCE was being used. No longer used in example
+         onClick: "toogleEditorMode('broadcast-area', 'broadcast[content]', 'twitter-char-count');
+                         $('#url-part').toggle();
+                         $('#twitter-char-count').toggle();
+          -->
+          <%= check_box_tag 'feeds[twitter]', '1', true,
+                            title: "Select to choose Twitter feed" %>
+          <%= label_tag 'twitter', 'Twitter' %>
+        </p>
+
+        <%= label_tag 'twitter', '140', id: 'twitter-char-count', title: 'Twitter character remaining count' %>
+      </div>
+    </div>
+
+
+<% end %>

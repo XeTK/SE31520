@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>tom.rosier92@gmail.com</string>
+	<key>Builder Version</key>
+	<string>9537.77.4</string>
+	<key>CFBundleDisplayName</key>
+	<string>SE31520 Extension</string>
+	<key>CFBundleIdentifier</key>
+	<string>uk.co.tomrosier.se31520</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Chrome</key>
+	<dict>
+		<key>Global Page</key>
+		<string>data/html/index.html</string>
+		<key>Popovers</key>
+		<array>
+			<dict>
+				<key>Filename</key>
+				<string>data/html/index.html</string>
+				<key>Height</key>
+				<real>550</real>
+				<key>Identifier</key>
+				<string>SE31520</string>
+				<key>Width</key>
+				<real>550</real>
+			</dict>
+		</array>
+		<key>Toolbar Items</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<string>SE31520</string>
+				<key>Image</key>
+				<string>data/img/btn_large.png</string>
+				<key>Label</key>
+				<string>SE31520 Browser Extension</string>
+				<key>Popover</key>
+				<string>SE31520</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Content</key>
+	<dict>
+		<key>Scripts</key>
+		<dict>
+			<key>End</key>
+			<array>
+			</array>
+			<key>Start</key>
+			<array>
+			</array>
+		</dict>
+		<key>Stylesheets</key>
+		<array>
+		</array>
+	</dict>
+	<key>Description</key>
+	<string></string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>All</string>
+		</dict>
+	</dict>
+	<key>Website</key>
+	<string></string>
+</dict>
+</plist>

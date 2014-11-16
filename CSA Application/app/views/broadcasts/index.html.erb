@@ -1,0 +1,46 @@
+<h1>Broadcasts</h1>
+
+<% if @broadcasts.length > 0 %>
+    <table class="sortable" id="sortabletable">
+      <thead>
+      <tr class="list-line-even">
+        <th>Date sent</th>
+        <th class="unsortable">Feeds</th>
+        <th class="unsortable"/>
+        <th class="unsortable"/>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @broadcasts.each do |broadcast| %>
+          <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+            <td><%= broadcast.created_at %></td>
+            <td>
+              <%= display_feeds broadcast %>
+            </td>
+
+            <td><%= link_to image_tag('eye.jpg', alt: 'Show',
+                                      title: 'Show details', border: '0'),
+                            broadcast_path(broadcast, page: @broadcasts.current_page) %></td>
+            <td><%= link_to image_tag('destroy.gif', alt: 'Destroy',
+                                      title: 'Destroy item', border: '0'),
+                            broadcast_path(broadcast, page: @broadcasts.current_page),
+                            data: {confirm: 'Are you sure?'},
+                            method: :delete %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <br/>
+<% end %>
+<div class="digg_pagination">
+  <div clas="page_info">
+    <%= page_entries_info @broadcasts %>
+  </div>
+  <%= will_paginate @broadcasts, container: false %>
+</div>
+
+<br/>
+
+<%= link_to 'New broadcast', new_broadcast_path(page: @broadcasts.current_page) %>

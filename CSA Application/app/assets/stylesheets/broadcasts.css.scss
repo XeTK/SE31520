@@ -1,0 +1,31 @@
+#broadcasts_controller {
+
+	#url-part {
+	    padding-top:1em;
+	}
+	
+	#split-arrow{
+	    background:#FFFFFF center no-repeat;
+	    background-image: url(/assets/split-arrow.png) ;
+	    width: 22px;
+	    height: 22px;
+	    text-indent: -9999px;
+	    display: block;
+	    margin-right: 0.5em;
+	    float:left;
+	}
+	
+	#twitter-char-count{
+	    font-family: courier;
+	    font-weight:bold;
+	    color: black;
+	    float:left;   
+	}
+	
+	#tinymce.mceContentBody{
+	    background:#FBD38D;
+	    font-family:"Arial";
+	    font-size: 1em;
+	}
+
+}

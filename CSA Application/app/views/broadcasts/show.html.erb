@@ -1,0 +1,18 @@
+<h1>Broadcast details</h1>
+<p>
+  <b>Date broadcast attempted:</b>
+  <%= @broadcast.created_at %>
+</p>
+
+<p>
+  <b>Feeds broadcast to:</b>
+  <%= display_feeds @broadcast %>
+</p>
+
+<br/><br/>
+<p>
+  <%= sanitize @broadcast.content %>
+</p>
+
+<br/><br/>
+<%= link_to 'Back', broadcasts_path(page: @current_page) %>

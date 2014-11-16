@@ -1,0 +1,85 @@
+<h1><%= I18n.t('users.sign-up') %></h1>
+
+<% @user.user_detail.password = @user.user_detail.password_confirmation = nil %>
+
+<%= form_for(@user, html: {multipart: true}) do |user_form| %>
+    <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <%= hidden_field_tag 'page', @current_page %>
+
+    <div>
+      <b><%= user_form.label :firstname, I18n.t('firstname') %></b><br/>
+      <%= user_form.text_field :firstname, autofocus: 'autofocus' %>
+      <br/><br/>
+    </div>
+
+    <div>
+      <b><%= user_form.label :surname, I18n.t('surname') %></b><br/>
+      <%= user_form.text_field :surname %>
+      <br/><br/>
+    </div>
+
+    <div>
+      <b><%= user_form.label :phone, I18n.t('phone') %></b><br/>
+      <%= user_form.phone_field :phone %>
+      <br/><br/>
+    </div>
+
+    <div>
+      <b><%= user_form.label :grad_year, I18n.t('grad-year') %></b><br/>
+      <%= user_form.text_field :grad_year %>
+      <br/><br/>
+    </div>
+
+    <div>
+      <b><%= user_form.label :jobs, I18n.t('jobs') %></b><br/>
+      <%= user_form.check_box :jobs %>
+      <br/><br/>
+    </div>
+
+    <div>
+      <b><%= label :user, I18n.t('image') %></b><br/>
+      <%= file_field_tag :image_file %>
+      <br/>
+    </div>
+    <div>
+      <b><%= user_form.label :email, I18n.t('email') %></b><br/>
+      <%= user_form.email_field :email %>
+      <br/><br/>
+    </div>
+    <%= user_form.fields_for :user_detail do |user_fields| %>
+        <div>
+          <b><%= user_fields.label :login, I18n.t('sessions.login') %></b><br/>
+          <%= user_fields.text_field :login %>
+          <br/><br/>
+        </div>
+        <div>
+          <b><%= user_fields.label :password, I18n.t('sessions.password') %></b><br/>
+          <%= user_fields.password_field :password %>
+          <br/><br/>
+        </div>
+        <div>
+          <b><%= label_tag 'password_confirmation', I18n.t('sessions.password-confirm') %></b><br/>
+          <%= user_fields.password_field :password_confirmation %>
+          <br/><br/>
+        </div>
+    <% end %>
+    <br/>
+    <%= user_form.submit I18n.t('create') %> |
+    <% if is_admin? %>
+        <%= link_to I18n.t('back'), users_path(page: @current_page) %>
+    <% else %>
+        <%= link_to I18n.t('back'), home_path %>
+    <% end %>
+<% end %>
+
+

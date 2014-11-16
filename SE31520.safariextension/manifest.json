@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "SE31520 Extension",
+  "description": "",
+  "version": "1.0",
+  "icons": {
+    "128": "./data/img/oal.png" ,
+    "64" : "./data/img/btn_large.png",
+    "32" : "./data/img/btn_small.png"
+  },
+
+  "browser_action": {
+    "default_title" : "SE31520 Extension",
+    "default_icon": "./data/img/oal.png",
+    "default_popup": "./data/html/index.html"
+  },
+  "permissions": [
+    "storage"
+  ]
+}

@@ -1,0 +1,15 @@
+
+<div class="register">
+  <p>Welcome Guest</p>
+  <%= link_to 'Forgot password?', '' %>
+  or
+  <%= link_to 'Register', '' %>
+</div>
+
+<div class="login-form">
+  <%= button_to 'Login', '', :method => :get %>
+</div>
+
+
+
+
