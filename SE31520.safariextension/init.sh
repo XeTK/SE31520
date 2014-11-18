@@ -3,8 +3,8 @@
 # Author Tom Rosier (XeTK)
 
 # Directories
-RESOURCES_PATH="./res"
-CSS_PATH="./$RESOURCES_PATH/css"
+RESOURCES_PATH="./data/res"
+CSS_PATH="$RESOURCES_PATH/css"
 
 # CSS Stuff
 BS_CSS_PATH="$CSS_PATH/bootstrap.css"
@@ -83,3 +83,8 @@ else
 fi
 
 bower install
+
+if [ -d "bower_components" ]
+then
+	mv bower_components data/res/
+fi

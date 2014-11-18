@@ -21,8 +21,8 @@ var tabs    = require("sdk/tabs");
 
 // Display area for the plugin.
 var panel = panels.Panel({
-  width: 550,
-  height: 550,
+  width: 800,
+  height: 600,
   position: {
     top: 0,
     left: 0

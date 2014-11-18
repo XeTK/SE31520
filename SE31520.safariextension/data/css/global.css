@@ -1,0 +1,45 @@
+/* Set gloval size of the extension. */
+html {
+	min-width:  800px;
+	min-height: 600px;
+}
+
+/* Fix bad padding issue within Bootstrap. */
+body {
+ 	padding-top: 40px;
+ 	/* Override background colour from theme. */
+	background-color: #FFCC00;
+}
+
+/* Remove the masive margins in Bootstrap. */
+.container {
+	padding-left:  0px;
+	padding-right: 0px;
+}
+
+/* Give bordered containers with shadows for the page content. */
+.csa-content {
+	background-color: #fff;
+	padding: 10px;
+	box-shadow: -2px 2px 2px -2px #444;
+}
+
+/*
+#FFCC00  Aber Yellow
+#56318E  Aber Purple
+#4D2C80  Darker Purple
+*/
+
+/* Overwritting Bootswatch theme colours. */
+.navbar-inverse {
+	background-color: #56318E;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
+	background-color: #4D2C80;
+}
+
+.navbar-brand > img {
+	display: inline;
+	padding-bottom: 3px;
+}

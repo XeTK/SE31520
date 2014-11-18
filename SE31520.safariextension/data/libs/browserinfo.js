@@ -8,7 +8,7 @@
 
 // Original code taken from http://www.javascripter.net/faq/browsern.htm
 
-var XeTKBrowserInfo  = XeTKBrowserInfo || {};
+var BrowserInfo  = BrowserInfo || {};
 
 var nVer         = navigator.appVersion;
 var nAgt         = navigator.userAgent;
@@ -72,6 +72,6 @@ if (isNaN(majorVersion)) {
     majorVersion = parseInt(navigator.appVersion,10);
 }
 
-browserInfo.browserName  = browserName;
-browserInfo.fullVersion  = fullVersion;
-browserInfo.majorVersion = majorVersion;
+BrowserInfo.browserName  = browserName;
+BrowserInfo.fullVersion  = fullVersion;
+BrowserInfo.majorVersion = majorVersion;

@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>tom.rosier92@gmail.com</string>
 	<key>Builder Version</key>
-	<string>9537.77.4</string>
+	<string>10600.1.25.1</string>
 	<key>CFBundleDisplayName</key>
 	<string>SE31520 Extension</string>
 	<key>CFBundleIdentifier</key>
@@ -26,11 +26,11 @@
 				<key>Filename</key>
 				<string>data/html/index.html</string>
 				<key>Height</key>
-				<real>550</real>
+				<real>600</real>
 				<key>Identifier</key>
 				<string>SE31520</string>
 				<key>Width</key>
-				<real>550</real>
+				<real>800</real>
 			</dict>
 		</array>
 		<key>Toolbar Items</key>
@@ -39,7 +39,7 @@
 				<key>Identifier</key>
 				<string>SE31520</string>
 				<key>Image</key>
-				<string>data/img/btn_large.png</string>
+				<string>data/img/safari.png</string>
 				<key>Label</key>
 				<string>SE31520 Browser Extension</string>
 				<key>Popover</key>
@@ -52,18 +52,17 @@
 		<key>Scripts</key>
 		<dict>
 			<key>End</key>
-			<array>
-			</array>
+			<array/>
 			<key>Start</key>
-			<array>
-			</array>
+			<array/>
 		</dict>
 		<key>Stylesheets</key>
-		<array>
-		</array>
+		<array/>
 	</dict>
 	<key>Description</key>
 	<string></string>
+	<key>DeveloperIdentifier</key>
+	<string>W94ZB3QDE2</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
