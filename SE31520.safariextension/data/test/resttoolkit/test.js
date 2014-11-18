@@ -23,8 +23,6 @@ QUnit.test(
 
 		var compJSONStr = JSON.stringify(test);
 
-		console.log(inJSONStr);
-
 		assert.ok(inJSONStr == compJSONStr, "Correct JSON was not returned.");
 	}
 );
