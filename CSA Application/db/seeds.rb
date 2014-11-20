@@ -49,7 +49,8 @@ User.transaction do
     where  us.id = bc.user_id
     and    bc.id = fb.broadcast_id
     and    fe.id = fb.feed_id
-    and    fe.name = \'extension\';'
+    and    fe.name = \'extension\'
+    order  by bc.created_at desc';
   )
 
 end
