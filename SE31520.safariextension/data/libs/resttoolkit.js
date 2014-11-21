@@ -26,6 +26,10 @@ RESTToolKit.clearAuth = function() {
 	this.authToken = "";
 }
 
+RESTToolKit.isAuthenticated = function() {
+	return (this.authToken.length > 0);
+}
+
 // Gets JSON of the information from the RestFul service one the server.
 RESTToolKit.getASync = function(address, sync) {
 
@@ -80,7 +84,8 @@ RESTToolKit.postASync = function(address, obj, func) {
 	    	if (func)
 	    		func();
 
-	        console.info(data);
+	    	if (this.debug)
+	        	console.info(data);
 	    }
 	});
 }

@@ -1,36 +1,42 @@
 
 var background = background || {}
 
-background.last = {};
+background.last  = {};
 
-background.url = "http://127.0.0.1:3000/rest/extensions.json";
+background.url   = "http://127.0.0.1:3000/rest/extensions.json";
 
-background.key = 'feeds';
+background.key   = 'feeds';
 
 background.debug = true;
 
-background.dirty = false;
 
 background.init = function() {
 
 	background.last = LocalStorage.load(this.key);
 
-	chrome.alarms.create(
-		"Check Rest Connection", 
-		{
-			delayInMinutes: 0.1, 
-			periodInMinutes: 0.2
-		} 
-	);
+	var user = LocalStorage.load('user');
+
+	//if (user) {
+
+		RESTToolKit.auth(user.name, user.pwd);
+
+		chrome.alarms.create(
+			"Check Rest Connection", 
+			{
+				delayInMinutes: 0.1, 
+				periodInMinutes: 0.2
+			} 
+		);
+	//}
 }
 
 background.notification = function(item) {
 
 	var momentObj = moment(new Date(item.created));
 
-	var dateStr = momentObj.format('HH:mm DD/MM/YY');
+	var dateStr   = momentObj.format('HH:mm DD/MM/YY');
 
-	var content = item.name + " - " + dateStr;
+	var content   = item.name + " - " + dateStr;
 
 	var opts = {
 		type: "basic",
@@ -54,14 +60,12 @@ background.updateFeeds = function() {
 	if (this.debug)
 		console.log("background.updateFeeds: function run!");
 
-	RESTToolKit.auth('admin','password');
-
-	var restReq = RESTToolKit.get(this.url);
+	var restReq   = RESTToolKit.get(this.url);
 
 	var feedsObjs = restReq.responseJSON;
 
-	var feedsStr = JSON.stringify(feedsObjs);
-	var last     = JSON.stringify(background.last);
+	var feedsStr  = JSON.stringify(feedsObjs);
+	var last      = JSON.stringify(background.last);
 
 	if (feedsStr != last) {
 		if (this.debug)
@@ -84,35 +88,34 @@ background.updateFeeds = function() {
 }
 
 background.diff = function(inArray, compArray) {
-
+	
 	var ret = [];
 
-	console.log("inArray: " + JSON.stringify(inArray));
-	console.log("compArray: " + JSON.stringify(compArray));
+	if (inArray && compArray) {
 
-	for (var i = 0; i < inArray.length; i++) {
+		for (var i = 0; i < inArray.length; i++) {
 
-		var inn = inArray[i];
+			var inn   = inArray[i];
 
-		var inStr = JSON.stringify(inn);
+			var inStr = JSON.stringify(inn);
 
-		var found = false;
+			var found = false;
 
-		for (var j = 0; j < compArray.length; j++) {
+			for (var j = 0; j < compArray.length; j++) {
 
-			var comp = JSON.stringify(compArray[j]);
+				var comp = JSON.stringify(compArray[j]);
 
-			if (inStr == comp) {
+				if (inStr == comp) {
 
-				found = true;
+					found = true;
 
-				break;
+					break;
+				}
 			}
-		}
 
-		if (!found) {
-			console.log("not found" + JSON.stringify(inn));
-			ret.push(inn);
+			if (!found) 
+				ret.push(inn);
+			
 		}
 	}
 

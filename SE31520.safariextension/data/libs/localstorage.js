@@ -23,13 +23,23 @@ LocalStorage.save = function(jsonIn, key) {
 
 // Load that same JSON object back out from local storage.
 LocalStorage.load = function(key) {
+
+	var ret = null;
+
+	var lsObj = localStorage.getItem(key);
+
+	if (lsObj) {
+		var obj = JSON.parse(lsObj); 
+
+		if (obj) {
+			if (this.debug)
+				console.log('LocalStorage.load: Loading data, ' + obj);
+
+			ret = obj;
+		}
+	}
 	
-	var obj = JSON.parse(localStorage.getItem(key)); 
-
-	if (this.debug)
-		console.log('LocalStorage.load: Loading data, ' + obj);
-
-	return obj;
+	return ret;
 }
 
 LocalStorage.remove = function(key) {

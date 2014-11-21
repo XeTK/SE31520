@@ -15,7 +15,8 @@
       "./data/res/bower_components/moment/moment.js",
       "./data/libs/resttoolkit.js",
       "./data/libs/localstorage.js",
-      "./data/js/background.js"],
+      "./data/js/background.js"
+    ],
     "persistent": true
   },
   "browser_action": {

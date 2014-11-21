@@ -43,3 +43,16 @@ body {
 	display: inline;
 	padding-bottom: 3px;
 }
+
+.bs-docs-section {
+	padding-top: 20px;
+}
+
+#buttons {
+	float: right;
+	padding-top: 15px;
+}
+
+#pagenumber {
+	text-align: right;
+}
