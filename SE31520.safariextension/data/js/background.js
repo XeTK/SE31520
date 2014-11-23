@@ -71,7 +71,7 @@ background.updateFeeds = function() {
 		if (this.debug)
 			console.log("background.updateFeeds: object differs.");
 
-		var diffed = background.diff(feedsObjs, background.last);
+		var diffed = utils.diff(feedsObjs, background.last);
 
 		if (diffed.length > 0) {
 
@@ -85,41 +85,6 @@ background.updateFeeds = function() {
 		LocalStorage.save(feedsObjs, this.key);
 		background.last = feedsObjs;
 	} 
-}
-
-background.diff = function(inArray, compArray) {
-	
-	var ret = [];
-
-	if (inArray && compArray) {
-
-		for (var i = 0; i < inArray.length; i++) {
-
-			var inn   = inArray[i];
-
-			var inStr = JSON.stringify(inn);
-
-			var found = false;
-
-			for (var j = 0; j < compArray.length; j++) {
-
-				var comp = JSON.stringify(compArray[j]);
-
-				if (inStr == comp) {
-
-					found = true;
-
-					break;
-				}
-			}
-
-			if (!found) 
-				ret.push(inn);
-			
-		}
-	}
-
-	return ret;
 }
 
 chrome.alarms.onAlarm.addListener(

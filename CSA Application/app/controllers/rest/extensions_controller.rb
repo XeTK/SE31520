@@ -1,7 +1,8 @@
 class Rest::ExtensionsController < ApplicationController
 
 	def index
-		@feeds = ExtensionFeed.all
+		@feeds = ExtensionFeed.paginate(page: params[:page],
+                           per_page: params[:per_page])
 
 		respond_to do |format|
       		format.json { render :json => @feeds }
@@ -10,7 +11,8 @@ class Rest::ExtensionsController < ApplicationController
 
 
 	def show
-		@feeds = ExtensionFeed.all
+		@feeds = ExtensionFeed.paginate(page: params[:page],
+                           per_page: params[:per_page])
 
 		respond_to do |format|
 

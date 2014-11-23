@@ -7,8 +7,9 @@ Options.init = function() {
 	Options.load();
 
 	$('#userdata').submit(
-		function() {
+		function(event) {
 			Options.save();
+		    event.preventDefault();
 			return false;
 		}
 	);

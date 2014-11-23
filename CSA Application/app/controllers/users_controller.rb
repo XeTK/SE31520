@@ -4,11 +4,13 @@ class UsersController < ApplicationController
 
   force_ssl except: [:destroy]
 
-  before_action :admin_required, only: [:index, :search, :destroy]
+  before_action :admin_required, only: [:search, :destroy]
   before_action :set_current_page, except: [:index]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :show_record_not_found
+
+  skip_before_filter :verify_authenticity_token  
 
   def search
     # Use will_paginate's :conditions and :joins to search across both the
@@ -38,9 +40,13 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.paginate(page: params[:page],
-                           per_page: params[:per_page])
-                 .order('surname, firstname')
+    if is_admin?
+      @users = User.paginate(page: params[:page],
+                             per_page: params[:per_page])
+                   .order('surname, firstname')
+    else
+      @users = [User.find(current_user.id)];
+    end
   end
 
   # GET /users/1

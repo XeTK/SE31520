@@ -14,6 +14,10 @@ begin
 	def content=(value)
 		write_attribute :content, (value ? value.humanize : nil)
 	end
+
+	def self.per_page
+		8
+	end
 end
 
 end

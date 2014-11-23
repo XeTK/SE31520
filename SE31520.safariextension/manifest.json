@@ -13,6 +13,7 @@
     "scripts": [
       "./data/res/bower_components/jquery/dist/jquery.min.js", 
       "./data/res/bower_components/moment/moment.js",
+      "./data/libs/utils.js",
       "./data/libs/resttoolkit.js",
       "./data/libs/localstorage.js",
       "./data/js/background.js"

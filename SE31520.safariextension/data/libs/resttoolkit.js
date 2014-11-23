@@ -77,12 +77,19 @@ RESTToolKit.postASync = function(address, obj, func) {
 	    type: 'post',
 	    data: obj,
 	    headers: {
-	       'Authorization': 'Bearer ' + this.token
+	       'Authorization': 'Basic ' + this.authToken 
 	    },
-	    dataType: 'json',
-	    success: function (data) {
+	    dataType: 'text',
+	    success: function(data) {
 	    	if (func)
-	    		func();
+	    		func(data);
+
+	    	if (this.debug)
+	        	console.info(data);
+	    },
+	    error: function(data) {
+	    	if (func)
+	    		func(data);
 
 	    	if (this.debug)
 	        	console.info(data);

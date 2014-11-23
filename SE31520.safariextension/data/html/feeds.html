@@ -29,7 +29,7 @@
 
     <script src="../libs/resttoolkit.js"></script>
     <script src="../libs/localstorage.js"></script>
-    <script src="../libs/Paginationr.js"></script>
+    <script src="../libs/utils.js"></script>
 
     <script src="../js/feeds.js"></script>
 
@@ -51,8 +51,9 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="feeds.html">Feeds</a></li>
-            <li><a href="options.html">Options</a></li>
+            <li class="active"><a href="feeds.html">Broadcasts</a></li>
+            <li><a href="users.html">Users</a></li>
+            <li><a href="options.html">Login</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -62,12 +63,12 @@
 
       <div class="csa-content hidden">
         <div id="bcasthead">
-          <div id="buttons">
+          <div class="btn-group" role="group" id="buttons">
             <button type="submit" class="btn btn-warning" id="backbut">back</button>
             <button type="submit" class="btn btn-primary" id="nextbut">next</button>
           </div>
         </div>
-        <h1>Broadcasts</h1>
+        <!--<h1>Broadcasts</h1>-->
         <div id="broadcasts"></div>
         <div id="pagenumber"></div>
       </div>

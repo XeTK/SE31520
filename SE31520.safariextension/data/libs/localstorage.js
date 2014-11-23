@@ -29,13 +29,20 @@ LocalStorage.load = function(key) {
 	var lsObj = localStorage.getItem(key);
 
 	if (lsObj) {
-		var obj = JSON.parse(lsObj); 
 
-		if (obj) {
-			if (this.debug)
-				console.log('LocalStorage.load: Loading data, ' + obj);
+		if (lsObj != 'undefined'){
 
-			ret = obj;
+			var obj = JSON.parse(lsObj); 
+
+			if (obj) {
+				if (this.debug)
+					console.log('LocalStorage.load: Loading data, ' + obj);
+
+				ret = obj;
+			}
+		} else {
+			console.error('Corupt key removing it!');
+			this.remove(key);
 		}
 	}
 	
