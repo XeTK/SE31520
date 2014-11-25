@@ -16,7 +16,8 @@ users.init = function() {
 
 	var user = LocalStorage.load('user');
 
-	RESTToolKit.auth(user.name, user.pwd);
+	if (user)
+		RESTToolKit.auth(user.name, user.pwd);
 
 	utils.check4User();
 
@@ -49,6 +50,8 @@ users.init = function() {
 		function(event) {
 
 			var formData = $("#edit_user").serialize();
+
+			console.log("Form Data :'" + formData + "'");
 			
 			// CORS is having a bit of a issue with cross domain XHR's ?!?!
 			try {
@@ -81,7 +84,7 @@ users.loadData = function(reload) {
 
 	utils.loadPages(this.url, reload);
 
-	if (utils.pages.length < 1) {
+	if (utils.pages.length <= 1) {
 		$('#pagenumber').hide();
 		$('#buttons').hide();
 	}

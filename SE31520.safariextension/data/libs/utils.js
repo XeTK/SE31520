@@ -40,15 +40,17 @@ utils.loadPage = function() {
 
 	var utilsObjs = this.pages[this.page];
 
-	utilsObjs.forEach(
-		function(obj) {
-			utils.loadContent(obj);
-		}
-	);
+	if (utilsObjs) {
+		utilsObjs.forEach(
+			function(obj) {
+				utils.loadContent(obj);
+			}
+		);
 
-	var pNo = (this.page + 1) + "/" + this.pages.length;
+		var pNo = (this.page + 1) + "/" + this.pages.length;
 
-	$(this.pageNoID).text(pNo);
+		$(this.pageNoID).text(pNo);
+	}
 }
 
 utils.pagination = function(jsonArray) {

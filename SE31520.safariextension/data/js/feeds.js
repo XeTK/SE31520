@@ -12,7 +12,8 @@ feeds.init = function() {
 
 	var user = LocalStorage.load('user');
 
-	RESTToolKit.auth(user.name, user.pwd);
+	if (user)
+		RESTToolKit.auth(user.name, user.pwd);
 
 	utils.check4User();
 
@@ -49,7 +50,7 @@ feeds.loadData = function(reload) {
 
 	utils.loadPages(this.url, reload);
 
-	if (utils.pages.length < 1) {
+	if (utils.pages.length <= 1) {
 		$('#pagenumber').hide();
 		$('#buttons').hide();
 	}

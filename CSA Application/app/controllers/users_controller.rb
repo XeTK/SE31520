@@ -10,8 +10,6 @@ class UsersController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :show_record_not_found
 
-  skip_before_filter :verify_authenticity_token  
-
   def search
     # Use will_paginate's :conditions and :joins to search across both the
     # users and user_details tables. search_fields private method will add a field

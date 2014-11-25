@@ -50,7 +50,7 @@ User.transaction do
     and    bc.id = fb.broadcast_id
     and    fe.id = fb.feed_id
     and    fe.name = \'extension\'
-    order  by bc.created_at desc';
+    order  by bc.created_at desc'
   )
 
 end
