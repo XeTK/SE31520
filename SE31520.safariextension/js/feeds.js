@@ -8,26 +8,34 @@
 
 var feeds = feeds || {};
 
+// This is the region where the list of broadcasts go.
 feeds.bCastID = '#broadcasts';
 
 feeds.debug   = false;
 
-feeds.key     = 'feeds';
-
+// URL to the RESTful interface.
 feeds.url     = "http://127.0.0.1:3000/rest/extensions.json";
 
+// Method that populate the page on first run.
 feeds.init = function() {
 
+	// Check if the user has been authenticated.
 	var valid = utils.check4User();
 
+	// If they have been validated.
 	if (valid) {
+
+		// Load the user credentials from Local Storage.
 		var user = LocalStorage.load('user');
 
+		// Authenticate the user ready for REST transaction.
 		RESTToolKit.auth(user.name, user.pwd);
 
+		// Set the variables for the paginisation libary to the information for this page.
 		utils.listID  = '#broadcasts';
 		utils.perPage = 4;
 
+		// Override the method for displaying the entries.
 		utils.loadContent = function(item) {
 			feeds.broadcast(item);
 		};
@@ -35,8 +43,10 @@ feeds.init = function() {
 		if (this.debug)
 			console.log("feeds.init: Starting.");
 
+		// Load page content.
 		feeds.loadData(false);
 
+		// Bind the buttons for previous and next in pagionisation.
 		$('#backbut').click(
 			function(){
 				utils.lastPage();
@@ -52,13 +62,16 @@ feeds.init = function() {
 	}
 }
 
+// Loads the page content.
 feeds.loadData = function(reload) {
 
 	if (this.debug)
 		console.log('running feeds.loadData()');
 
+	// Load page content.
 	utils.loadPages(this.url, reload);
 
+	// Check if we have more than one page. If we dont then we definatly dont want to show the controls.
 	if (utils.pages.length <= 1) {
 		$('#pagenumber').hide();
 		$('#buttons').hide();
@@ -66,6 +79,7 @@ feeds.loadData = function(reload) {
 
 }
 
+// This creates singular elements within the list of broadcasts
 feeds.broadcast = function(bCast) {
 
 	if (this.debug)
@@ -78,6 +92,7 @@ feeds.broadcast = function(bCast) {
 
 	var dateStr   = momentObj.format('MMMM Do YYYY, h:mm:ss a');
 
+	// Build the html!!
 	var html = "\
 		<div id=\"bcast" + this.count + "\">\
 			<h3>" + bCast.name + ' - ' + dateStr + "</h3>\
@@ -88,6 +103,7 @@ feeds.broadcast = function(bCast) {
 	$(this.bCastID).append(html);
 }
 
+// Load the init function when page has been loaded.
 $(document).ready(
 	function() {
 		feeds.init();

@@ -10,6 +10,7 @@ var RESTToolKit = RESTToolKit || {};
 
 RESTToolKit.debug = false;
 
+// Hold the auth token that will be passed to the server via basic auth.
 RESTToolKit.authToken = "";
 
 // Wrapper function to call restful without async.
@@ -22,6 +23,7 @@ RESTToolKit.post = function(address, obj) {
 	RESTToolKit.postASync(address, obj, null);
 }
 
+// Generate the authentication token that will be passed in a header for basic auth.
 RESTToolKit.auth = function(username, password) {
 	var toCyther = username + ":" + password;
 
@@ -30,10 +32,12 @@ RESTToolKit.auth = function(username, password) {
 	RESTToolKit.authToken = encoded;
 }
 
+// This clears the Auth Token.
 RESTToolKit.clearAuth = function() {
 	this.authToken = "";
 }
 
+// This verifys 
 RESTToolKit.isAuthenticated = function() {
 	return (this.authToken.length > 0);
 }
@@ -44,9 +48,10 @@ RESTToolKit.getASync = function(address, sync) {
 	if (this.debug)
 		console.log('RESTToolKit.get_restful: in Address = ' + address);
 
+	// Check if we are doing things synchronously
 	var isSync = (!sync) ? false : true; // Check if a function is ready to be attached.
 
-	// Get the response from the REST request as a json object, using the aJax Libary.
+	// Get the response from the REST request as a json object, using the aJax library.
 	var retJSON = $.ajax(
 		{
 			url:   address,
@@ -57,8 +62,9 @@ RESTToolKit.getASync = function(address, sync) {
 				'Authorization': 'Basic ' + this.authToken 
 			},
 			success: function(data, textStatus, jqXHR) { 
+				// If there is a function we can call it.
 				if (sync)
-					sync(data); //Pass if the connection is up or down to the function that is async.
+					sync(data); // Pass if the connection is up or down to the function that is async.
 
 				if (this.debug)
 					console.log('RESTToolKit.get_restful: Successfully got restful data.');
