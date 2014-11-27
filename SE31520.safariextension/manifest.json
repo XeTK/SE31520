@@ -5,25 +5,25 @@
   "description": "",
   "version": "1.0",
   "icons": {
-    "128": "./data/img/128.png" ,
-    "64" : "./data/img/64.png",
-    "32" : "./data/img/32.png"
+    "128": "./img/128.png" ,
+    "64" : "./img/64.png",
+    "32" : "./img/32.png"
   },
   "background": {
     "scripts": [
-      "./data/res/bower_components/jquery/dist/jquery.min.js", 
-      "./data/res/bower_components/moment/moment.js",
-      "./data/libs/utils.js",
-      "./data/libs/resttoolkit.js",
-      "./data/libs/localstorage.js",
-      "./data/js/background.js"
+      "./bower_components/jquery/dist/jquery.min.js", 
+      "./bower_components/moment/moment.js",
+      "./libs/utils.js",
+      "./libs/resttoolkit.js",
+      "./libs/localstorage.js",
+      "./js/background.js"
     ],
     "persistent": true
   },
   "browser_action": {
     "default_title" : "SE31520 Extension",
-    "default_icon": "./data/img/128.png",
-    "default_popup": "./data/html/index.html"
+    "default_icon": "./img/128.png",
+    "default_popup": "./html/index.html"
   },
   "permissions": [
     "storage",
@@ -31,6 +31,6 @@
     "alarms"
   ],
   "web_accessible_resources": [
-    "./data/img/128.png"
+    "./img/128.png"
   ]
 }

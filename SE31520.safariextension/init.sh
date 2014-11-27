@@ -83,8 +83,3 @@ else
 fi
 
 bower install
-
-if [ -d "bower_components" ]
-then
-	mv bower_components data/res/
-fi
