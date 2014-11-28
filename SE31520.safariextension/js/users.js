@@ -76,6 +76,8 @@ users.init = function() {
 
 				// Serialise the data from the form.
 				var formData = $("#edit_user").serialize();
+
+				console.log(formData);
 				
 				// CORS is having a bit of a issue with cross domain XHR's ?!?!
 				try {
