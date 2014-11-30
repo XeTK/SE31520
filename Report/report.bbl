@@ -1,0 +1,61 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{entry}{nty}
+    \entry{saa:2013:online}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=9b4f6fe43737e24424bebe57aac9a550}{McDonnell}{M\bibinitperiod}{Mark}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=9b4f6fe43737e24424bebe57aac9a550}{McDonnell}{M\bibinitperiod}{Mark}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9b4f6fe43737e24424bebe57aac9a550}
+      \strng{fullhash}{9b4f6fe43737e24424bebe57aac9a550}
+      \field{sortinit}{M}
+      \field{labeltitle}{SQLite and ActiveRecord}
+      \field{month}{10}
+      \field{title}{SQLite and ActiveRecord}
+      \field{year}{2013}
+      \verb{url}
+      \verb http://www.integralist.co.uk/posts/sqlite-and-activerecord/
+      \endverb
+    \endentry
+    \entry{bara:2013:online}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=2a6d68ecef426170a71f56d791018496}{Morrison}{M\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=2a6d68ecef426170a71f56d791018496}{Morrison}{M\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{2a6d68ecef426170a71f56d791018496}
+      \strng{fullhash}{2a6d68ecef426170a71f56d791018496}
+      \field{sortinit}{M}
+      \field{labeltitle}{Building Awesome Rails APIs: Part 1}
+      \field{month}{06}
+      \field{title}{Building Awesome Rails APIs: Part 1}
+      \field{year}{2013}
+      \verb{url}
+      \verb http://collectiveidea.com/blog/archives/2013/06/13/building-awesome-rails-apis-part-1/
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

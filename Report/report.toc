@@ -1,0 +1,33 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Document Summary}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Application Design}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{CS-Alumni Chrome Browser Extension}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Rational}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Module Diagrams}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{CS-Alumni Rails Application}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{New Additions}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Modifications}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{Communication Between Applications}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{RESTful Web Interfaces}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Data Flow Diagrams}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Application Testing}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{CS-Alumni Rails Application}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{Communication Between Applications}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Evaluation}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Something Extra}{3}
