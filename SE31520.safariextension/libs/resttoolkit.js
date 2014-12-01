@@ -20,7 +20,7 @@ RESTToolKit.get = function(address) {
 
 // Send post object to the restful service.
 RESTToolKit.post = function(address, obj) {
-	RESTToolKit.postASync(address, obj, null);
+	return RESTToolKit.postASync(address, obj, null);
 }
 
 // Generate the authentication token that will be passed in a header for basic auth.
@@ -88,7 +88,7 @@ RESTToolKit.getASync = function(address, sync) {
 RESTToolKit.postASync = function(address, obj, func) {
 
 	// Just use the ajax libary.
-	$.ajax(
+	var ret = $.ajax(
 		{
 		    url:      address,
 		    data:     obj,
@@ -113,4 +113,6 @@ RESTToolKit.postASync = function(address, obj, func) {
 		    }
 		}
 	);
+
+	return ret;
 }

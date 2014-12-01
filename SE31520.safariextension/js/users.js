@@ -74,6 +74,9 @@ users.init = function() {
 		$('#edit_user').submit(
 			function(event) {
 
+				// Override the default behaviour that is present when submitting a form.
+				event.preventDefault();
+
 				// Serialise the data from the form.
 				var formData = $("#edit_user").serialize();
 				
@@ -102,9 +105,6 @@ users.init = function() {
 					console.error(err);
 				}
 
-				// Override the default behaviour that is present when submitting a form.
-				event.preventDefault();
-
 				return false;
 			}
 		);
@@ -124,6 +124,10 @@ users.loadData = function(reload) {
 	if (utils.pages.length <= 1) {
 		$('#pagenumber').hide();
 		$('#buttons').hide();
+	}
+
+	if (utils.pages.length == 0) {
+		$(this.userID).append('<h2>Odd their does not seem to be any users.<br>Pretty sure there must be if you logged in...</h2>');
 	}
 
 }

@@ -77,6 +77,10 @@ feeds.loadData = function(reload) {
 		$('#buttons').hide();
 	}
 
+	if (utils.pages.length == 0) {
+		$(this.bCastID).append('<h2>There has not been any broadcast\'s yet!</h2>');
+	}
+
 }
 
 // This creates singular elements within the list of broadcasts

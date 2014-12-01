@@ -6,10 +6,11 @@
  * Desc:    Tests for Utilities.
  */
 
-
+// Two arrays we want to compair.
 var array1 = [1,2,3,4];
 var array2 = [2,3,4];
 
+// This gets the differing element from the two lists.
 QUnit.test( 
 	"Diffed Array", 
 	function(assert) {
@@ -20,6 +21,7 @@ QUnit.test(
 	}
 );
 
+// Do the reverse and there should be nothing returned as all the elements exist within the old array.
 QUnit.test( 
 	"Reverse Diffed Array", 
 	function(assert) {
