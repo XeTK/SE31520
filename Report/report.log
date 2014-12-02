@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.18)  2 DEC 2014 17:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.18)  2 DEC 2014 18:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -328,6 +328,11 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks17
 \@floatcapt=\box27
 )
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyphenat/hyphenat.sty
+Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
+\langwohyphens=\language79
+LaTeX Info: Redefining \_ on input line 43.
+)
 \c@homeworkProblemCounter=\count209
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -341,25 +346,25 @@ File: english.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             macros/latex/contrib/pageslts/ 
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 139.
+(lastpage)             ! on input line 140.
 
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -415,17 +420,17 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report.bbl' found.
 
 (./report.bbl)
-Package biblatex Info: Reference section=0 on input line 139.
-Package biblatex Info: Reference segment=0 on input line 139.
+Package biblatex Info: Reference section=0 on input line 140.
+Package biblatex Info: Reference segment=0 on input line 140.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 141.
+(Font)              <12> on input line 142.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 141.
+(Font)              <8> on input line 142.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 141.
+(Font)              <6> on input line 142.
  [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./repo
@@ -439,127 +444,155 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout4 = `report.toc'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 167--174
+Underfull \hbox (badness 10000) in paragraph at lines 178--191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--174
+Underfull \hbox (badness 10000) in paragraph at lines 178--191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--174
+Underfull \hbox (badness 10000) in paragraph at lines 178--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--191
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 191--194
+Underfull \hbox (badness 10000) in paragraph at lines 208--211
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--194
+Underfull \hbox (badness 10000) in paragraph at lines 208--211
 
  []
 
 <images/homepage.png, id=17, 819.06pt x 617.30624pt>
 File: images/homepage.png Graphic file (type png)
  <use images/homepage.png>
-Package pdftex.def Info: images/homepage.png used on input line 197.
+Package pdftex.def Info: images/homepage.png used on input line 214.
 (pdftex.def)             Requested size: 328.82706pt x 247.83179pt.
 
 [4 <./images/homepage.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
 <images/bcpage.png, id=23, 820.06375pt x 622.325pt>
 File: images/bcpage.png Graphic file (type png)
  <use images/bcpage.png>
-Package pdftex.def Info: images/bcpage.png used on input line 206.
+Package pdftex.def Info: images/bcpage.png used on input line 223.
 (pdftex.def)             Requested size: 328.82706pt x 249.54282pt.
 
 <images/populatebcpage.png, id=24, 830.10126pt x 627.34375pt>
 File: images/populatebcpage.png Graphic file (type png)
 
 <use images/populatebcpage.png>
-Package pdftex.def Info: images/populatebcpage.png used on input line 214.
+Package pdftex.def Info: images/populatebcpage.png used on input line 231.
 (pdftex.def)             Requested size: 328.82706pt x 248.50163pt.
-
-<images/userpage.png, id=25, 819.06pt x 617.30624pt>
+ [5 <./images/bcpage.png> <./images/populatebcpage.png>] <images/userpage.png, 
+id=30, 819.06pt x 617.30624pt>
 File: images/userpage.png Graphic file (type png)
- <use images/userpage.png>
-Package pdftex.def Info: images/userpage.png used on input line 220.
-(pdftex.def)             Requested size: 375.80542pt x 283.23903pt.
 
-[5 <./images/bcpage.png> <./images/populatebcpage.png>]
+<use images/userpage.png>
+Package pdftex.def Info: images/userpage.png used on input line 239.
+(pdftex.def)             Requested size: 328.82706pt x 247.83179pt.
+
 <images/modalpage.png, id=31, 818.05624pt x 613.29124pt>
 File: images/modalpage.png Graphic file (type png)
 
 <use images/modalpage.png>
-Package pdftex.def Info: images/modalpage.png used on input line 226.
-(pdftex.def)             Requested size: 375.80542pt x 281.74307pt.
-
-<images/loginpage.png, id=32, 820.06375pt x 617.30624pt>
+Package pdftex.def Info: images/modalpage.png used on input line 247.
+(pdftex.def)             Requested size: 328.82706pt x 246.51933pt.
+ [6 <./images/userpage.png> <./images/modalpage.png>] <images/loginpage.png, id
+=37, 820.06375pt x 617.30624pt>
 File: images/loginpage.png Graphic file (type png)
 
 <use images/loginpage.png>
-Package pdftex.def Info: images/loginpage.png used on input line 232.
-(pdftex.def)             Requested size: 375.80542pt x 282.89052pt.
- [6 <./images/userpage.png> <./images/modalpage.png>] <images/createbc.png, id=
-38, 726.715pt x 381.425pt>
+Package pdftex.def Info: images/loginpage.png used on input line 256.
+(pdftex.def)             Requested size: 328.82706pt x 247.53038pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--263
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--263
+
+ []
+
+<images/createbc.png, id=38, 726.715pt x 381.425pt>
 File: images/createbc.png Graphic file (type png)
  <use images/createbc.png>
-Package pdftex.def Info: images/createbc.png used on input line 238.
+Package pdftex.def Info: images/createbc.png used on input line 266.
 (pdftex.def)             Requested size: 352.31624pt x 184.92105pt.
 
-<images/confbc.png, id=39, 539.01375pt x 294.09875pt>
+[7 <./images/loginpage.png> <./images/createbc.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 271--274
+
+ []
+
+<images/confbc.png, id=45, 539.01375pt x 294.09875pt>
 File: images/confbc.png Graphic file (type png)
  <use images/confbc.png>
-Package pdftex.def Info: images/confbc.png used on input line 244.
+Package pdftex.def Info: images/confbc.png used on input line 277.
 (pdftex.def)             Requested size: 352.31624pt x 192.23444pt.
 
-[7 <./images/loginpage.png> <./images/createbc.png>]
 <images/chromenotification.png, id=46, 388.45125pt x 129.48375pt>
 File: images/chromenotification.png Graphic file (type png)
 
 <use images/chromenotification.png>
-Package pdftex.def Info: images/chromenotification.png used on input line 250.
+Package pdftex.def Info: images/chromenotification.png used on input line 285.
 (pdftex.def)             Requested size: 234.87749pt x 78.29344pt.
 
 <images/operanotification.png, id=47, 367.3725pt x 122.4575pt>
 File: images/operanotification.png Graphic file (type png)
 
 <use images/operanotification.png>
-Package pdftex.def Info: images/operanotification.png used on input line 256.
+Package pdftex.def Info: images/operanotification.png used on input line 293.
 (pdftex.def)             Requested size: 234.87749pt x 78.29404pt.
-
-<images/twitterbc.png, id=48, 609.27625pt x 433.62pt>
+ [8 <./images/confbc.png> <./images/chromenotification.png> <./images/operanoti
+fication.png>]
+<images/twitterbc.png, id=54, 609.27625pt x 433.62pt>
 File: images/twitterbc.png Graphic file (type png)
 
 <use images/twitterbc.png>
-Package pdftex.def Info: images/twitterbc.png used on input line 262.
+Package pdftex.def Info: images/twitterbc.png used on input line 302.
 (pdftex.def)             Requested size: 375.80542pt x 267.4654pt.
- [8 <./images/confbc.png> <./images/chromenotification.png> <./images/operanoti
-fication.png>] [9 <./images/twitterbc.png>]
+ [9 <./images/twitterbc.png>]
 <images/backgroundqunit.png, id=59, 844.15375pt x 338.26375pt>
 File: images/backgroundqunit.png Graphic file (type png)
 
 <use images/backgroundqunit.png>
-Package pdftex.def Info: images/backgroundqunit.png used on input line 303.
+Package pdftex.def Info: images/backgroundqunit.png used on input line 343.
 (pdftex.def)             Requested size: 469.75499pt x 188.23926pt.
 
 <images/biqunit.png, id=60, 809.0225pt x 338.26375pt>
 File: images/biqunit.png Graphic file (type png)
  <use images/biqunit.png>
-Package pdftex.def Info: images/biqunit.png used on input line 309.
+Package pdftex.def Info: images/biqunit.png used on input line 349.
 (pdftex.def)             Requested size: 469.75499pt x 196.41504pt.
 
 <images/lsqunit.png, id=61, 832.10875pt x 339.2675pt>
 File: images/lsqunit.png Graphic file (type png)
  <use images/lsqunit.png>
-Package pdftex.def Info: images/lsqunit.png used on input line 315.
+Package pdftex.def Info: images/lsqunit.png used on input line 355.
 (pdftex.def)             Requested size: 469.75499pt x 191.53117pt.
 
 [10 <./images/backgroundqunit.png> <./images/biqunit.png>]
@@ -567,27 +600,27 @@ Package pdftex.def Info: images/lsqunit.png used on input line 315.
 File: images/restqunit.png Graphic file (type png)
 
 <use images/restqunit.png>
-Package pdftex.def Info: images/restqunit.png used on input line 321.
+Package pdftex.def Info: images/restqunit.png used on input line 361.
 (pdftex.def)             Requested size: 469.75499pt x 248.05643pt.
 
 <images/utilsqunit.png, id=68, 837.1275pt x 318.18875pt>
 File: images/utilsqunit.png Graphic file (type png)
 
 <use images/utilsqunit.png>
-Package pdftex.def Info: images/utilsqunit.png used on input line 327.
+Package pdftex.def Info: images/utilsqunit.png used on input line 367.
 (pdftex.def)             Requested size: 469.75499pt x 178.54861pt.
  [11 <./images/lsqunit.png> <./images/restqunit.png>] [12 <./images/utilsqunit.
 png>] [13] [14]
 <images/pebble.jpg, id=85, 1525.7pt x 2698.08pt>
 File: images/pebble.jpg Graphic file (type jpg)
  <use images/pebble.jpg>
-Package pdftex.def Info: images/pebble.jpg used on input line 376.
+Package pdftex.def Info: images/pebble.jpg used on input line 426.
 (pdftex.def)             Requested size: 234.87749pt x 415.3574pt.
 
 <images/pebblesh.png, id=86, 144.54pt x 168.63pt>
 File: images/pebblesh.png Graphic file (type png)
  <use images/pebblesh.png>
-Package pdftex.def Info: images/pebblesh.png used on input line 382.
+Package pdftex.def Info: images/pebblesh.png used on input line 432.
 (pdftex.def)             Requested size: 117.43874pt x 137.01152pt.
 
 [15 <./images/pebble.jpg>] [16 <./images/pebblesh.png>] [17]
@@ -599,10 +632,10 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 8094 strings out of 493117
- 137128 string characters out of 6135432
- 529957 words of memory out of 5000000
- 11457 multiletter control sequences out of 15000+600000
+ 8128 strings out of 493117
+ 137637 string characters out of 6135432
+ 530884 words of memory out of 5000000
+ 11487 multiletter control sequences out of 15000+600000
  9316 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,10n,48p,812b,943s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -614,7 +647,7 @@ usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/l
 ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/lo
 cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (18 pages, 1439876 bytes).
+Output written on report.pdf (18 pages, 1418160 bytes).
 PDF statistics:
  130 PDF objects out of 1000 (max. 8388607)
  66 compressed objects within 1 object stream

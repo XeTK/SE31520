@@ -30,6 +30,7 @@
 \usepackage{biblatex}
 \usepackage{caption}
 \usepackage{float}
+\usepackage[none]{hyphenat}
 
 
 \bibliography{main.bib}
@@ -180,8 +181,15 @@ Another reason for my choice to develop a browser extension was that I wanted to
 \\
 One of the newer features within the Chrome SDK had also caught my attention in the weeks before starting this assignment was the use of Chrome desktop notifications where you can create a notification within your application that will be displayed to the end user via the Chrome UI's notification draw.\\
 \\
-I wanted to see if it was possible to encapsulate some of the key management features of the CS-Alumni application into an attractive and well presented browser extension that also notified the user of any new broadcasts that had been made.
+I wanted to see if it was possible to encapsulate some of the key management features of the CS-Alumni application into an attractive and well presented browser extension that also notified the user of any new broadcasts that had been made.\\
+\\
+Why did I choose to develop a Chrome extension over a Firefox, Safari or Internet Explorer, the main reason was due to Chris Loftus's preference of Chrome over the other browsers. In addition to that I felt that due to developing for Chrome also meant that the code will work without modification in Opera this a bonus in the real world as it means we can support a greater population of users without investing more money into development.\\
+\\
+I also feel that Chrome has a much nicer development environment for developing browser extensions over its competitors, along with having some newer and more unique features that allow the Chrome based extension to stand out.\\
+\\
+If this was a real world product it would not take that much resources to port the extension to work on Firefox and Safari aswell but this out of the scope of this assignment.
 
+\newpage
 \subsubsection{Module Diagrams}
 
 \iffalse
@@ -225,29 +233,45 @@ Again below we see the 'Broadcasts' tab this time we see how the page appears wh
 \caption{This is what the populated broadcast screen looks like.}
 \end{figure}
 
+This is the 'users' tab of the browser extension here the user can view a specific users details and edit there information if it is deemed appropriate.
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{userpage}
+\includegraphics[width=0.7\textwidth]{userpage}
 \caption{Here we have a screenshot of the user's screen.}
 \end{figure}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{modalpage}
-\caption{Above we have a screenshot showing the appearance of the modal window we used to edit the user information.}
-\end{figure}
+When the edit button has pressed on the a specific user it shows this modal window that allows the user to edit the details that are kept on the current user they are editing.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{loginpage}
+\includegraphics[width=0.7\textwidth]{modalpage}
+\caption{Above we have a screenshot showing the modal window we used to edit the user information.}
+\end{figure}
+
+\newpage
+The 'Login' tab is where the user enters there login credentials that will be used to authenticate the user against the CS-Alumni application.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{loginpage}
 \caption{This is a screenshot of the login screen.}
 \end{figure}
+
+In the screenshot below i have created a new broadcast within the CS-Alumni application to to showcase the notification features within the browser extension.\\
+\\
+Note: The destination list differs from the standard CSA application. They have been modified to remove the networks that do not work along with adding in the functionality to target the browser extension specifically.\\
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.75\textwidth]{createbc}
-\caption{Creating a broadcast within the CSA application. Note: The destination list differs from the standard CSA application.}
+\caption{Creating a broadcast within the CSA application.}
 \end{figure}
+
+\newpage
+Confirmation of the broadcast being created with the parameters that I gave on the previous screenshot is pictured in the screenshot that has been included below.\\
+\\
+You can see in the list of feeds that it includes the feed named 'Extension' which signifies that we want to alert users that are using the browser extension.
 
 \begin{figure}[H]
 \centering
@@ -255,17 +279,24 @@ Again below we see the 'Broadcasts' tab this time we see how the page appears wh
 \caption{Here is the confirmation that a new broadcast has been created.}
 \end{figure}
 
+Here is shown a Chrome Notification for the broadcast that we just created, this notification will only be shown once when it has been created then is stored and will not be shown again to the user which will prevent them from being annoyed by repeated notifications telling them the same information over and over.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{chromenotification}
 \caption{Here is a Chrome notification showing the latest broadcast.}
 \end{figure}
 
+Due to the nature of how the browser Opera is designed it users the same core frameworks as Chrome thus allowing it to use the same browser extensions without any modifications the screenshot below shows the same broadcast that we created earlier also being displayed within Opera's notification system.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{operanotification}
 \caption{Same again but for Opera this time just to show multi platform support.}
 \end{figure}
+
+\newpage
+Just to confirm that this is a real broadcast and has not broken any of the other functionality within the CS-Alumni application this is a screenshot of the broadcast on the Twitter website.
 
 \begin{figure}[H]
 \centering
@@ -307,6 +338,15 @@ Again below we see the 'Broadcasts' tab this time we see how the page appears wh
 
 \subsection{QUnit Tests}
 
+\iffalse
+ _________    ________      ________      ________     
+|\___   ___\ |\   __  \    |\   ___ \    |\   __  \    
+\|___ \  \_| \ \  \|\  \   \ \  \_|\ \   \ \  \|\  \   
+     \ \  \   \ \  \\\  \   \ \  \ \\ \   \ \  \\\  \  
+      \ \  \   \ \  \\\  \   \ \  \_\\ \   \ \  \\\  \ 
+       \ \__\   \ \_______\   \ \_______\   \ \_______\
+        \|__|    \|_______|    \|_______|    \|_______|                                               
+\fi   
 
 \begin{figure}[H]
 \centering
@@ -370,7 +410,7 @@ Again below we see the 'Broadcasts' tab this time we see how the page appears wh
 
 \subsubsection{RESTful Interfaces}
 
-\subsubsection{Cors}
+\subsubsection{CORS}
 
 \subsubsection{Basic Authentication}
 
