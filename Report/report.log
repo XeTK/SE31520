@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.18)  2 DEC 2014 10:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.18)  2 DEC 2014 17:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -320,52 +320,60 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 )
 \c@ContinuedFloat=\count207
 )
-\c@homeworkProblemCounter=\count208
+(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count208
+\float@exts=\toks16
+\float@box=\box26
+\@float@everytoks=\toks17
+\@floatcapt=\box27
+)
+\c@homeworkProblemCounter=\count209
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 )
-\@quotelevel=\count209
-\@quotereset=\count210
+\@quotelevel=\count210
+\@quotereset=\count211
 
 (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             macros/latex/contrib/pageslts/ 
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 138.
+(lastpage)             ! on input line 139.
 
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count211
+\scratchcounter=\count212
 \scratchdimen=\dimen112
-\scratchbox=\box26
-\nofMPsegments=\count212
-\nofMParguments=\count213
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count214
+\scratchbox=\box28
+\nofMPsegments=\count213
+\nofMParguments=\count214
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count215
 \MPscratchDim=\dimen113
-\MPnumerator=\count215
-\makeMPintoPDFobject=\count216
-\everyMPtoPDFconversion=\toks17
+\MPnumerator=\count216
+\makeMPintoPDFobject=\count217
+\everyMPtoPDFconversion=\toks19
 ) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -407,16 +415,17 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report.bbl' found.
 
 (./report.bbl)
-Package biblatex Info: Reference section=0 on input line 138.
-Package biblatex Info: Reference segment=0 on input line 138.
+Package biblatex Info: Reference section=0 on input line 139.
+Package biblatex Info: Reference segment=0 on input line 139.
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 140.
+(Font)              <12> on input line 141.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 140.
+(Font)              <8> on input line 141.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 140.
+(Font)              <6> on input line 141.
  [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./repo
@@ -430,144 +439,173 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout4 = `report.toc'.
 
  [2]
-<images/homepage.png, id=14, 819.06pt x 617.30624pt>
+Underfull \hbox (badness 10000) in paragraph at lines 167--174
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--174
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--174
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 191--194
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--194
+
+ []
+
+<images/homepage.png, id=17, 819.06pt x 617.30624pt>
 File: images/homepage.png Graphic file (type png)
  <use images/homepage.png>
-Package pdftex.def Info: images/homepage.png used on input line 172.
-(pdftex.def)             Requested size: 375.80542pt x 283.23903pt.
+Package pdftex.def Info: images/homepage.png used on input line 197.
+(pdftex.def)             Requested size: 328.82706pt x 247.83179pt.
 
-<images/bcpage.png, id=16, 820.06375pt x 622.325pt>
+[4 <./images/homepage.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
+<images/bcpage.png, id=23, 820.06375pt x 622.325pt>
 File: images/bcpage.png Graphic file (type png)
  <use images/bcpage.png>
-Package pdftex.def Info: images/bcpage.png used on input line 178.
-(pdftex.def)             Requested size: 375.80542pt x 285.19043pt.
+Package pdftex.def Info: images/bcpage.png used on input line 206.
+(pdftex.def)             Requested size: 328.82706pt x 249.54282pt.
 
-<images/populatebcpage.png, id=17, 830.10126pt x 627.34375pt>
+<images/populatebcpage.png, id=24, 830.10126pt x 627.34375pt>
 File: images/populatebcpage.png Graphic file (type png)
 
 <use images/populatebcpage.png>
-Package pdftex.def Info: images/populatebcpage.png used on input line 184.
-(pdftex.def)             Requested size: 375.80542pt x 284.00597pt.
+Package pdftex.def Info: images/populatebcpage.png used on input line 214.
+(pdftex.def)             Requested size: 328.82706pt x 248.50163pt.
 
-<images/userpage.png, id=18, 819.06pt x 617.30624pt>
+<images/userpage.png, id=25, 819.06pt x 617.30624pt>
 File: images/userpage.png Graphic file (type png)
  <use images/userpage.png>
-Package pdftex.def Info: images/userpage.png used on input line 190.
+Package pdftex.def Info: images/userpage.png used on input line 220.
 (pdftex.def)             Requested size: 375.80542pt x 283.23903pt.
 
-<images/modalpage.png, id=19, 818.05624pt x 613.29124pt>
+[5 <./images/bcpage.png> <./images/populatebcpage.png>]
+<images/modalpage.png, id=31, 818.05624pt x 613.29124pt>
 File: images/modalpage.png Graphic file (type png)
 
 <use images/modalpage.png>
-Package pdftex.def Info: images/modalpage.png used on input line 196.
+Package pdftex.def Info: images/modalpage.png used on input line 226.
 (pdftex.def)             Requested size: 375.80542pt x 281.74307pt.
 
-<images/loginpage.png, id=20, 820.06375pt x 617.30624pt>
+<images/loginpage.png, id=32, 820.06375pt x 617.30624pt>
 File: images/loginpage.png Graphic file (type png)
 
 <use images/loginpage.png>
-Package pdftex.def Info: images/loginpage.png used on input line 202.
+Package pdftex.def Info: images/loginpage.png used on input line 232.
 (pdftex.def)             Requested size: 375.80542pt x 282.89052pt.
- <images/createbc.png, id=21, 726.715pt x 381.425pt>
+ [6 <./images/userpage.png> <./images/modalpage.png>] <images/createbc.png, id=
+38, 726.715pt x 381.425pt>
 File: images/createbc.png Graphic file (type png)
-
-<use images/createbc.png>
-Package pdftex.def Info: images/createbc.png used on input line 208.
+ <use images/createbc.png>
+Package pdftex.def Info: images/createbc.png used on input line 238.
 (pdftex.def)             Requested size: 352.31624pt x 184.92105pt.
 
-<images/confbc.png, id=22, 539.01375pt x 294.09875pt>
+<images/confbc.png, id=39, 539.01375pt x 294.09875pt>
 File: images/confbc.png Graphic file (type png)
  <use images/confbc.png>
-Package pdftex.def Info: images/confbc.png used on input line 214.
+Package pdftex.def Info: images/confbc.png used on input line 244.
 (pdftex.def)             Requested size: 352.31624pt x 192.23444pt.
 
-<images/chromenotification.png, id=23, 388.45125pt x 129.48375pt>
+[7 <./images/loginpage.png> <./images/createbc.png>]
+<images/chromenotification.png, id=46, 388.45125pt x 129.48375pt>
 File: images/chromenotification.png Graphic file (type png)
 
 <use images/chromenotification.png>
-Package pdftex.def Info: images/chromenotification.png used on input line 220.
+Package pdftex.def Info: images/chromenotification.png used on input line 250.
 (pdftex.def)             Requested size: 234.87749pt x 78.29344pt.
 
-<images/operanotification.png, id=24, 367.3725pt x 122.4575pt>
+<images/operanotification.png, id=47, 367.3725pt x 122.4575pt>
 File: images/operanotification.png Graphic file (type png)
 
 <use images/operanotification.png>
-Package pdftex.def Info: images/operanotification.png used on input line 226.
+Package pdftex.def Info: images/operanotification.png used on input line 256.
 (pdftex.def)             Requested size: 234.87749pt x 78.29404pt.
 
-<images/twitterbc.png, id=25, 609.27625pt x 433.62pt>
+<images/twitterbc.png, id=48, 609.27625pt x 433.62pt>
 File: images/twitterbc.png Graphic file (type png)
 
 <use images/twitterbc.png>
-Package pdftex.def Info: images/twitterbc.png used on input line 232.
+Package pdftex.def Info: images/twitterbc.png used on input line 262.
 (pdftex.def)             Requested size: 375.80542pt x 267.4654pt.
-
-<images/backgroundqunit.png, id=26, 844.15375pt x 338.26375pt>
+ [8 <./images/confbc.png> <./images/chromenotification.png> <./images/operanoti
+fication.png>] [9 <./images/twitterbc.png>]
+<images/backgroundqunit.png, id=59, 844.15375pt x 338.26375pt>
 File: images/backgroundqunit.png Graphic file (type png)
 
 <use images/backgroundqunit.png>
-Package pdftex.def Info: images/backgroundqunit.png used on input line 260.
+Package pdftex.def Info: images/backgroundqunit.png used on input line 303.
 (pdftex.def)             Requested size: 469.75499pt x 188.23926pt.
 
-<images/biqunit.png, id=27, 809.0225pt x 338.26375pt>
+<images/biqunit.png, id=60, 809.0225pt x 338.26375pt>
 File: images/biqunit.png Graphic file (type png)
  <use images/biqunit.png>
-Package pdftex.def Info: images/biqunit.png used on input line 266.
+Package pdftex.def Info: images/biqunit.png used on input line 309.
 (pdftex.def)             Requested size: 469.75499pt x 196.41504pt.
 
-<images/lsqunit.png, id=28, 832.10875pt x 339.2675pt>
+<images/lsqunit.png, id=61, 832.10875pt x 339.2675pt>
 File: images/lsqunit.png Graphic file (type png)
  <use images/lsqunit.png>
-Package pdftex.def Info: images/lsqunit.png used on input line 272.
+Package pdftex.def Info: images/lsqunit.png used on input line 315.
 (pdftex.def)             Requested size: 469.75499pt x 191.53117pt.
 
-<images/restqunit.png, id=29, 823.075pt x 434.62375pt>
+[10 <./images/backgroundqunit.png> <./images/biqunit.png>]
+<images/restqunit.png, id=67, 823.075pt x 434.62375pt>
 File: images/restqunit.png Graphic file (type png)
 
 <use images/restqunit.png>
-Package pdftex.def Info: images/restqunit.png used on input line 278.
+Package pdftex.def Info: images/restqunit.png used on input line 321.
 (pdftex.def)             Requested size: 469.75499pt x 248.05643pt.
 
-<images/utilsqunit.png, id=30, 837.1275pt x 318.18875pt>
+<images/utilsqunit.png, id=68, 837.1275pt x 318.18875pt>
 File: images/utilsqunit.png Graphic file (type png)
 
 <use images/utilsqunit.png>
-Package pdftex.def Info: images/utilsqunit.png used on input line 284.
+Package pdftex.def Info: images/utilsqunit.png used on input line 327.
 (pdftex.def)             Requested size: 469.75499pt x 178.54861pt.
- <images/pebble.jpg, id=31, 1525.7pt x 2698.08pt>
+ [11 <./images/lsqunit.png> <./images/restqunit.png>] [12 <./images/utilsqunit.
+png>] [13] [14]
+<images/pebble.jpg, id=85, 1525.7pt x 2698.08pt>
 File: images/pebble.jpg Graphic file (type jpg)
-
-<use images/pebble.jpg>
-Package pdftex.def Info: images/pebble.jpg used on input line 303.
+ <use images/pebble.jpg>
+Package pdftex.def Info: images/pebble.jpg used on input line 376.
 (pdftex.def)             Requested size: 234.87749pt x 415.3574pt.
- [3 <./images/homepage.png>] [4 <./images/bcpage.png> <./images/populatebcpage.
-png>] [5 <./images/userpage.png> <./images/modalpage.png>] [6 <./images/loginpa
-ge.png> <./images/createbc.png>] [7 <./images/confbc.png> <./images/chromenotif
-ication.png> <./images/operanotification.png>] [8 <./images/twitterbc.png> <./i
-mages/backgroundqunit.png>] [9 <./images/biqunit.png> <./images/lsqunit.png>] [
-10 <./images/restqunit.png> <./images/utilsqunit.png>]
-<images/pebblesh.png, id=73, 144.54pt x 168.63pt>
+
+<images/pebblesh.png, id=86, 144.54pt x 168.63pt>
 File: images/pebblesh.png Graphic file (type png)
  <use images/pebblesh.png>
-Package pdftex.def Info: images/pebblesh.png used on input line 309.
+Package pdftex.def Info: images/pebblesh.png used on input line 382.
 (pdftex.def)             Requested size: 117.43874pt x 137.01152pt.
 
-[11] [12 <./images/pebble.jpg> <./images/pebblesh.png>] [13]
+[15 <./images/pebble.jpg>] [16 <./images/pebblesh.png>] [17]
 
 AED: lastpage setting LastPage
-[14] (./report.aux)
+[18] (./report.aux)
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 8044 strings out of 493117
- 136449 string characters out of 6135432
- 530590 words of memory out of 5000000
- 11411 multiletter control sequences out of 15000+600000
+ 8094 strings out of 493117
+ 137128 string characters out of 6135432
+ 529957 words of memory out of 5000000
+ 11457 multiletter control sequences out of 15000+600000
  9316 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,10n,48p,812b,945s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,10n,48p,812b,943s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
@@ -576,10 +614,10 @@ usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/l
 ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/lo
 cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (14 pages, 1419683 bytes).
+Output written on report.pdf (18 pages, 1439876 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 130 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

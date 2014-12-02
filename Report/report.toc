@@ -10,28 +10,70 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Module Diagrams}{3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Program Operation}{3}
+\contentsline {subsubsection}{Program Operation}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{CS-Alumni Rails Application}{11}
+\contentsline {subsection}{CS-Alumni Rails Application}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{New Additions}{11}
+\contentsline {subsubsection}{New Additions}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Modifications}{11}
+\contentsline {paragraph}{New Database View}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Communication Between Applications}{11}
+\contentsline {paragraph}{New RESTful interface}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{RESTful Web Interfaces}{11}
+\contentsline {subsubsection}{Modifications}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Data Flow Diagrams}{11}
+\contentsline {paragraph}{Changes to Seeds}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Application Testing}{11}
+\contentsline {paragraph}{Changes to Broadcasts}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{QUnit Tests}{11}
+\contentsline {paragraph}{Changes to Security}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{CS-Alumni Rails Application}{11}
+\contentsline {paragraph}{Changes to REST implementation}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Communication Between Applications}{11}
+\contentsline {paragraph}{Changes to Users}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Evaluation}{11}
+\contentsline {subsection}{Communication Between Applications}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Something Extra}{11}
+\contentsline {subsubsection}{RESTful Web Interfaces}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Data Flow Diagrams}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Application Testing}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{QUnit Tests}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{CS-Alumni Chrome Browser Extension}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Javascript}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Chrome Extensions API}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Bootstrap}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{jQuery}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moment.js}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Alertify.js}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Qunit}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{CS-Alumni Rails Application}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ruby}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ruby on rails}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Qunit}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{Communication Between Applications}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{RESTful Interfaces}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Cors}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Basic Authentication}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Evaluation}{14}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Something Extra}{15}

@@ -29,6 +29,7 @@
 \usepackage{graphicx} % Required for including pictures
 \usepackage{biblatex}
 \usepackage{caption}
+\usepackage{float}
 
 
 \bibliography{main.bib}
@@ -156,6 +157,16 @@
 %-- Document Summary.
 \section{Document Summary}
 
+\iffalse
+ _________    ________      ________      ________     
+|\___   ___\ |\   __  \    |\   ___ \    |\   __  \    
+\|___ \  \_| \ \  \|\  \   \ \  \_|\ \   \ \  \|\  \   
+     \ \  \   \ \  \\\  \   \ \  \ \\ \   \ \  \\\  \  
+      \ \  \   \ \  \\\  \   \ \  \_\\ \   \ \  \\\  \ 
+       \ \__\   \ \_______\   \ \_______\   \ \_______\
+        \|__|    \|_______|    \|_______|    \|_______|                                               
+\fi   
+
 %-- Application Design.
 \section{Application Design}
 
@@ -163,74 +174,103 @@
 
 \subsubsection{Rational}
 
+My rational behind deciding to developing a browser extension for this project, was that they have been a technology that I have been following for a while and I have not seen them used that regularly for small little applications that interface with a bigger application.\\
+\\
+Another reason for my choice to develop a browser extension was that I wanted to learn about implementing some of the more advanced features within the Chrome SDK for example the use of 'Background Pages' which are used to keep a task running in the background while the extension is closed.\\
+\\
+One of the newer features within the Chrome SDK had also caught my attention in the weeks before starting this assignment was the use of Chrome desktop notifications where you can create a notification within your application that will be displayed to the end user via the Chrome UI's notification draw.\\
+\\
+I wanted to see if it was possible to encapsulate some of the key management features of the CS-Alumni application into an attractive and well presented browser extension that also notified the user of any new broadcasts that had been made.
+
 \subsubsection{Module Diagrams}
 
+\iffalse
+ _________    ________      ________      ________     
+|\___   ___\ |\   __  \    |\   ___ \    |\   __  \    
+\|___ \  \_| \ \  \|\  \   \ \  \_|\ \   \ \  \|\  \   
+     \ \  \   \ \  \\\  \   \ \  \ \\ \   \ \  \\\  \  
+      \ \  \   \ \  \\\  \   \ \  \_\\ \   \ \  \\\  \ 
+       \ \__\   \ \_______\   \ \_______\   \ \_______\
+        \|__|    \|_______|    \|_______|    \|_______|                                               
+\fi                                                   
+
+
+\newpage
 \subsubsection{Program Operation}
 
-\begin{figure}[!htbp]
+When the user opens the browser extension they will be presented with the home screen, this shows a small blurb about the application along with a disclaimer.\\
+\\
+Due to this being an assignment this is essentially a development version of the browser extension thus I have included a link to the Unit tests on the home page to make it easily accessible during the development and testing of the application, if this extension was intended to be released as production code this link would be removed or turned off within the configuration.\\
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{homepage}
+\includegraphics[width=0.7\textwidth]{homepage}
 \caption{The screenshot above is the landing screen for the browser extension.}
 \end{figure}
 
-\begin{figure}[!htbp]
+\newpage
+From the home page the user can navigate to the 'Broadcasts' tab, in the figure captioned there is no broadcasts available to the user so they are show a message that says that there is no broadcasts.\\
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{bcpage}
+\includegraphics[width=0.7\textwidth]{bcpage}
 \caption{Above we see the broadcasts screen with no broadcasts available.}
 \end{figure}
 
-\begin{figure}[!htbp]
+Again below we see the 'Broadcasts' tab this time we see how the page appears when there is broadcasts.
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{populatebcpage}
+\includegraphics[width=0.7\textwidth]{populatebcpage}
 \caption{This is what the populated broadcast screen looks like.}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{userpage}
 \caption{Here we have a screenshot of the user's screen.}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{modalpage}
 \caption{Above we have a screenshot showing the appearance of the modal window we used to edit the user information.}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{loginpage}
 \caption{This is a screenshot of the login screen.}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.75\textwidth]{createbc}
-\caption{This is the unit tests for the background.js module for the browser extension.}
+\caption{Creating a broadcast within the CSA application. Note: The destination list differs from the standard CSA application.}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.75\textwidth]{confbc}
-\caption{This is the unit tests for the background.js module for the browser extension.}
+\caption{Here is the confirmation that a new broadcast has been created.}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{chromenotification}
-\caption{This is the unit tests for the background.js module for the browser extension.}
+\caption{Here is a Chrome notification showing the latest broadcast.}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{operanotification}
-\caption{This is the unit tests for the background.js module for the browser extension.}
+\caption{Same again but for Opera this time just to show multi platform support.}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{twitterbc}
-\caption{This is the unit tests for the background.js module for the browser extension.}
+\caption{Proof that the broadcasts still get sent to Twitter.}
 \end{figure}
 
 
@@ -238,8 +278,21 @@
 
 \subsubsection{New Additions}
 
+\paragraph{New Database View}
+
+\paragraph{New RESTful interface}
+
 \subsubsection{Modifications}
 
+\paragraph{Changes to Seeds}
+
+\paragraph{Changes to Broadcasts}
+
+\paragraph{Changes to Security}
+
+\paragraph{Changes to REST implementation}
+
+\paragraph{Changes to Users}
 
 \subsection{Communication Between Applications}
 
@@ -249,62 +302,102 @@
 
 
 %-- Application Testing.
+\newpage
 \section{Application Testing}
 
 \subsection{QUnit Tests}
 
 
-
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{backgroundqunit}
 \caption{This is the unit tests for the background.js module for the browser extension.}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{biqunit}
 \caption{This images shows the browserinfo.js module completing its tests successfully.}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{lsqunit}
 \caption{This shows the LocalStorage.js module passing all its unit tests.}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{restqunit}
 \caption{Above we see the RestToolKit.js module successfully completing all its unit tests.}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{utilsqunit}
 \caption{Included above we see the Utils.js module efficiently complete all of its unit tests.}
 \end{figure}
 
 %-- Technologies.
+\newpage
 \section*{Technologies}
+
+\subsection{CS-Alumni Chrome Browser Extension}
+
+\subsubsection{Javascript}
+
+\subsubsection{Chrome Extensions API}
+
+\subsubsection{Bootstrap}
+
+\subsubsection{jQuery}
+
+\subsubsection{Moment.js}
+
+\subsubsection{Alertify.js}
+
+\subsubsection{Qunit}
 
 \subsection{CS-Alumni Rails Application}
 
+\subsubsection{Ruby}
+
+\subsubsection{Ruby on rails}
+
+\subsubsection{Qunit}
+
 \subsection{Communication Between Applications}
 
+\subsubsection{RESTful Interfaces}
+
+\subsubsection{Cors}
+
+\subsubsection{Basic Authentication}
 
 %-- Evaluation.
+\newpage
 \section{Evaluation}
 
+\iffalse
+ _________    ________      ________      ________     
+|\___   ___\ |\   __  \    |\   ___ \    |\   __  \    
+\|___ \  \_| \ \  \|\  \   \ \  \_|\ \   \ \  \|\  \   
+     \ \  \   \ \  \\\  \   \ \  \ \\ \   \ \  \\\  \  
+      \ \  \   \ \  \\\  \   \ \  \_\\ \   \ \  \\\  \ 
+       \ \__\   \ \_______\   \ \_______\   \ \_______\
+        \|__|    \|_______|    \|_______|    \|_______|                                               
+\fi   
+
+\newpage
 \section{Something Extra}
 %-- Talk about pebble app here.
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{pebble}
 \caption{Above is a image of the Pebble smartwatch running the CSA application.}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.25\textwidth]{pebblesh}
 \caption{This is a screenshot taken from the Pebble smartwatch.}
