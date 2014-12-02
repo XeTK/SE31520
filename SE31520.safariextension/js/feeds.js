@@ -77,8 +77,9 @@ feeds.loadData = function(reload) {
 		$('#buttons').hide();
 	}
 
+	// If there is no broadcasts then show a nice message for the end user to show that there is no broadcasts.
 	if (utils.pages.length == 0) {
-		$(this.bCastID).append('<h2>There has not been any broadcast\'s yet!</h2>');
+		$(this.bCastID).append('<h2>There has not been any broadcasts yet!</h2>');
 	}
 
 }

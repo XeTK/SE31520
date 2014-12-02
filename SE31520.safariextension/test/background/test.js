@@ -74,7 +74,11 @@ QUnit.test(
 		// Reload the data from the local storage.
 		var updated = LocalStorage.load(key);
 
+		// Convert to some easier to compair objects.
+		var tCD = JSON.stringify(tempCurData);
+		var up  = JSON.stringify(updated);
+
 		// Check we have more than one objects.
-		assert.ok(updated.length > 0, "Data did not get stored correctly.");
+		assert.ok(tCD == up, "Data did not get stored correctly.");
 	}
 );

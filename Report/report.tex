@@ -26,11 +26,13 @@
 \usepackage{fancyhdr} % Required for custom headers
 \usepackage{lastpage} % Required to determine the last page for the footer
 \usepackage{extramarks} % Required for headers and footers
-\usepackage{graphicx} % Required to insert images
+\usepackage{graphicx} % Required for including pictures
 \usepackage{biblatex}
+\usepackage{caption}
 
 
 \bibliography{main.bib}
+\graphicspath{ {images/} }
 
 % Margins
 \topmargin=-0.45in
@@ -163,6 +165,74 @@
 
 \subsubsection{Module Diagrams}
 
+\subsubsection{Program Operation}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{homepage}
+\caption{The screenshot above is the landing screen for the browser extension.}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{bcpage}
+\caption{Above we see the broadcasts screen with no broadcasts available.}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{populatebcpage}
+\caption{This is what the populated broadcast screen looks like.}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{userpage}
+\caption{Here we have a screenshot of the user's screen.}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{modalpage}
+\caption{Above we have a screenshot showing the appearance of the modal window we used to edit the user information.}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{loginpage}
+\caption{This is a screenshot of the login screen.}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.75\textwidth]{createbc}
+\caption{This is the unit tests for the background.js module for the browser extension.}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.75\textwidth]{confbc}
+\caption{This is the unit tests for the background.js module for the browser extension.}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{chromenotification}
+\caption{This is the unit tests for the background.js module for the browser extension.}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{operanotification}
+\caption{This is the unit tests for the background.js module for the browser extension.}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{twitterbc}
+\caption{This is the unit tests for the background.js module for the browser extension.}
+\end{figure}
+
 
 \subsection{CS-Alumni Rails Application}
 
@@ -181,6 +251,40 @@
 %-- Application Testing.
 \section{Application Testing}
 
+\subsection{QUnit Tests}
+
+
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{backgroundqunit}
+\caption{This is the unit tests for the background.js module for the browser extension.}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{biqunit}
+\caption{This images shows the browserinfo.js module completing its tests successfully.}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{lsqunit}
+\caption{This shows the LocalStorage.js module passing all its unit tests.}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{restqunit}
+\caption{Above we see the RestToolKit.js module successfully completing all its unit tests.}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{utilsqunit}
+\caption{Included above we see the Utils.js module efficiently complete all of its unit tests.}
+\end{figure}
+
 %-- Technologies.
 \section*{Technologies}
 
@@ -194,6 +298,17 @@
 
 \section{Something Extra}
 %-- Talk about pebble app here.
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{pebble}
+\caption{Above is a image of the Pebble smartwatch running the CSA application.}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.25\textwidth]{pebblesh}
+\caption{This is a screenshot taken from the Pebble smartwatch.}
+\end{figure}
 
 \newpage
 %-- Attributions.

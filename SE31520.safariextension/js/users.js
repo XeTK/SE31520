@@ -126,6 +126,7 @@ users.loadData = function(reload) {
 		$('#buttons').hide();
 	}
 
+	// If the page fails to load for what ever reason. or there really is no users!!
 	if (utils.pages.length == 0) {
 		$(this.userID).append('<h2>Odd their does not seem to be any users.<br>Pretty sure there must be if you logged in...</h2>');
 	}
