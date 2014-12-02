@@ -31,6 +31,7 @@
 \usepackage{caption}
 \usepackage{float}
 \usepackage[none]{hyphenat}
+\usepackage{hyperref}
 
 
 \bibliography{main.bib}
@@ -384,19 +385,55 @@ Just to confirm that this is a real broadcast and has not broken any of the othe
 
 \subsection{CS-Alumni Chrome Browser Extension}
 
-\subsubsection{Javascript}
+\subsubsection{HTML}
+
+HTML is a markup language that dictates the layout of the screens that are shown within the browser extension it is the skeleton in which the content is placed and displayed to the end user, it has no style to start with it just is the structure of the screen.
+
+\subsubsection{CSS}
+
+CSS works tangent with HTML and gives the skeleton of a document some style, it is responsible for colour schemes along with the positioning of various elements on the page and how they are displayed.
+
+\subsubsection{JavaScript}
+
+Is the programing language that the browser extension has been written in, Google's definition for JavaScript is 'an object-oriented computer programming language commonly used to create interactive effects within web browsers.'.\\
+\\
+JavaScript is an integral part of creating an interactive experience for web based content. It interacts with the various libraries we require to make the application work as intended. It works together with the other web based web technologies within the browser extension to give us total control of the content that is presented on the screen.
 
 \subsubsection{Chrome Extensions API}
 
+This is the framework that we must adhere to to make the 3 main web based technologies (HTML, CSS and JavaScript) work as a browser extension, the Chrome Extensions API bundles all of the technologies we need to create a viable and fully working browser extension, it takes in the web technologies plus a few extra configuration files to generate a browser extension that will do what the developer intended.
+
 \subsubsection{Bootstrap}
+
+Bootstrap I see as an essential tool to creating a modern looking website, it unifies the appearance of the application along with giving the ability to make the pages adaptive and work on any screen size. This means that if we were to run the browser extension as a web page it would work on any screen size or any resolution.\\
+\\
+I choose to not use the standard Bootstrap theme opting to use a modified one that was supplied by \url{http://bootswatch.com/} (Theme name is Yeti) I choose to modify this further and make it try and more closely fit the Aberystwyth colour scheme.
 
 \subsubsection{jQuery}
 
+Along with Bootstrap I also see jQuery as an essential library to be able to create modern and feature full web applications (If I remember correctly all of the other JavaScript libraries I am using rely on jQuery).\\
+\\
+Within the application I use jQuery to handle many bits of the functionality within the screens, the key points being aJax requests this enables very simple REST type responses to the server without much hassle, I also use it to edit DOM elements in real time and make them display the information I want them to display in real time.\\
+\\
+The jQuery library is so vast that I use a lot of the trivial functions for doing all sorts of other work as the method calls and work that is required is greatly reduced.
+
 \subsubsection{Moment.js}
+
+This library simplifies interaction with date objects, its is well known that is quite difficult working with date objects within JavaScript, this library takes all the pain out of modifying the dates and putting them into a format that developer actually wants.\\
+\\
+I use it for the broadcast times to make them display in the correct way, the objects have been converted into a JSON string and when they are converted back they stay as a string I use moment to convert theses strings into a viable date object that then can be displayed on the screen.
 
 \subsubsection{Alertify.js}
 
+Alertify is a JavaScript library that makes modern user alerts, this gives well designed and easy to use dialogs to present information to the user.\\
+\\ 
+I have used it within the application to notify when a user has not been logged in and redirect them to the login page, along with showing a message confirming that there settings have been saved successfully.
+
 \subsubsection{Qunit}
+
+Due to doing a test driving development strategy to developing this browser extension I needed a unit test framework for JavaScript, it is developed by the same developers as jQuery and seems to have strong industry recognition.\\
+\\
+I have used this for all my unit testing for the JavaScript libraries that I have written for this project, It has a simple and efficient way of testing the functions along with having a simple and powerful syntax that allows tests to be written without much code.
 
 \subsection{CS-Alumni Rails Application}
 

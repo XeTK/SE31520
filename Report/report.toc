@@ -1,79 +1,83 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Document Summary}{3}
+\contentsline {section}{Document Summary}{3}{section*.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Application Design}{3}
+\contentsline {section}{Application Design}{3}{section*.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{CS-Alumni Chrome Browser Extension}{3}
+\contentsline {subsection}{CS-Alumni Chrome Browser Extension}{3}{section*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Rational}{3}
+\contentsline {subsubsection}{Rational}{3}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Module Diagrams}{3}
+\contentsline {subsubsection}{Module Diagrams}{4}{section*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Program Operation}{4}
+\contentsline {subsubsection}{Program Operation}{5}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{CS-Alumni Rails Application}{9}
+\contentsline {subsection}{CS-Alumni Rails Application}{10}{section*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{New Additions}{9}
+\contentsline {subsubsection}{New Additions}{10}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{New Database View}{9}
+\contentsline {paragraph}{New Database View}{10}{section*.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{New RESTful interface}{9}
+\contentsline {paragraph}{New RESTful interface}{10}{section*.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Modifications}{9}
+\contentsline {subsubsection}{Modifications}{10}{section*.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Changes to Seeds}{9}
+\contentsline {paragraph}{Changes to Seeds}{10}{section*.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Changes to Broadcasts}{9}
+\contentsline {paragraph}{Changes to Broadcasts}{10}{section*.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Changes to Security}{9}
+\contentsline {paragraph}{Changes to Security}{10}{section*.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Changes to REST implementation}{9}
+\contentsline {paragraph}{Changes to REST implementation}{10}{section*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Changes to Users}{9}
+\contentsline {paragraph}{Changes to Users}{10}{section*.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Communication Between Applications}{9}
+\contentsline {subsection}{Communication Between Applications}{10}{section*.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{RESTful Web Interfaces}{9}
+\contentsline {subsubsection}{RESTful Web Interfaces}{10}{section*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Data Flow Diagrams}{9}
+\contentsline {subsubsection}{Data Flow Diagrams}{10}{section*.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Application Testing}{10}
+\contentsline {section}{Application Testing}{11}{section*.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{QUnit Tests}{10}
+\contentsline {subsection}{QUnit Tests}{11}{section*.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{CS-Alumni Chrome Browser Extension}{13}
+\contentsline {subsection}{CS-Alumni Chrome Browser Extension}{14}{section*.40}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Javascript}{13}
+\contentsline {subsubsection}{HTML}{14}{section*.41}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Chrome Extensions API}{13}
+\contentsline {subsubsection}{CSS}{14}{section*.42}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Bootstrap}{13}
+\contentsline {subsubsection}{JavaScript}{14}{section*.43}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{jQuery}{13}
+\contentsline {subsubsection}{Chrome Extensions API}{14}{section*.44}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Moment.js}{13}
+\contentsline {subsubsection}{Bootstrap}{14}{section*.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Alertify.js}{13}
+\contentsline {subsubsection}{jQuery}{14}{section*.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Qunit}{13}
+\contentsline {subsubsection}{Moment.js}{15}{section*.47}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{CS-Alumni Rails Application}{13}
+\contentsline {subsubsection}{Alertify.js}{15}{section*.48}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Ruby}{13}
+\contentsline {subsubsection}{Qunit}{15}{section*.49}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Ruby on rails}{13}
+\contentsline {subsection}{CS-Alumni Rails Application}{15}{section*.50}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Qunit}{13}
+\contentsline {subsubsection}{Ruby}{15}{section*.51}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Communication Between Applications}{13}
+\contentsline {subsubsection}{Ruby on rails}{15}{section*.52}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{RESTful Interfaces}{13}
+\contentsline {subsubsection}{Qunit}{15}{section*.53}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{CORS}{13}
+\contentsline {subsection}{Communication Between Applications}{15}{section*.54}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Basic Authentication}{13}
+\contentsline {subsubsection}{RESTful Interfaces}{15}{section*.55}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Evaluation}{14}
+\contentsline {subsubsection}{CORS}{15}{section*.56}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Something Extra}{15}
+\contentsline {subsubsection}{Basic Authentication}{15}{section*.57}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Evaluation}{16}{section*.58}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Something Extra}{17}{section*.59}
