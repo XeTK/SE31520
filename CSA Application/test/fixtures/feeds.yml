@@ -1,0 +1,17 @@
+one:
+  name: twitter
+
+two:
+  name: facebook
+
+three:
+  name: email
+
+four:
+  name: RSS
+
+five:
+  name: atom
+
+six:
+  name: extension

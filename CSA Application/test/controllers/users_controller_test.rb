@@ -3,9 +3,12 @@ require 'test_helper'
 class UsersControllerTest < ActionController::TestCase
   setup do
     @user = users(:one)
+    @user_details = user_details(:one)
+    @request.session[:user_id] = @user.id
   end
 
   test "should get index" do
+    @request.env['HTTPS'] = nil
     get :index
     assert_response :success
     assert_not_nil assigns(:users)
@@ -30,7 +33,7 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   test "should show user" do
-    get :show, id: @user
+    get :show, id: @user.id
     assert_response :success
   end
 
@@ -40,7 +43,7 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   test "should update user" do
-    patch :update, id: @user, user: { email: @user.email, firstname: @user.firstname, grad_year: @user.grad_year, jobs: @user.jobs, phone: @user.phone, surname: @user.surname }
+    patch :update, id: @user.id, user: { id: @user.id, email: @user.email, firstname: @user.firstname, grad_year: @user.grad_year, jobs: @user.jobs, phone: @user.phone, surname: @user.surname }
     assert_redirected_to "#{user_path(assigns(:user))}?page=1"
   end
 
