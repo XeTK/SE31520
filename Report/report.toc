@@ -72,16 +72,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Ruby on rails}{17}{section*.55}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Rack Middleware}{17}{section*.56}
+\contentsline {subsubsection}{Rack CORS Middleware}{17}{section*.56}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Communication Between Applications}{17}{section*.57}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{RESTful Interfaces}{17}{section*.58}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{CORS}{17}{section*.59}
+\contentsline {subsubsection}{Basic Authentication}{17}{section*.59}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Basic Authentication}{17}{section*.60}
+\contentsline {section}{Evaluation}{18}{section*.60}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Evaluation}{18}{section*.61}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Something Extra}{19}{section*.62}
+\contentsline {section}{Something Extra}{19}{section*.61}

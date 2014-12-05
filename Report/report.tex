@@ -37,6 +37,8 @@
 \bibliography{main.bib}
 \graphicspath{ {images/} }
 
+\addbibresource{}
+
 % Margins
 \topmargin=-0.45in
 \evensidemargin=0in
@@ -152,9 +154,6 @@
 \tableofcontents
 \newpage
 
-
-\nocite{bara:2013:online}
-\nocite{saa:2013:online}
 
 %-- Document Summary.
 \section{Document Summary}
@@ -457,23 +456,35 @@ I have used this for all my unit testing for the JavaScript libraries that I hav
 
 \subsubsection{Ruby}
 
-Ruby is a object orientated program language that is dynamically typed which means there is no strict types for objects
+Ruby is a object orientated program language that is dynamically typed which means there is no strict types for objects, development of Ruby was started in the early 1990's as an alternative to Python and Perl which it is heavily influenced by.\\
+\\
+We needed to use Ruby because the application we were supplied was written using the Ruby on Rails which I will cover in the next section
 
 \subsubsection{Ruby on rails}
 
-Ruby on Rails (RoR) is a web framework that allows the use of the Ruby programing language to create web based applications, it has a strong modularity and is easily extended through the use of Ruby Gems which are small library that can be imported to allow extra functionality within the project.
+Ruby on Rails (RoR) is a web framework that allows the use of the Ruby programing language to create web based applications, it has a strong modularity and is easily extended through the use of Ruby Gems which are small library that can be imported to allow extra functionality within the project. RoR is built on strong model view controller principles, this tries to segregate the code out into the functional modules that they are really responsible for, in theory this means that the code should be more modular and thus more portable work in different situations.\\
+\\
+The CS-Alumni application that we were given as a starting point for this project was written in RoR and uses multiple gems to accomplish the functionality that was desired by its original developer.
 
-The CS-Alumni application that we were given as a starting 
+\subsubsection{Rack CORS Middleware}
 
-\subsubsection{Rack Middleware}
+Although the RoR CS-Alumni application used many Ruby Gems already, I had to add in the use an external 3rd party library called 'Rack CORS Middleware' \cite[see reference][page \pageref{LastPage}]{cors:2014:online}.\\
+\\
+This enabled the use of cross domain REST requests without this being enabled it would be impossible to-do cross domain style interactions.
 
 \subsection{Communication Between Applications}
 
 \subsubsection{RESTful Interfaces}
 
-\subsubsection{CORS}
+For interaction between the CS-Alumni application and my browser extension the most viable method obtaining communication between the two application is to use RESTful web services.\\
+\\
+REST uses the standard HTTP protocol and allows the ability to send various data over text formats(usually JSON or XML) the application should be able to request data and be returned back to over a few HTTP requests. \\
+\\
+Please follow theses references \cite[see reference][page \pageref{LastPage}]{bara:2013:online}, \cite[see reference][page \pageref{LastPage}]{saa:2013:online} for the guides I read to understand how create new RESTful interfaces within the CS-Alumni application.
 
 \subsubsection{Basic Authentication}
+
+To authenticate the browser extension with the CS-Alumni application it was appropriate to use basic authentication to verify if the user had permission to view the data within the application, this basically consists of encoding the username and password using a base64 encoder, and attaching the encoded password as an extra header on the HTTP requests that are being sent to the server to ensure the user is authenticated. \cite[see reference][page \pageref{LastPage}]{wp:2014:online}
 
 %-- Evaluation.
 \newpage

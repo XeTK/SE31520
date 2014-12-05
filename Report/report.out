@@ -26,10 +26,9 @@
 \BOOKMARK [2][-]{section*.53}{CS-Alumni Rails Application}{section*.33}% 26
 \BOOKMARK [3][-]{section*.54}{Ruby}{section*.53}% 27
 \BOOKMARK [3][-]{section*.55}{Ruby on rails}{section*.53}% 28
-\BOOKMARK [3][-]{section*.56}{Rack Middleware}{section*.53}% 29
+\BOOKMARK [3][-]{section*.56}{Rack CORS Middleware}{section*.53}% 29
 \BOOKMARK [2][-]{section*.57}{Communication Between Applications}{section*.33}% 30
 \BOOKMARK [3][-]{section*.58}{RESTful Interfaces}{section*.57}% 31
-\BOOKMARK [3][-]{section*.59}{CORS}{section*.57}% 32
-\BOOKMARK [3][-]{section*.60}{Basic Authentication}{section*.57}% 33
-\BOOKMARK [1][-]{section*.61}{Evaluation}{}% 34
-\BOOKMARK [1][-]{section*.62}{Something Extra}{}% 35
+\BOOKMARK [3][-]{section*.59}{Basic Authentication}{section*.57}% 32
+\BOOKMARK [1][-]{section*.60}{Evaluation}{}% 33
+\BOOKMARK [1][-]{section*.61}{Something Extra}{}% 34

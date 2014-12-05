@@ -19,6 +19,14 @@
 
 \refsection{0}
   \sortlist{entry}{nty}
+    \entry{wp:2014:online}{online}{}
+      \field{sortinit}{B}
+      \field{labeltitle}{Basic access authentication}
+      \field{title}{Basic access authentication}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Basic_access_authentication
+      \endverb
+    \endentry
     \entry{saa:2013:online}{online}{}
       \name{labelname}{1}{}{%
         {{hash=9b4f6fe43737e24424bebe57aac9a550}{McDonnell}{M\bibinitperiod}{Mark}{M\bibinitperiod}{}{}{}{}}%
@@ -53,6 +61,24 @@
       \field{year}{2013}
       \verb{url}
       \verb http://collectiveidea.com/blog/archives/2013/06/13/building-awesome-rails-apis-part-1/
+      \endverb
+    \endentry
+    \entry{cors:2014:online}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=abe4b257a567186255c8630f02b01ddc}{Yu}{Y\bibinitperiod}{Calvin}{C\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=abe4b257a567186255c8630f02b01ddc}{Yu}{Y\bibinitperiod}{Calvin}{C\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{abe4b257a567186255c8630f02b01ddc}
+      \strng{fullhash}{abe4b257a567186255c8630f02b01ddc}
+      \field{sortinit}{Y}
+      \field{labeltitle}{Rack CORS Middleware}
+      \field{month}{01}
+      \field{title}{Rack CORS Middleware}
+      \field{year}{2014}
+      \verb{url}
+      \verb https://github.com/cyu/rack-cors
       \endverb
     \endentry
   \endsortlist
