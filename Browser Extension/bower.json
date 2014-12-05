@@ -1,0 +1,26 @@
+{
+  "name": "SE31520",
+  "version": "0.0.0",
+  "homepage": "",
+  "authors": [
+    "Tom Rosier tom.rosier92@gmail.com"
+  ],
+  "description": "Browser extension for CSA application",
+  "main": "manifest.json",
+  "keywords": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.0",
+    "jquery": "~2.1.1",
+    "qunit": "~1.15.0",
+    "moment": "~2.8.3",
+    "alertify.js": "~0.3.11"
+  }
+}

@@ -176,19 +176,19 @@
 
 \subsubsection{Rational}
 
-My rational behind deciding to developing a browser extension for this project, was that they have been a technology that I have been following for a while and I have not seen them used that regularly for small little applications that interface with a bigger application.\\
+My rational behind deciding to develop a browser extension for this project, was that this has been a technology that I have been following for a while and I have not seen it used that regularly for small little applications that interface with a bigger application.\\
 \\
-Another reason for my choice to develop a browser extension was that I wanted to learn about implementing some of the more advanced features within the Chrome SDK for example the use of 'Background Pages' which are used to keep a task running in the background while the extension is closed.\\
+Another reason for my choice to develop a browser extension was that I wanted to learn about implementing some of the more advanced features within the Chrome SDK; for example the use of 'Background Pages' which are used to keep a task running in the background while the extension is closed.\\
 \\
-One of the newer features within the Chrome SDK had also caught my attention in the weeks before starting this assignment was the use of Chrome desktop notifications where you can create a notification within your application that will be displayed to the end user via the Chrome UI's notification draw.\\
+One of the newer features within the Chrome SDK that had also caught my attention in the weeks before starting this assignment was the use of Chrome desktop notifications where you can create a notification within your application that will be displayed to the end user via the Chrome UI's notification draw.\\
 \\
 I wanted to see if it was possible to encapsulate some of the key management features of the CS-Alumni application into an attractive and well presented browser extension that also notified the user of any new broadcasts that had been made.\\
 \\
-Why did I choose to develop a Chrome extension over a Firefox, Safari or Internet Explorer, the main reason was due to Chris Loftus's preference of Chrome over the other browsers. In addition to that I felt that due to developing for Chrome also meant that the code will work without modification in Opera this a bonus in the real world as it means we can support a greater population of users without investing more money into development.\\
+Why did I choose to develop a Chrome extension over a Firefox, Safari or Internet Explorer? The main reason was due to Chris Loftus's preference of Chrome over the other browsers. In addition to that I felt that due to developing for Chrome this also meant that the code will work without modification in Opera. This is a bonus in the real world as it means we can support a greater population of users without investing more money into development.\\
 \\
 I also feel that Chrome has a much nicer development environment for developing browser extensions over its competitors, along with having some newer and more unique features that allow the Chrome based extension to stand out.\\
 \\
-If this was a real world product it would not take that much resources to port the extension to work on Firefox and Safari aswell but this out of the scope of this assignment.
+If this was a real world product it would not take many resources to port the extension to work on Firefox and Safari as well, but this was not within the scope of this assignment.
 
 \newpage
 \subsubsection{Module Diagrams}
@@ -207,9 +207,9 @@ If this was a real world product it would not take that much resources to port t
 \newpage
 \subsubsection{Program Operation}
 
-When the user opens the browser extension they will be presented with the home screen, this shows a small blurb about the application along with a disclaimer.\\
+When the user opens the browser extension they will be presented with the home screen. This shows a brief summary about the application along with a disclaimer.\\
 \\
-Due to this being an assignment this is essentially a development version of the browser extension thus I have included a link to the Unit tests on the home page to make it easily accessible during the development and testing of the application, if this extension was intended to be released as production code this link would be removed or turned off within the configuration.\\
+Due to this being an assignment this is essentially a development version of the browser extension. So I have included a link to the Unit tests on the home page to make it easily accessible during the development and testing of the application. If this extension was intended to be released as production code this link would be removed or turned off within the configuration.\\
 
 \begin{figure}[H]
 \centering
@@ -218,7 +218,7 @@ Due to this being an assignment this is essentially a development version of the
 \end{figure}
 
 \newpage
-From the home page the user can navigate to the 'Broadcasts' tab, in the figure captioned there is no broadcasts available to the user so they are show a message that says that there is no broadcasts.\\
+From the home page the user can navigate to the 'Broadcasts' tab. In the figure captioned there is no broadcasts available to the user so they are shown a message that says that there are no broadcasts.\\
 
 \begin{figure}[H]
 \centering
@@ -226,7 +226,7 @@ From the home page the user can navigate to the 'Broadcasts' tab, in the figure 
 \caption{Above we see the broadcasts screen with no broadcasts available.}
 \end{figure}
 
-Again below we see the 'Broadcasts' tab this time we see how the page appears when there is broadcasts.
+Again below we see the 'Broadcasts' tab. This time we see how the page appears when there are broadcasts.
 
 \begin{figure}[H]
 \centering
@@ -234,7 +234,7 @@ Again below we see the 'Broadcasts' tab this time we see how the page appears wh
 \caption{This is what the populated broadcast screen looks like.}
 \end{figure}
 
-This is the 'users' tab of the browser extension here the user can view a specific users details and edit there information if it is deemed appropriate.
+This is the 'users' tab of the browser extension where the user can view a specific user's details and edit their information if it is deemed appropriate.
 
 \begin{figure}[H]
 \centering
@@ -242,7 +242,7 @@ This is the 'users' tab of the browser extension here the user can view a specif
 \caption{Here we have a screenshot of the user's screen.}
 \end{figure}
 
-When the edit button has pressed on the a specific user it shows this modal window that allows the user to edit the details that are kept on the current user they are editing.
+When the edit button has been selected for a specific user it shows this modal window that allows the user to edit the details that are kept on the current user they are editing.
 
 \begin{figure}[H]
 \centering
@@ -259,7 +259,7 @@ The 'Login' tab is where the user enters there login credentials that will be us
 \caption{This is a screenshot of the login screen.}
 \end{figure}
 
-In the screenshot below i have created a new broadcast within the CS-Alumni application to to showcase the notification features within the browser extension.\\
+In the screenshot below I have created a new broadcast within the CS-Alumni application to showcase the notification features within the browser extension.\\
 \\
 Note: The destination list differs from the standard CSA application. They have been modified to remove the networks that do not work along with adding in the functionality to target the browser extension specifically.\\
 
@@ -280,7 +280,7 @@ You can see in the list of feeds that it includes the feed named 'Extension' whi
 \caption{Here is the confirmation that a new broadcast has been created.}
 \end{figure}
 
-Here is shown a Chrome Notification for the broadcast that we just created, this notification will only be shown once when it has been created then is stored and will not be shown again to the user which will prevent them from being annoyed by repeated notifications telling them the same information over and over.
+Here is shown a Chrome Notification for the broadcast that we just created. This notification will only be shown once when it has been created, then is stored and will not be shown again to the user which will prevent them from being annoyed by repeated notifications telling them the same information over and over.
 
 \begin{figure}[H]
 \centering
@@ -288,7 +288,7 @@ Here is shown a Chrome Notification for the broadcast that we just created, this
 \caption{Here is a Chrome notification showing the latest broadcast.}
 \end{figure}
 
-Due to the nature of how the browser Opera is designed it users the same core frameworks as Chrome thus allowing it to use the same browser extensions without any modifications the screenshot below shows the same broadcast that we created earlier also being displayed within Opera's notification system.
+Due to the nature of how the browser Opera is designed it users the same core frameworks as Chrome thus allowing it to use the same browser extensions without any modifications. The screenshot below shows the same broadcast that we created earlier also being displayed within Opera's notification system.
 
 \begin{figure}[H]
 \centering
@@ -297,7 +297,7 @@ Due to the nature of how the browser Opera is designed it users the same core fr
 \end{figure}
 
 \newpage
-Just to confirm that this is a real broadcast and has not broken any of the other functionality within the CS-Alumni application this is a screenshot of the broadcast on the Twitter website.
+Just to confirm that this is a real broadcast and has not broken any of the other functionality within the CS-Alumni application, this is a screenshot of the broadcast on the Twitter website.
 
 \begin{figure}[H]
 \centering
@@ -341,9 +341,9 @@ Just to confirm that this is a real broadcast and has not broken any of the othe
 
 \subsection{Rails Unit Tests}
 
-For testing the rails application I had to fix the functionality of the included tests to make them work with the rails application, once theses changes had taken place it was possible to complete the tests successfully.\\
+For testing the rails application I had to fix the functionality of the included tests to make them work with the rails application. Once theses changes had taken place it was possible to complete the tests successfully.\\
 \\
-One issue I have ran into though is on first run of the \"rake test\" one of the tests will fail but on second execution the tests will work perfectly, my theory behind this is that it is not guaranteed that the tests will run in order and that one of the other other tests authenticates with the CS-Alimni application before hand allowing the transaction to work as intended second time round.
+One issue I have run into though is on first run of the \"rake test\" one of the tests will fail but on the second execution the tests will work perfectly. My theory behind this is that it is not guaranteed that the tests will run in order and that one of the other tests authenticates with the CS-Alimni application beforehand allowing the transaction to work as intended second time round.
 
 \begin{figure}[H]
 \centering
@@ -355,11 +355,11 @@ One issue I have ran into though is on first run of the \"rake test\" one of the
 
 While developing my browser extension for this assignment I decided it was best to take a test driven style methodically to the design and construction of the extension, creating tests and then making the code that works with the test.\\
 \\
-I used a external JavaScript unit testing framework to allow the code to be tested efficiently. The framework I used was called QUnit and was developed by the same developers that created the other JavaScript library that I used called jQuery.\\
+I used an external JavaScript unit testing framework to allow the code to be tested efficiently. The framework I used was called QUnit and was developed by the same developers that created the other JavaScript library that I used called jQuery.\\
 \\
-For each of the libraries that I wrote to give the core functionality to the application I created there own page of tests the results of the unit tests at the end of the project are pictured below.\\
+For each of the libraries that I wrote to give the core functionality to the application I created their own page of tests. The results of the unit tests at the end of the project are pictured below.\\
 \\
-This is the class that handles all of the background interactions with the REST services, this creates notifications for new broadcasts being created.\\
+This is the class that handles all of the background interactions with the REST services. This creates notifications for new broadcasts being created.\\
 \\
 \begin{figure}[H]
 \centering
@@ -372,7 +372,7 @@ This library is used to get the version of the browser that is in use.\\
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{biqunit}
-\caption{This images shows the browserinfo.js module completing its tests successfully.}
+\caption{This image shows the browserinfo.js module completing its tests successfully.}
 \end{figure}
 
 Library for handling interaction with local storage.\\
