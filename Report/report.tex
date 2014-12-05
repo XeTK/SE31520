@@ -326,6 +326,8 @@ Just to confirm that this is a real broadcast and has not broken any of the othe
 
 \paragraph{Changes to Users}
 
+\paragraph{Changes to Tests}
+
 \subsection{Communication Between Applications}
 
 \subsubsection{RESTful Web Interfaces}
@@ -337,23 +339,35 @@ Just to confirm that this is a real broadcast and has not broken any of the othe
 \newpage
 \section{Application Testing}
 
+\subsection{Rails Unit Tests}
+
+For testing the rails application I had to fix the functionality of the included tests to make them work with the rails application, once theses changes had taken place it was possible to complete the tests successfully.\\
+\\
+One issue I have ran into though is on first run of the \"rake test\" one of the tests will fail but on second execution the tests will work perfectly, my theory behind this is that it is not guaranteed that the tests will run in order and that one of the other other tests authenticates with the CS-Alimni application before hand allowing the transaction to work as intended second time round.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{railstests}
+\caption{This shows that the Ruby on Rails tests work successfully.}
+\end{figure}
+
 \subsection{QUnit Tests}
 
-\iffalse
- _________    ________      ________      ________     
-|\___   ___\ |\   __  \    |\   ___ \    |\   __  \    
-\|___ \  \_| \ \  \|\  \   \ \  \_|\ \   \ \  \|\  \   
-     \ \  \   \ \  \\\  \   \ \  \ \\ \   \ \  \\\  \  
-      \ \  \   \ \  \\\  \   \ \  \_\\ \   \ \  \\\  \ 
-       \ \__\   \ \_______\   \ \_______\   \ \_______\
-        \|__|    \|_______|    \|_______|    \|_______|                                               
-\fi   
-
+While developing my browser extension for this assignment I decided it was best to take a test driven style methodically to the design and construction of the extension, creating tests and then making the code that works with the test.\\
+\\
+I used a external JavaScript unit testing framework to allow the code to be tested efficiently. The framework I used was called QUnit and was developed by the same developers that created the other JavaScript library that I used called jQuery.\\
+\\
+For each of the libraries that I wrote to give the core functionality to the application I created there own page of tests the results of the unit tests at the end of the project are pictured below.\\
+\\
+This is the class that handles all of the background interactions with the REST services, this creates notifications for new broadcasts being created.\\
+\\
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{backgroundqunit}
 \caption{This is the unit tests for the background.js module for the browser extension.}
 \end{figure}
+
+This library is used to get the version of the browser that is in use.\\
 
 \begin{figure}[H]
 \centering
@@ -361,17 +375,22 @@ Just to confirm that this is a real broadcast and has not broken any of the othe
 \caption{This images shows the browserinfo.js module completing its tests successfully.}
 \end{figure}
 
+Library for handling interaction with local storage.\\
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{lsqunit}
 \caption{This shows the LocalStorage.js module passing all its unit tests.}
 \end{figure}
 
+This is a wrapper around some of the AJAX methods within the jQuery library to make interaction with the server a little bit simpler.\\
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{restqunit}
 \caption{Above we see the RestToolKit.js module successfully completing all its unit tests.}
 \end{figure}
+
+This is a small utility library I have written to share commonly used functions between the various screens within the application.\\
 
 \begin{figure}[H]
 \centering
@@ -380,7 +399,6 @@ Just to confirm that this is a real broadcast and has not broken any of the othe
 \end{figure}
 
 %-- Technologies.
-\newpage
 \section*{Technologies}
 
 \subsection{CS-Alumni Chrome Browser Extension}
@@ -542,7 +560,7 @@ The CS-Alumni application that we were given as a starting
   VK                                                    `.
                                                           `.
 
-                                        
+
 \fi   
 
 \newpage

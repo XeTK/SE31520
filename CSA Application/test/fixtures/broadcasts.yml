@@ -1,10 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  content: Hello There
+  content: http://www.porfell.co.uk/assets/PICT0125.jpg All of the Capabara's 
   user_id: 1
 
 two:
-  content: There Hello
+  content: http://www.porfell.co.uk/assets/PICT0125.jpg DAWWW
   user_id: 1
 

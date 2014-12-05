@@ -32,52 +32,56 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Changes to Users}{10}{section*.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Communication Between Applications}{10}{section*.29}
+\contentsline {paragraph}{Changes to Tests}{10}{section*.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{RESTful Web Interfaces}{10}{section*.30}
+\contentsline {subsection}{Communication Between Applications}{11}{section*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Data Flow Diagrams}{10}{section*.31}
+\contentsline {subsubsection}{RESTful Web Interfaces}{11}{section*.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Application Testing}{11}{section*.32}
+\contentsline {subsubsection}{Data Flow Diagrams}{11}{section*.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{QUnit Tests}{11}{section*.33}
+\contentsline {section}{Application Testing}{12}{section*.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{CS-Alumni Chrome Browser Extension}{14}{section*.40}
+\contentsline {subsection}{Rails Unit Tests}{12}{section*.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{HTML}{14}{section*.41}
+\contentsline {subsection}{QUnit Tests}{12}{section*.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{CSS}{14}{section*.42}
+\contentsline {subsection}{CS-Alumni Chrome Browser Extension}{15}{section*.43}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{JavaScript}{14}{section*.43}
+\contentsline {subsubsection}{HTML}{15}{section*.44}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Chrome Extensions API}{14}{section*.44}
+\contentsline {subsubsection}{CSS}{15}{section*.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Bootstrap}{14}{section*.45}
+\contentsline {subsubsection}{JavaScript}{15}{section*.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{jQuery}{14}{section*.46}
+\contentsline {subsubsection}{Chrome Extensions API}{15}{section*.47}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Moment.js}{15}{section*.47}
+\contentsline {subsubsection}{Bootstrap}{16}{section*.48}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Alertify.js}{15}{section*.48}
+\contentsline {subsubsection}{jQuery}{16}{section*.49}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Qunit}{15}{section*.49}
+\contentsline {subsubsection}{Moment.js}{16}{section*.50}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{CS-Alumni Rails Application}{15}{section*.50}
+\contentsline {subsubsection}{Alertify.js}{16}{section*.51}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Ruby}{15}{section*.51}
+\contentsline {subsubsection}{Qunit}{16}{section*.52}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Ruby on rails}{15}{section*.52}
+\contentsline {subsection}{CS-Alumni Rails Application}{17}{section*.53}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Qunit}{15}{section*.53}
+\contentsline {subsubsection}{Ruby}{17}{section*.54}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Communication Between Applications}{15}{section*.54}
+\contentsline {subsubsection}{Ruby on rails}{17}{section*.55}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{RESTful Interfaces}{15}{section*.55}
+\contentsline {subsubsection}{Rack Middleware}{17}{section*.56}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{CORS}{15}{section*.56}
+\contentsline {subsection}{Communication Between Applications}{17}{section*.57}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Basic Authentication}{15}{section*.57}
+\contentsline {subsubsection}{RESTful Interfaces}{17}{section*.58}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Evaluation}{16}{section*.58}
+\contentsline {subsubsection}{CORS}{17}{section*.59}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Something Extra}{17}{section*.59}
+\contentsline {subsubsection}{Basic Authentication}{17}{section*.60}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Evaluation}{18}{section*.61}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Something Extra}{19}{section*.62}

@@ -7,28 +7,29 @@
 \BOOKMARK [2][-]{section*.19}{CS-Alumni Rails Application}{section*.3}% 7
 \BOOKMARK [3][-]{section*.20}{New Additions}{section*.19}% 8
 \BOOKMARK [3][-]{section*.23}{Modifications}{section*.19}% 9
-\BOOKMARK [2][-]{section*.29}{Communication Between Applications}{section*.3}% 10
-\BOOKMARK [3][-]{section*.30}{RESTful Web Interfaces}{section*.29}% 11
-\BOOKMARK [3][-]{section*.31}{Data Flow Diagrams}{section*.29}% 12
-\BOOKMARK [1][-]{section*.32}{Application Testing}{}% 13
-\BOOKMARK [2][-]{section*.33}{QUnit Tests}{section*.32}% 14
-\BOOKMARK [2][-]{section*.40}{CS-Alumni Chrome Browser Extension}{section*.32}% 15
-\BOOKMARK [3][-]{section*.41}{HTML}{section*.40}% 16
-\BOOKMARK [3][-]{section*.42}{CSS}{section*.40}% 17
-\BOOKMARK [3][-]{section*.43}{JavaScript}{section*.40}% 18
-\BOOKMARK [3][-]{section*.44}{Chrome Extensions API}{section*.40}% 19
-\BOOKMARK [3][-]{section*.45}{Bootstrap}{section*.40}% 20
-\BOOKMARK [3][-]{section*.46}{jQuery}{section*.40}% 21
-\BOOKMARK [3][-]{section*.47}{Moment.js}{section*.40}% 22
-\BOOKMARK [3][-]{section*.48}{Alertify.js}{section*.40}% 23
-\BOOKMARK [3][-]{section*.49}{Qunit}{section*.40}% 24
-\BOOKMARK [2][-]{section*.50}{CS-Alumni Rails Application}{section*.32}% 25
-\BOOKMARK [3][-]{section*.51}{Ruby}{section*.50}% 26
-\BOOKMARK [3][-]{section*.52}{Ruby on rails}{section*.50}% 27
-\BOOKMARK [3][-]{section*.53}{Qunit}{section*.50}% 28
-\BOOKMARK [2][-]{section*.54}{Communication Between Applications}{section*.32}% 29
-\BOOKMARK [3][-]{section*.55}{RESTful Interfaces}{section*.54}% 30
-\BOOKMARK [3][-]{section*.56}{CORS}{section*.54}% 31
-\BOOKMARK [3][-]{section*.57}{Basic Authentication}{section*.54}% 32
-\BOOKMARK [1][-]{section*.58}{Evaluation}{}% 33
-\BOOKMARK [1][-]{section*.59}{Something Extra}{}% 34
+\BOOKMARK [2][-]{section*.30}{Communication Between Applications}{section*.3}% 10
+\BOOKMARK [3][-]{section*.31}{RESTful Web Interfaces}{section*.30}% 11
+\BOOKMARK [3][-]{section*.32}{Data Flow Diagrams}{section*.30}% 12
+\BOOKMARK [1][-]{section*.33}{Application Testing}{}% 13
+\BOOKMARK [2][-]{section*.34}{Rails Unit Tests}{section*.33}% 14
+\BOOKMARK [2][-]{section*.36}{QUnit Tests}{section*.33}% 15
+\BOOKMARK [2][-]{section*.43}{CS-Alumni Chrome Browser Extension}{section*.33}% 16
+\BOOKMARK [3][-]{section*.44}{HTML}{section*.43}% 17
+\BOOKMARK [3][-]{section*.45}{CSS}{section*.43}% 18
+\BOOKMARK [3][-]{section*.46}{JavaScript}{section*.43}% 19
+\BOOKMARK [3][-]{section*.47}{Chrome Extensions API}{section*.43}% 20
+\BOOKMARK [3][-]{section*.48}{Bootstrap}{section*.43}% 21
+\BOOKMARK [3][-]{section*.49}{jQuery}{section*.43}% 22
+\BOOKMARK [3][-]{section*.50}{Moment.js}{section*.43}% 23
+\BOOKMARK [3][-]{section*.51}{Alertify.js}{section*.43}% 24
+\BOOKMARK [3][-]{section*.52}{Qunit}{section*.43}% 25
+\BOOKMARK [2][-]{section*.53}{CS-Alumni Rails Application}{section*.33}% 26
+\BOOKMARK [3][-]{section*.54}{Ruby}{section*.53}% 27
+\BOOKMARK [3][-]{section*.55}{Ruby on rails}{section*.53}% 28
+\BOOKMARK [3][-]{section*.56}{Rack Middleware}{section*.53}% 29
+\BOOKMARK [2][-]{section*.57}{Communication Between Applications}{section*.33}% 30
+\BOOKMARK [3][-]{section*.58}{RESTful Interfaces}{section*.57}% 31
+\BOOKMARK [3][-]{section*.59}{CORS}{section*.57}% 32
+\BOOKMARK [3][-]{section*.60}{Basic Authentication}{section*.57}% 33
+\BOOKMARK [1][-]{section*.61}{Evaluation}{}% 34
+\BOOKMARK [1][-]{section*.62}{Something Extra}{}% 35
