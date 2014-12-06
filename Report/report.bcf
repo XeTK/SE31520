@@ -1968,6 +1968,8 @@
     <bcf:citekey order="2">bara:2013:online</bcf:citekey>
     <bcf:citekey order="3">saa:2013:online</bcf:citekey>
     <bcf:citekey order="4">wp:2014:online</bcf:citekey>
+    <bcf:citekey order="5">saa:2013:online</bcf:citekey>
+    <bcf:citekey order="6">bara:2013:online</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="nty">
   <bcf:sorting>

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.18)  6 DEC 2014 17:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.18)  6 DEC 2014 21:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -447,27 +447,27 @@ File: english.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             macros/latex/contrib/pageslts/ 
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 145.
+(lastpage)             ! on input line 147.
 
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -507,14 +507,14 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report.bbl' found.
 
 (./report.bbl)
-Package biblatex Info: Reference section=0 on input line 145.
-Package biblatex Info: Reference segment=0 on input line 145.
+Package biblatex Info: Reference section=0 on input line 147.
+Package biblatex Info: Reference segment=0 on input line 147.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 145.
+Package hyperref Info: Link coloring OFF on input line 147.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -524,24 +524,31 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count228
 )
-LaTeX Info: Redefining \ref on input line 145.
-LaTeX Info: Redefining \pageref on input line 145.
-LaTeX Info: Redefining \nameref on input line 145.
+LaTeX Info: Redefining \ref on input line 147.
+LaTeX Info: Redefining \pageref on input line 147.
+LaTeX Info: Redefining \nameref on input line 147.
 
 (./report.out) (./report.out)
 \@outlinefile=\write4
 \openout4 = `report.out'.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 148.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 148.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 148.
- [1
 
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./repo
-rt.toc
+<images/ror.png, id=132, 394.47375pt x 347.2975pt>
+File: images/ror.png Graphic file (type png)
+ <use images/ror.png>
+Package pdftex.def Info: images/ror.png used on input line 150.
+(pdftex.def)             Requested size: 234.87749pt x 206.785pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 150.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 150.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 150.
+
+[1
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./image
+s/ror.png>] (./report.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -551,383 +558,423 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout5 = `report.toc'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 167--180
+Underfull \hbox (badness 10000) in paragraph at lines 168--181
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--180
+Underfull \hbox (badness 10000) in paragraph at lines 168--181
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--180
+Underfull \hbox (badness 10000) in paragraph at lines 168--181
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--180
+Underfull \hbox (badness 10000) in paragraph at lines 168--181
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--180
+Underfull \hbox (badness 10000) in paragraph at lines 168--181
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--180
+Underfull \hbox (badness 10000) in paragraph at lines 168--181
 
  []
 
 [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 188--191
+Underfull \hbox (badness 10000) in paragraph at lines 189--192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--191
+Underfull \hbox (badness 10000) in paragraph at lines 189--192
 
  []
 
-<images/homepage.png, id=192, 819.06pt x 617.30624pt>
+<images/homepage.png, id=195, 819.06pt x 617.30624pt>
 File: images/homepage.png Graphic file (type png)
 
 <use images/homepage.png>
-Package pdftex.def Info: images/homepage.png used on input line 194.
+Package pdftex.def Info: images/homepage.png used on input line 195.
 (pdftex.def)             Requested size: 328.82706pt x 247.83179pt.
  [5 <./images/homepage.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
-<images/bcpage.png, id=201, 820.06375pt x 622.325pt>
+<images/bcpage.png, id=203, 820.06375pt x 622.325pt>
 File: images/bcpage.png Graphic file (type png)
  <use images/bcpage.png>
-Package pdftex.def Info: images/bcpage.png used on input line 203.
+Package pdftex.def Info: images/bcpage.png used on input line 204.
 (pdftex.def)             Requested size: 328.82706pt x 249.54282pt.
 
-<images/populatebcpage.png, id=202, 830.10126pt x 627.34375pt>
+<images/populatebcpage.png, id=204, 830.10126pt x 627.34375pt>
 File: images/populatebcpage.png Graphic file (type png)
 
 <use images/populatebcpage.png>
-Package pdftex.def Info: images/populatebcpage.png used on input line 211.
+Package pdftex.def Info: images/populatebcpage.png used on input line 212.
 (pdftex.def)             Requested size: 328.82706pt x 248.50163pt.
  [6 <./images/bcpage.png> <./images/populatebcpage.png>] <images/userpage.png, 
-id=212, 819.06pt x 617.30624pt>
+id=214, 819.06pt x 617.30624pt>
 File: images/userpage.png Graphic file (type png)
 
 <use images/userpage.png>
-Package pdftex.def Info: images/userpage.png used on input line 219.
+Package pdftex.def Info: images/userpage.png used on input line 220.
 (pdftex.def)             Requested size: 328.82706pt x 247.83179pt.
 
-<images/modalpage.png, id=213, 818.05624pt x 613.29124pt>
+<images/modalpage.png, id=215, 818.05624pt x 613.29124pt>
 File: images/modalpage.png Graphic file (type png)
 
 <use images/modalpage.png>
-Package pdftex.def Info: images/modalpage.png used on input line 227.
+Package pdftex.def Info: images/modalpage.png used on input line 228.
 (pdftex.def)             Requested size: 328.82706pt x 246.51933pt.
  [7 <./images/userpage.png> <./images/modalpage.png>] <images/loginpage.png, id
-=224, 820.06375pt x 617.30624pt>
+=226, 820.06375pt x 617.30624pt>
 File: images/loginpage.png Graphic file (type png)
 
 <use images/loginpage.png>
-Package pdftex.def Info: images/loginpage.png used on input line 236.
+Package pdftex.def Info: images/loginpage.png used on input line 237.
 (pdftex.def)             Requested size: 328.82706pt x 247.53038pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--243
+Underfull \hbox (badness 10000) in paragraph at lines 241--244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--243
+Underfull \hbox (badness 10000) in paragraph at lines 241--244
 
  []
 
-<images/createbc.png, id=225, 726.715pt x 381.425pt>
+<images/createbc.png, id=227, 726.715pt x 381.425pt>
 File: images/createbc.png Graphic file (type png)
  <use images/createbc.png>
-Package pdftex.def Info: images/createbc.png used on input line 246.
+Package pdftex.def Info: images/createbc.png used on input line 247.
 (pdftex.def)             Requested size: 352.31624pt x 184.92105pt.
 
 [8 <./images/loginpage.png> <./images/createbc.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 251--254
+Underfull \hbox (badness 10000) in paragraph at lines 252--255
 
  []
 
-<images/confbc.png, id=235, 539.01375pt x 294.09875pt>
+<images/confbc.png, id=237, 539.01375pt x 294.09875pt>
 File: images/confbc.png Graphic file (type png)
  <use images/confbc.png>
-Package pdftex.def Info: images/confbc.png used on input line 257.
+Package pdftex.def Info: images/confbc.png used on input line 258.
 (pdftex.def)             Requested size: 352.31624pt x 192.23444pt.
 
-<images/chromenotification.png, id=236, 388.45125pt x 129.48375pt>
+<images/chromenotification.png, id=238, 388.45125pt x 129.48375pt>
 File: images/chromenotification.png Graphic file (type png)
 
 <use images/chromenotification.png>
-Package pdftex.def Info: images/chromenotification.png used on input line 265.
+Package pdftex.def Info: images/chromenotification.png used on input line 266.
 (pdftex.def)             Requested size: 234.87749pt x 78.29344pt.
 
-<images/operanotification.png, id=237, 367.3725pt x 122.4575pt>
+<images/operanotification.png, id=239, 367.3725pt x 122.4575pt>
 File: images/operanotification.png Graphic file (type png)
 
 <use images/operanotification.png>
-Package pdftex.def Info: images/operanotification.png used on input line 273.
+Package pdftex.def Info: images/operanotification.png used on input line 274.
 (pdftex.def)             Requested size: 234.87749pt x 78.29404pt.
  [9 <./images/confbc.png> <./images/chromenotification.png> <./images/operanoti
 fication.png>]
-<images/twitterbc.png, id=249, 609.27625pt x 433.62pt>
+<images/twitterbc.png, id=251, 609.27625pt x 433.62pt>
 File: images/twitterbc.png Graphic file (type png)
 
 <use images/twitterbc.png>
-Package pdftex.def Info: images/twitterbc.png used on input line 282.
+Package pdftex.def Info: images/twitterbc.png used on input line 283.
 (pdftex.def)             Requested size: 469.75499pt x 334.33174pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--296
+Underfull \hbox (badness 10000) in paragraph at lines 293--297
 
  []
 
-<images/sqlview.png, id=250, 451.6875pt x 402.50375pt>
+<images/sqlview.png, id=252, 451.6875pt x 402.50375pt>
 File: images/sqlview.png Graphic file (type png)
 
 <use images/sqlview.png>
-Package pdftex.def Info: images/sqlview.png used on input line 299.
+Package pdftex.def Info: images/sqlview.png used on input line 300.
 (pdftex.def)             Requested size: 328.82706pt x 293.03915pt.
  [10 <./images/twitterbc.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 303--309
+Underfull \hbox (badness 10000) in paragraph at lines 304--310
 
  []
 
-<images/broadcastrest.png, id=260, 667.49374pt x 221.82875pt>
+<images/broadcastrest.png, id=262, 667.49374pt x 221.82875pt>
 File: images/broadcastrest.png Graphic file (type png)
 
 <use images/broadcastrest.png>
-Package pdftex.def Info: images/broadcastrest.png used on input line 312.
+Package pdftex.def Info: images/broadcastrest.png used on input line 313.
 (pdftex.def)             Requested size: 469.75499pt x 156.11848pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--319
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
 
  []
 
 [11 <./images/sqlview.png> <./images/broadcastrest.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 320--323
+Underfull \hbox (badness 10000) in paragraph at lines 321--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--329
+Underfull \hbox (badness 10000) in paragraph at lines 327--330
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--337
+Underfull \hbox (badness 10000) in paragraph at lines 333--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--337
+Underfull \hbox (badness 10000) in paragraph at lines 333--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--339
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 342--343
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--349
+Underfull \hbox (badness 10000) in paragraph at lines 345--350
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--349
+Underfull \hbox (badness 10000) in paragraph at lines 345--350
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 356--359
+Underfull \hbox (badness 10000) in paragraph at lines 357--360
 
  []
 
-<images/railstests.png, id=281, 832.10875pt x 237.88875pt>
+<images/railstests.png, id=283, 832.10875pt x 237.88875pt>
 File: images/railstests.png Graphic file (type png)
 
 <use images/railstests.png>
-Package pdftex.def Info: images/railstests.png used on input line 362.
+Package pdftex.def Info: images/railstests.png used on input line 363.
 (pdftex.def)             Requested size: 469.75499pt x 134.29848pt.
 
-<images/backgroundqunit.png, id=282, 844.15375pt x 338.26375pt>
+<images/backgroundqunit.png, id=284, 844.15375pt x 338.26375pt>
 File: images/backgroundqunit.png Graphic file (type png)
 
 <use images/backgroundqunit.png>
-Package pdftex.def Info: images/backgroundqunit.png used on input line 378.
+Package pdftex.def Info: images/backgroundqunit.png used on input line 379.
 (pdftex.def)             Requested size: 469.75499pt x 188.23926pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--380
+Underfull \hbox (badness 10000) in paragraph at lines 369--381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--380
+Underfull \hbox (badness 10000) in paragraph at lines 369--381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--380
+Underfull \hbox (badness 10000) in paragraph at lines 369--381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--380
+Underfull \hbox (badness 10000) in paragraph at lines 369--381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--380
+Underfull \hbox (badness 10000) in paragraph at lines 369--381
 
  []
 
 [13 <./images/railstests.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 382--383
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
 
  []
 
-<images/biqunit.png, id=291, 809.0225pt x 338.26375pt>
+<images/biqunit.png, id=293, 809.0225pt x 338.26375pt>
 File: images/biqunit.png Graphic file (type png)
 
 <use images/biqunit.png>
-Package pdftex.def Info: images/biqunit.png used on input line 386.
+Package pdftex.def Info: images/biqunit.png used on input line 387.
 (pdftex.def)             Requested size: 469.75499pt x 196.41504pt.
 
-<images/lsqunit.png, id=292, 832.10875pt x 339.2675pt>
+<images/lsqunit.png, id=294, 832.10875pt x 339.2675pt>
 File: images/lsqunit.png Graphic file (type png)
 
 <use images/lsqunit.png>
-Package pdftex.def Info: images/lsqunit.png used on input line 393.
+Package pdftex.def Info: images/lsqunit.png used on input line 394.
 (pdftex.def)             Requested size: 469.75499pt x 191.53117pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--395
+Underfull \hbox (badness 10000) in paragraph at lines 391--396
 
  []
 
 [14 <./images/backgroundqunit.png> <./images/biqunit.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 397--398
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
 
  []
 
-<images/restqunit.png, id=302, 798.985pt x 406.51875pt>
+<images/restqunit.png, id=304, 798.985pt x 406.51875pt>
 File: images/restqunit.png Graphic file (type png)
 
 <use images/restqunit.png>
-Package pdftex.def Info: images/restqunit.png used on input line 401.
+Package pdftex.def Info: images/restqunit.png used on input line 402.
 (pdftex.def)             Requested size: 469.75499pt x 239.00658pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 405--406
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
 
-<images/utilsqunit.png, id=303, 837.1275pt x 318.18875pt>
+<images/utilsqunit.png, id=305, 837.1275pt x 318.18875pt>
 File: images/utilsqunit.png Graphic file (type png)
 
 <use images/utilsqunit.png>
-Package pdftex.def Info: images/utilsqunit.png used on input line 409.
+Package pdftex.def Info: images/utilsqunit.png used on input line 410.
 (pdftex.def)             Requested size: 469.75499pt x 178.54861pt.
  [15 <./images/lsqunit.png> <./images/restqunit.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 428--431
+Underfull \hbox (badness 10000) in paragraph at lines 429--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--441
+Underfull \hbox (badness 10000) in paragraph at lines 439--442
 
  []
 
 [16 <./images/utilsqunit.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 444--449
+Underfull \hbox (badness 10000) in paragraph at lines 445--450
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--449
+Underfull \hbox (badness 10000) in paragraph at lines 445--450
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--455
+Underfull \hbox (badness 10000) in paragraph at lines 453--456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--461
+Underfull \hbox (badness 10000) in paragraph at lines 459--462
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--467
+Underfull \hbox (badness 10000) in paragraph at lines 465--468
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--475
+Underfull \hbox (badness 10000) in paragraph at lines 473--476
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 478--481
+Underfull \hbox (badness 10000) in paragraph at lines 479--482
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--487
+Underfull \hbox (badness 10000) in paragraph at lines 485--488
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--498
+Underfull \hbox (badness 10000) in paragraph at lines 494--499
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--498
+Underfull \hbox (badness 10000) in paragraph at lines 494--499
 
  []
 
-[18] [19] <images/pebble.jpg, id=351, 934.49126pt x 1324.95pt>
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 509--524
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--524
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--524
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--524
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--524
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--524
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--524
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 528--531
+
+ []
+
+<images/pebble.jpg, id=357, 934.49126pt x 1324.95pt>
 File: images/pebble.jpg Graphic file (type jpg)
-
-<use images/pebble.jpg>
-Package pdftex.def Info: images/pebble.jpg used on input line 512.
+ <use images/pebble.jpg>
+Package pdftex.def Info: images/pebble.jpg used on input line 534.
 (pdftex.def)             Requested size: 140.92792pt x 199.80544pt.
- <images/pebblesh.png, id=352, 144.54pt x 168.63pt>
-File: images/pebblesh.png Graphic file (type png)
 
-<use images/pebblesh.png>
-Package pdftex.def Info: images/pebblesh.png used on input line 518.
+<images/pebblesh.png, id=358, 144.54pt x 168.63pt>
+File: images/pebblesh.png Graphic file (type png)
+ <use images/pebblesh.png>
+Package pdftex.def Info: images/pebblesh.png used on input line 540.
 (pdftex.def)             Requested size: 117.43874pt x 137.01152pt.
- [20 <./images/pebble.jpg> <./images/pebblesh.png>]
-[21] 
+
+[20 <./images/pebble.jpg> <./images/pebblesh.png>] [21]
+
 AED: lastpage setting LastPage
 [22]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 529.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 529.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 551.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 551.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 529.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 529.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 551.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 551.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 680DFAF24044E70906487553F186AD87;1971.
 Package logreq Info: Writing requests to 'report.run.xml'.
@@ -935,10 +982,10 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11694 strings out of 493117
- 192178 string characters out of 6135432
- 607253 words of memory out of 5000000
- 14932 multiletter control sequences out of 15000+600000
+ 11699 strings out of 493117
+ 192260 string characters out of 6135432
+ 608273 words of memory out of 5000000
+ 14936 multiletter control sequences out of 15000+600000
  9316 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,11n,48p,812b,958s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -950,10 +997,10 @@ usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/l
 ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/lo
 cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (22 pages, 1122588 bytes).
+Output written on report.pdf (22 pages, 1215966 bytes).
 PDF statistics:
- 428 PDF objects out of 1000 (max. 8388607)
- 351 compressed objects within 4 object streams
+ 434 PDF objects out of 1000 (max. 8388607)
+ 355 compressed objects within 4 object streams
  89 named destinations out of 1000 (max. 500000)
- 362 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 367 words of extra memory for PDF output out of 10000 (max. 10000000)
 

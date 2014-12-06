@@ -122,14 +122,16 @@
 %----------------------------------------------------------------------------------------
 
 \title{
-\vspace{2in}
+\includegraphics[width=0.5\textwidth]{ror}\\
+\vspace{1in}
+%\vspace{2in}
 \textmd{\textbf{\hmwkShortCode\\ \hmwkClass}}\\
 \normalsize
 \vspace{0.1in}
 \textbf{\hmwkTitle}\\
 \vspace{0.1in}
 \small{Submission\ Due\ \hmwkClassTime\ \hmwkDueDate}\\
-\vspace{3in}
+\vspace{2in}
 }
 
 \author{
@@ -155,7 +157,6 @@
 \newpage
 \tableofcontents
 \newpage
-
 
 %-- Application Design.
 \section{Application Design}
@@ -498,15 +499,36 @@ Please follow theses references \cite[see reference][page \pageref{LastPage}]{ba
 
 \subsubsection{Basic Authentication}
 
+
 To authenticate the browser extension with the CS-Alumni application it was appropriate to use basic authentication to verify if the user had permission to view the data within the application, this basically consists of encoding the username and password using a base64 encoder, and attaching the encoded password as an extra header on the HTTP requests that are being sent to the server to ensure the user is authenticated. \cite[see reference][page \pageref{LastPage}]{wp:2014:online}
 
 %-- Evaluation.
 \newpage
 \section{Evaluation}
 
+During the development of the browser extension that interacts with the CS-Alumni applications there were points that were fairly difficult.\\
+\\
+The first was trying to get the Ruby on Rails (RoR) environment functional on my system my platform of choice is Mac OSX and my first attempt at getting a working version of RoR working ending in requiring a whole reinstall of the operating system due to the Ruby installer breaking the ownership and permissions of some of the system files, For a while before I tried installing it again on my main system was running the RoR environment on a Linux based virtual machine while I was trying to get comfortable with the install steps of RoR, second time round the install went successfully on my main system but this had taken about 4-5 hours work by this point.\\
+\\
+My next major point of difficulty was familiarising my self with the way that handles database objects using active records, I found a very good paper / tutorial on using active record \cite[see reference][page \pageref{LastPage}]{saa:2013:online} this helped me greatly and spurred on development greatly.\\
+\\
+Coming from a background of Node.js (Using the Express.js library) and PL-SQL (Via Oracle APEX) the way that RoR deals with the implementation of RESTful interfaces was a bit alien so required a lot of reading to fully understand how to implement a new RESTful interface. I have included the reference i used most for the REST interfaces \cite[see reference][page \pageref{LastPage}]{bara:2013:online}.\\
+\\
+For a while there was not many stumbling points with the implementation the browser extension design and implementation was very painless as it was basically the same as implementing a website, biggest issue that arouse during the development of the browser extension was the authentication with the CS-Alumni application but a lot of the work to get this working was dealing with the various security settings within RoR its self.\\
+\\
+The only other sticking point for the browser extension was the implementation of pagination as I had failed to implement it correctly the first time round and had opted to write my own system than just use a off the shelf library to do it.\\
+\\
+One of the more interesting points of RoR and Ruby that I liked was the strong use of Model, View, Controller (MVC) which made it quite easy to find where various sections of functionality were separated out into. This also helped with the configuration of the RoR application as the settings that you would need to edit were quite easy to find due to the structure that RoR seems to impose upon the developer.\\
+\\
+As a developer with not much prior knowledge to web based applications I have learned a great deal from implementing new features into a language that I have not had any prior knowledge of, It was enjoyable to make a small feature rich application that interacts with a much larger and interesting application and getting to learn some new technologies along the way.
+
 \newpage
 \section{Something Extra}
-%-- Talk about pebble app here.
+
+This is something extra and is out of the scope of the assignment but just out of curiosity I wanted to see how simple it would be to design a smart watch application and did some reading of the SDK for the Pebble smart watch and they have a JavaScript based SDK that allows the use of of AJAX type requests to a server, there was a simple example on interactions with a REST based weather service.\\
+\\
+I took this example and modified it to work with the RESTful interfaces that I had written for the the CS-Alumni application and the screen shot below shows this simple prototype working.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\textwidth]{pebble}
