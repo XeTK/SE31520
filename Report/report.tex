@@ -27,7 +27,8 @@
 \usepackage{lastpage} % Required to determine the last page for the footer
 \usepackage{extramarks} % Required for headers and footers
 \usepackage{graphicx} % Required for including pictures
-\usepackage{biblatex}
+%\usepackage{biblatex}
+\usepackage[sorting=none, backend=biber]{biblatex}
 \usepackage{caption}
 \usepackage{float}
 \usepackage[none]{hyphenat}
@@ -543,9 +544,18 @@ I took this example and modified it to work with the RESTful interfaces that I h
 
 \newpage
 %-- Attributions.
-\section{Attributions}
+%\section{Attributions}
+
+\nocite{bs:2014:online}
+\nocite{bw:2014:online}
+\nocite{jq:2014:online}
+\nocite{qu:2014:online}
+\nocite{mo:2014:online}
+\nocite{af:2014:online}
 
 \newpage
-\printbibliography
+\printbibheading
+\printbibliography[keyword=web,title={Web}]
+\printbibliography[keyword=libs,title={Attributions}]
 
 \end{document}

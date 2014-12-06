@@ -75,5 +75,3 @@
 \contentsline {section}{Evaluation}{19}{section*.57}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Something Extra}{20}{section*.58}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Attributions}{21}{section*.61}
