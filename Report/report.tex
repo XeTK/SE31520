@@ -157,19 +157,6 @@
 \newpage
 
 
-%-- Document Summary.
-\section{Document Summary}
-
-\iffalse
- _________    ________      ________      ________     
-|\___   ___\ |\   __  \    |\   ___ \    |\   __  \    
-\|___ \  \_| \ \  \|\  \   \ \  \_|\ \   \ \  \|\  \   
-     \ \  \   \ \  \\\  \   \ \  \ \\ \   \ \  \\\  \  
-      \ \  \   \ \  \\\  \   \ \  \_\\ \   \ \  \\\  \ 
-       \ \__\   \ \_______\   \ \_______\   \ \_______\
-        \|__|    \|_______|    \|_______|    \|_______|                                               
-\fi   
-
 %-- Application Design.
 \section{Application Design}
 
@@ -193,16 +180,6 @@ If this was a real world product it would not take many resources to port the ex
 
 \newpage
 \subsubsection{Module Diagrams}
-
-\iffalse
- _________    ________      ________      ________     
-|\___   ___\ |\   __  \    |\   ___ \    |\   __  \    
-\|___ \  \_| \ \  \|\  \   \ \  \_|\ \   \ \  \|\  \   
-     \ \  \   \ \  \\\  \   \ \  \ \\ \   \ \  \\\  \  
-      \ \  \   \ \  \\\  \   \ \  \_\\ \   \ \  \\\  \ 
-       \ \__\   \ \_______\   \ \_______\   \ \_______\
-        \|__|    \|_______|    \|_______|    \|_______|                                               
-\fi                                                   
 
 
 \newpage
@@ -302,12 +279,13 @@ Just to confirm that this is a real broadcast and has not broken any of the othe
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{twitterbc}
+\includegraphics[width=\textwidth]{twitterbc}
 \caption{Proof that the broadcasts still get sent to Twitter.}
 \end{figure}
 
-
 \subsection{CS-Alumni Rails Application}
+
+For more details on the changes made to CS-Alumni application please see the 'changelog.txt' file in the root of the project directory.
 
 \subsubsection{New Additions}
 
@@ -318,7 +296,7 @@ Using a view allows using the database engine to do all the hard work of getting
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\textwidth]{sqlview}
+\includegraphics[width=0.7\textwidth]{sqlview}
 \caption{This shows the database view I created.}
 \end{figure}
 
@@ -339,22 +317,35 @@ Please refer to page \pageref{sec:technology} and the section titled 'RESTful In
 
 \myparagraph{Changes to Seeds}
 
+For 'db/seeds.rb' I have changed the default seeds for the application so that the default password is easier to remember which is now 'password'.\\
+\\
+I have also added in the new feed type for publishing exclusively to browser extensions along with the database view for getting the simplified broadcast information covered in the previous section.
+
 \myparagraph{Changes to Broadcasts}
+
+In the broadcast section of the application I have added in support for posting directly to the the browser extension only, along with disabling the feeds that have not been implemented yet.\\
+\\
+The other changes consist of adding in support for the new RESTful interface that I have added.
 
 \myparagraph{Changes to Security}
 
+There has been some changes to the forgery protection within the application, to enable the use of 3rd party extensions to interact via the RESTful interfaces that have already been setup.\\
+\\
+To enable the tests to run successfully I have disabled SSL for when the application is within test mode thus enabling the tests to pass correctly without a valid SSL certificate.\\
+\\
+I have also added in CORS to enable the ability to do cross domain HTTP requests this ensure that the browser extension can work even when not on the same network as the CS-Alumni application, if this was not enabled then the browser extension would be next to useless.
+
 \myparagraph{Changes to REST implementation}
 
-\myparagraph{Changes to Users}
+Some changes have been made to the RESTful interfaces that server the users information, it now if the user is not an administrator it will return the user own object rather than denying them access to the page which means they can still edit there user account with minimum code changes to the client application. 
 
 \myparagraph{Changes to Tests}
 
-\subsection{Communication Between Applications}
-
-\subsubsection{RESTful Web Interfaces}
-
-\subsubsection{Data Flow Diagrams}
-
+There has had to be some changes made to the test classes due to them not being successful when the CS-Alumni application was distributed to us.\\
+\\
+Some new YAML files have had to be created to add in some missing information for the database to authenticate the user successfully with the application along with some of the changes previously mentioned in the security section of this document.\\
+\\
+One of the test methods was missing some of the parameters to make the application work as intended.
 
 %-- Application Testing.
 \newpage
@@ -513,96 +504,12 @@ To authenticate the browser extension with the CS-Alumni application it was appr
 \newpage
 \section{Evaluation}
 
-\iffalse
- _________    ________      ________      ________     
-|\___   ___\ |\   __  \    |\   ___ \    |\   __  \    
-\|___ \  \_| \ \  \|\  \   \ \  \_|\ \   \ \  \|\  \   
-     \ \  \   \ \  \\\  \   \ \  \ \\ \   \ \  \\\  \  
-      \ \  \   \ \  \\\  \   \ \  \_\\ \   \ \  \\\  \ 
-       \ \__\   \ \_______\   \ \_______\   \ \_______\
-        \|__|    \|_______|    \|_______|    \|_______|       
-
-
-                                                            .-'
-                                                         .-'
-                                                      .-'
-                                                   .-'
-                                                .-'
-                  /)                         .-'
-                 ||                       .-'
-                 ||                    .-'
-                 ||                 .-'
-                 ||              .-'     .------.
-                 ||           .-'  __   | *meow* |
-                 ||        .-'   .'-/__ |  _.---'
-                 |`-------------'    \/ /.'
-                 |*                 '| /'
-                 |     |          `--'
-               .-| |  /_______    |
-            .-'  | | <        `.|||               _.'|
-         .-'____  \\`.`.       ||||           _.-'_.-|
-      .-'  ||   `--`- `.).____ ||||       _.-'_.-'   |
-   .-'     ||                 ``-``--._.-'_.-'       |
-.-'        ||                         |`-'           |
-           ||                         | |            |
-           ||                         | |            |
-           ||                         | |            |
-           ||                         | |            |
-           ||                         | |            |
-           ||                        |`--;}};.       |
-           ||                       .'  o\ }}}}      |
-           ||                     .'\      }}}}      |
-           ||                     |      )}}}}}      |
-           ||                      \    '}}}}}       |
-           ||                       L    }}}}}}      |
-           ||                       |  _.}}}}}}      |
-           ||                    .-'|.'.-`-}}}}}     |
-           ||                  .'  |/|/      `.}}    |
-           ||                .' /              \}    |
-           ||               /  |           \    \    |
-           ||              /   |           |\    \   |
-           ||            .'   .'\          | \    \  |
-           ||          .'   .'  |   `      |  \    \ |
-`.         ||        .'   .'    |          |   |    )|
-  `.       ||     .-'\  .'      |          (  /   .' |
-    `.     ||   _/__.'`'        J          J /   /   |
-      `.   || (')               |           /   /    | 
-        `. ||                   F          <   /     |
-          `||                   L        ,/ `./      |
-           ||                   `-.__.---/'_/_/      |
-           ||                   |       //-'|        |
-           ||                   |      //   |        |
-           ||                   |      '    |        |
-           ||                   |           |        |
-           ||                   `-.______.-'         |
-           ||                    |    F    |         |
-           ||                    (   J|    F         |
-           ||                    |   ||   J          |
-           ||                    |   |J(   L         |
-           ||                    J   F|F   |         |
-           ||                    |  J ||   |         |
-           ||                    |  |_||   F         |
-           ||                   _F  J `|  J          |
-           ||               _.-'/_.' ) |  |`.        |
-           ||           _.-' .-'  /\/  |  |. `.      |
-           ||       _.-'     `---'     F  ) `. `.    |
-           ||   _.-'                  /-'/|   `. `.  |
-           ||.-'                    .__.'       `. `.|
-                                                  `. |
-                                                    `|
-                                                      `.
-  VK                                                    `.
-                                                          `.
-
-
-\fi   
-
 \newpage
 \section{Something Extra}
 %-- Talk about pebble app here.
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{pebble}
+\includegraphics[width=0.3\textwidth]{pebble}
 \caption{Above is a image of the Pebble smartwatch running the CSA application.}
 \end{figure}
 

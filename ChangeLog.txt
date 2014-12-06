@@ -28,7 +28,7 @@ ChangeLog:
 
 		app/controllers/application_controllers.rb:5 #changed the protect_from_forgery parameter to allow external api's to post data to the csa application.
 
-		GemFile:45 #added in the rack cors gem to allow the cross domain rest reqests.
+		GemFile:45 #added in the rack cors gem to allow the cross domain rest requests.
 
 		config/application.rb:26 #added in cors support to allow cross domain rest requests.
 
