@@ -33,8 +33,10 @@ User.transaction do
   Feed.create!(name: 'email')
   Feed.create!(name: 'RSS')
   Feed.create!(name: 'atom')
+  # Added in new feed that we can send information to.
   Feed.create!(name: 'extension')
 
+  # Create the database view that we use to get the broadcasts information.
   User.connection.execute(
     'CREATE VIEW extension_feeds as
     select us.firstname || \' \' || us.surname \'name\',

@@ -1,0 +1,61 @@
+ChangeLog:
+
+	changes:
+
+		db/seeds.rb:37 #added new feed type.
+
+		db/seeds.rb:40 #added in the database view for getting simplified broadcast data.
+
+		config/routes.rb:3 #added in the route for the new REST interface for the simplified broadcast data.
+
+		app/views/broadcasts/new.html.erb:74 #added in the new broadcast type.
+
+		app/views/broadcast/new.html.erb #commented out non functioning feed types.
+
+		app/models/broadcast_service.rb:23 #added in switch statement to handle new broadcast type.
+
+		app/models/broadcast_service.rb:32 #added in function to handle new broadcast type.
+
+		app/views/users/show.json.jbuilder:1 #added in the id to the JSON response from the server.
+
+		app/views/users/index.json.jbuilder:2 #added in the id to the JSON response from the server.
+
+		app/controllers/users_controller.rb:40 #changed it to return the current user only if the user logged in is not an admin, rather than throwing a non authenticated error.
+
+		app/controllers/users_controller.rb:7 #removed the requirement to be an admin to view the page.
+
+		app/model/users.rb:3 #added id to the search-able columns.
+
+		app/controllers/application_controllers.rb:5 #changed the protect_from_forgery parameter to allow external api's to post data to the csa application.
+
+		GemFile:45 #added in the rack cors gem to allow the cross domain rest reqests.
+
+		config/application.rb:26 #added in cors support to allow cross domain rest requests.
+
+		config/environments/test.rb:37 #disabled ssl connection during testing as this causes to many issues.
+
+		test/fixtures/users.yml:4 #added in a fixed id.
+
+		test/fixtures/broadcast.yml #changed the user_id to 1 and changed the content of the test.
+
+		test/controllers/broadcast_controller_test.rb:6 #get the information from the fixtures to authenticate the user
+
+		test/controllers/broadcast_controller_test.rb:37 #commented out the scaffolded code.
+
+		test/controllers/broadcast_controller_test.rb:24 #added in the feeds parameter.
+
+		test/controllers/users_controller_test.rb:6 #get the information from the fixtures to authenticate the user.
+
+		test/controllers/users_controller_test.rb:11 #disabled https for this section.
+
+	additions:
+
+		app/controllers/rest #folders created.
+
+		app/controllers/rest/extensions_controller.rb #file created for creating the REST interface to get the simplified broadcast data.
+
+		app/models/extensions_feeds.rb #this is a simplified broadcast entry as a class.
+
+		test/fixtures/user_details.yml #created a fixture for the database table user_details and linked the entry to the users.yml file.
+
+		test/fixtures/feeds.yml #created the various feeds that we cant link to just to make sure that we can send to various feeds.

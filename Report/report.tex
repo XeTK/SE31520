@@ -140,6 +140,8 @@
 
 %----------------------------------------------------------------------------------------
 
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+
 \begin{document}
 
 \maketitle
@@ -300,7 +302,7 @@ Just to confirm that this is a real broadcast and has not broken any of the othe
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{twitterbc}
+\includegraphics[width=0.7\textwidth]{twitterbc}
 \caption{Proof that the broadcasts still get sent to Twitter.}
 \end{figure}
 
@@ -309,23 +311,43 @@ Just to confirm that this is a real broadcast and has not broken any of the othe
 
 \subsubsection{New Additions}
 
-\paragraph{New Database View}
+\myparagraph{New Database View}
+For effectively retrieving information from the database to get the latest broadcasts, I decided to create a database view that would join all the relevant information that I required to show a new broadcast.\\
+\\
+Using a view allows using the database engine to do all the hard work of getting the data.
 
-\paragraph{New RESTful interface}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{sqlview}
+\caption{This shows the database view I created.}
+\end{figure}
+
+\myparagraph{New RESTful interface}
+On top of the new database view that has been created, I have added a RESTful interface to interact with the data that has been extracted from the database view. \\
+\\
+This enables effective retrieval of the data that we want to work on, The reason for implementing it this way was that I only wanted to make a single REST call to the CS-Alumni application to get all the currently relevant broadcasts with all the information about the user and the time that the broadcast was published.
+\\ 
+Please refer to page \pageref{sec:technology} and the section titled 'RESTful Interfaces' for more information.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{broadcastrest}
+\caption{This shows the JSON object that is returned from the RESTful interface I have added.}
+\end{figure}
 
 \subsubsection{Modifications}
 
-\paragraph{Changes to Seeds}
+\myparagraph{Changes to Seeds}
 
-\paragraph{Changes to Broadcasts}
+\myparagraph{Changes to Broadcasts}
 
-\paragraph{Changes to Security}
+\myparagraph{Changes to Security}
 
-\paragraph{Changes to REST implementation}
+\myparagraph{Changes to REST implementation}
 
-\paragraph{Changes to Users}
+\myparagraph{Changes to Users}
 
-\paragraph{Changes to Tests}
+\myparagraph{Changes to Tests}
 
 \subsection{Communication Between Applications}
 
@@ -398,7 +420,7 @@ This is a small utility library I have written to share commonly used functions 
 \end{figure}
 
 %-- Technologies.
-\section*{Technologies}
+\section{Technologies}
 
 \subsection{CS-Alumni Chrome Browser Extension}
 
@@ -475,6 +497,7 @@ This enabled the use of cross domain REST requests without this being enabled it
 \subsection{Communication Between Applications}
 
 \subsubsection{RESTful Interfaces}
+\label{sec:technology}
 
 For interaction between the CS-Alumni application and my browser extension the most viable method obtaining communication between the two application is to use RESTful web services.\\
 \\
@@ -591,7 +614,7 @@ To authenticate the browser extension with the CS-Alumni application it was appr
 
 \newpage
 %-- Attributions.
-\section*{Attributions}
+\section{Attributions}
 
 \newpage
 \printbibliography

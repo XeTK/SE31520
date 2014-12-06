@@ -34,6 +34,7 @@ Csa::Application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
+  # This disables SSL for the tests.
   config.use_ssl = false
 
 end
