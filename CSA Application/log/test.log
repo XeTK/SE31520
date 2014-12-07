@@ -17413,3 +17413,1239 @@ UserTest: test_unique_email
   [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
   [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl@aber.ac.uk' LIMIT 1[0m
   [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "broadcasts"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "broadcasts" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('http://www.porfell.co.uk/assets/PICT0125.jpg All of the Capabara''s', 1, '2014-12-07 12:19:12', '2014-12-07 12:19:12', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "broadcasts" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('http://www.porfell.co.uk/assets/PICT0125.jpg DAWWW', 1, '2014-12-07 12:19:12', '2014-12-07 12:19:12', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "feeds"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('twitter', '2014-12-07 12:19:12', '2014-12-07 12:19:12', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('facebook', '2014-12-07 12:19:12', '2014-12-07 12:19:12', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('email', '2014-12-07 12:19:12', '2014-12-07 12:19:12', 113629430)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('RSS', '2014-12-07 12:19:12', '2014-12-07 12:19:12', 281110143)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('atom', '2014-12-07 12:19:12', '2014-12-07 12:19:12', 1018350795)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('extension', '2014-12-07 12:19:12', '2014-12-07 12:19:12', 51848956)[0m
+  [1m[35mFixture Delete (0.8ms)[0m  DELETE FROM "user_details"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_details" ("id", "login", "crypted_password", "user_id") VALUES (1, 'admin', 'password', 1)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("id", "surname", "firstname", "phone", "grad_year", "jobs", "email", "created_at", "updated_at") VALUES (1, 'Loftus', 'Chris', 622422, 1985, 'f', 'cwl@aber.ac.uk', '2014-12-07 12:19:12', '2014-12-07 12:19:12')[0m
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------
+UserTest: test_grad_year_date_range_between_1970_and_this_year
+--------------------------------------------------------------
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl1@aber.ac.uk' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl1@aber.ac.uk' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl1@aber.ac.uk' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl1@aber.ac.uk' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+UserTest: test_invalid_with_empty_attributes
+--------------------------------------------
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------
+UserTest: test_unique_email
+---------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl@aber.ac.uk' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------
+UsersControllerTest: test_should_create_user
+--------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"cwl@aber.ac.uks", "firstname"=>"Chris", "grad_year"=>"1985", "jobs"=>false, "phone"=>"622422", "surname"=>"Loftus"}}
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl@aber.ac.uks' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl@aber.ac.uks' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "firstname", "grad_year", "phone", "surname", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-12-07 12:19:12.210710"], ["email", "cwl@aber.ac.uks"], ["firstname", "Chris"], ["grad_year", 1985], ["phone", "622422"], ["surname", "Loftus"], ["updated_at", "2014-12-07 12:19:12.210710"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/980190963?page=1
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+UsersControllerTest: test_should_destroy_user
+---------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "user_details" WHERE "user_details"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users?page=1
+Completed 302 Found in 15ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+UsersControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sessions/_login.html.erb (2.0ms)
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 159ms (Views: 157.3ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------
+UsersControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Processing by UsersController#index as HTML
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"   ORDER BY surname, firstname LIMIT 6 OFFSET 0
+  [1m[36mImage Load (0.0ms)[0m  [1mSELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"   ORDER BY surname, firstname LIMIT 1 OFFSET 0
+  Rendered users/_users_list.html.erb (14.6ms)
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.7ms)
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Processing by UsersController#new as HTML
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.6ms)
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+UsersControllerTest: test_should_show_user
+------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/_show.html.erb (0.7ms)
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.6ms)
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+UsersControllerTest: test_should_update_user
+--------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"id"=>"1", "email"=>"cwl@aber.ac.uk", "firstname"=>"Chris", "grad_year"=>"1985", "jobs"=>false, "phone"=>"622422", "surname"=>"Loftus"}, "id"=>"1"}
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mImage Load (0.0ms)[0m  [1mSELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+Unpermitted parameters: id
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'cwl@aber.ac.uk' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'cwl@aber.ac.uk' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/1?page=1
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+BroadcastsControllerTest: test_should_create_broadcast
+------------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.1ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "broadcasts"[0m
+Processing by BroadcastsController#create as HTML
+  Parameters: {"broadcast"=>{"content"=>"http://www.porfell.co.uk/assets/PICT0125.jpg All of the Capabara's", "user_id"=>"1"}, "feeds"=>["twitter"]}
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameters: user_id
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "broadcasts" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "http://www.porfell.co.uk/assets/PICT0125.jpg All of the Capabara's"], ["created_at", "2014-12-07 12:19:12.480832"], ["updated_at", "2014-12-07 12:19:12.480832"], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mFeed Load (0.2ms)[0m  SELECT  "feeds".* FROM "feeds"  WHERE "feeds"."name" = 'twitter' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "broadcasts_feeds" ("broadcast_id", "feed_id") VALUES (?, ?)  [["broadcast_id", 980190963], ["feed_id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/broadcasts?page=1
+Completed 302 Found in 632ms (ActiveRecord: 2.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "broadcasts"
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------
+BroadcastsControllerTest: test_should_destroy_broadcast
+-------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBroadcast Load (0.0ms)[0m  [1mSELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "broadcasts"
+Processing by BroadcastsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.0ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "broadcasts_feeds" WHERE "broadcasts_feeds"."broadcast_id" = ?  [["broadcast_id", 980190962]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "broadcasts" WHERE "broadcasts"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/broadcasts
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "broadcasts"[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+BroadcastsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.0ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BroadcastsController#index as HTML
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.2ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 298486374]]
+  [1m[35mFeed Load (0.0ms)[0m  SELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?  [["broadcast_id", 980190962]]
+  [1m[36mBroadcast Load (0.1ms)[0m  [1mSELECT  "broadcasts".* FROM "broadcasts"   ORDER BY created_at DESC LIMIT 1 OFFSET 0[0m
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.6ms)
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+BroadcastsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.0ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BroadcastsController#new as HTML
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (1.0ms)
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+BroadcastsControllerTest: test_should_show_broadcast
+----------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.0ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BroadcastsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.0ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 980190962]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.9ms)
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.8ms)[0m  DELETE FROM "broadcasts"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "broadcasts" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('http://www.porfell.co.uk/assets/PICT0125.jpg All of the Capabara''s', 1, '2014-12-07 12:19:17', '2014-12-07 12:19:17', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "broadcasts" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('http://www.porfell.co.uk/assets/PICT0125.jpg DAWWW', 1, '2014-12-07 12:19:17', '2014-12-07 12:19:17', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "feeds"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('twitter', '2014-12-07 12:19:17', '2014-12-07 12:19:17', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('facebook', '2014-12-07 12:19:17', '2014-12-07 12:19:17', 298486374)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('email', '2014-12-07 12:19:17', '2014-12-07 12:19:17', 113629430)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('RSS', '2014-12-07 12:19:17', '2014-12-07 12:19:17', 281110143)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('atom', '2014-12-07 12:19:17', '2014-12-07 12:19:17', 1018350795)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('extension', '2014-12-07 12:19:17', '2014-12-07 12:19:17', 51848956)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "user_details"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_details" ("id", "login", "crypted_password", "user_id") VALUES (1, 'admin', 'password', 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("id", "surname", "firstname", "phone", "grad_year", "jobs", "email", "created_at", "updated_at") VALUES (1, 'Loftus', 'Chris', 622422, 1985, 'f', 'cwl@aber.ac.uk', '2014-12-07 12:19:17', '2014-12-07 12:19:17')[0m
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+UsersControllerTest: test_should_create_user
+--------------------------------------------
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"cwl@aber.ac.uks", "firstname"=>"Chris", "grad_year"=>"1985", "jobs"=>false, "phone"=>"622422", "surname"=>"Loftus"}}
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl@aber.ac.uks' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl@aber.ac.uks' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "firstname", "grad_year", "phone", "surname", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-12-07 12:19:17.375642"], ["email", "cwl@aber.ac.uks"], ["firstname", "Chris"], ["grad_year", 1985], ["phone", "622422"], ["surname", "Loftus"], ["updated_at", "2014-12-07 12:19:17.375642"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users/980190963?page=1
+Completed 302 Found in 30ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+UsersControllerTest: test_should_destroy_user
+---------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "user_details" WHERE "user_details"."id" = ?  [["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users?page=1
+Completed 302 Found in 14ms (ActiveRecord: 0.8ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+UsersControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (1.4ms)
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 124ms (Views: 122.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+UsersControllerTest: test_should_get_index
+------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Processing by UsersController#index as HTML
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY surname, firstname LIMIT 6 OFFSET 0[0m
+  [1m[35mImage Load (0.0ms)[0m  SELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY surname, firstname LIMIT 1 OFFSET 0[0m
+  Rendered users/_users_list.html.erb (8.8ms)
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.6ms)
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Processing by UsersController#new as HTML
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.5ms)
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+UsersControllerTest: test_should_show_user
+------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.0ms)[0m  SELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/_show.html.erb (0.6ms)
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.6ms)
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------
+UsersControllerTest: test_should_update_user
+--------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"id"=>"1", "email"=>"cwl@aber.ac.uk", "firstname"=>"Chris", "grad_year"=>"1985", "jobs"=>false, "phone"=>"622422", "surname"=>"Loftus"}, "id"=>"1"}
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.0ms)[0m  SELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+Unpermitted parameters: id
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'cwl@aber.ac.uk' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'cwl@aber.ac.uk' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users/1?page=1
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------
+BroadcastsControllerTest: test_should_create_broadcast
+------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBroadcast Load (0.1ms)[0m  [1mSELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "broadcasts"
+Processing by BroadcastsController#create as HTML
+  Parameters: {"broadcast"=>{"content"=>"http://www.porfell.co.uk/assets/PICT0125.jpg All of the Capabara's", "user_id"=>"1"}, "feeds"=>["twitter"]}
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameters: user_id
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "broadcasts" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "http://www.porfell.co.uk/assets/PICT0125.jpg All of the Capabara's"], ["created_at", "2014-12-07 12:19:17.593177"], ["updated_at", "2014-12-07 12:19:17.593177"], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.9ms)
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 472ms (Views: 13.0ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "broadcasts"[0m
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+BroadcastsControllerTest: test_should_destroy_broadcast
+-------------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.0ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "broadcasts"[0m
+Processing by BroadcastsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBroadcast Load (0.0ms)[0m  [1mSELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "broadcasts_feeds" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 980190962]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "broadcasts" WHERE "broadcasts"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/broadcasts
+Completed 302 Found in 15ms (ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "broadcasts"
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+BroadcastsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBroadcast Load (0.0ms)[0m  [1mSELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by BroadcastsController#index as HTML
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBroadcast Load (0.2ms)[0m  [1mSELECT  "broadcasts".* FROM "broadcasts"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?  [["broadcast_id", 298486374]]
+  [1m[36mFeed Load (0.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 980190962]]
+  [1m[35mBroadcast Load (0.1ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"   ORDER BY created_at DESC LIMIT 1 OFFSET 0
+  [1m[36mUserDetail Load (7.9ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sessions/_login.html.erb (8.7ms)
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 23ms (Views: 12.5ms | ActiveRecord: 8.7ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------
+BroadcastsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBroadcast Load (0.0ms)[0m  [1mSELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by BroadcastsController#new as HTML
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.5ms)
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------------
+BroadcastsControllerTest: test_should_show_broadcast
+----------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBroadcast Load (0.0ms)[0m  [1mSELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by BroadcastsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBroadcast Load (0.0ms)[0m  [1mSELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFeed Load (0.0ms)[0m  SELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?  [["broadcast_id", 980190962]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.6ms)
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------------------
+UserTest: test_grad_year_date_range_between_1970_and_this_year
+--------------------------------------------------------------
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl1@aber.ac.uk' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl1@aber.ac.uk' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl1@aber.ac.uk' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl1@aber.ac.uk' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------
+UserTest: test_invalid_with_empty_attributes
+--------------------------------------------
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------
+UserTest: test_unique_email
+---------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl@aber.ac.uk' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "broadcasts"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "broadcasts" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('http://www.porfell.co.uk/assets/PICT0125.jpg All of the Capabara''s', 1, '2014-12-07 12:33:39', '2014-12-07 12:33:39', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "broadcasts" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('http://www.porfell.co.uk/assets/PICT0125.jpg DAWWW', 1, '2014-12-07 12:33:39', '2014-12-07 12:33:39', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "feeds"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('twitter', '2014-12-07 12:33:39', '2014-12-07 12:33:39', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('facebook', '2014-12-07 12:33:39', '2014-12-07 12:33:39', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('email', '2014-12-07 12:33:39', '2014-12-07 12:33:39', 113629430)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('RSS', '2014-12-07 12:33:39', '2014-12-07 12:33:39', 281110143)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('atom', '2014-12-07 12:33:39', '2014-12-07 12:33:39', 1018350795)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('extension', '2014-12-07 12:33:39', '2014-12-07 12:33:39', 51848956)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "user_details"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_details" ("id", "login", "crypted_password", "user_id") VALUES (1, 'admin', 'password', 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("id", "surname", "firstname", "phone", "grad_year", "jobs", "email", "created_at", "updated_at") VALUES (1, 'Loftus', 'Chris', 622422, 1985, 'f', 'cwl@aber.ac.uk', '2014-12-07 12:33:39', '2014-12-07 12:33:39')[0m
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+BroadcastsControllerTest: test_should_create_broadcast
+------------------------------------------------------
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.1ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "broadcasts"[0m
+Processing by BroadcastsController#create as HTML
+  Parameters: {"broadcast"=>{"content"=>"http://www.porfell.co.uk/assets/PICT0125.jpg All of the Capabara's", "user_id"=>"1"}, "feeds"=>["twitter"]}
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameters: user_id
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "broadcasts" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "http://www.porfell.co.uk/assets/PICT0125.jpg All of the Capabara's"], ["created_at", "2014-12-07 12:33:39.125489"], ["updated_at", "2014-12-07 12:33:39.125489"], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered broadcasts/new.html.erb within layouts/application (9.9ms)
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (1.7ms)
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 898ms (Views: 125.3ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "broadcasts"
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------
+BroadcastsControllerTest: test_should_destroy_broadcast
+-------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBroadcast Load (0.0ms)[0m  [1mSELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "broadcasts"
+Processing by BroadcastsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.0ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "broadcasts_feeds" WHERE "broadcasts_feeds"."broadcast_id" = ?  [["broadcast_id", 980190962]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "broadcasts" WHERE "broadcasts"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/broadcasts
+Completed 302 Found in 12ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "broadcasts"[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+BroadcastsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.0ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BroadcastsController#index as HTML
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.2ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 298486374]]
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?  [["broadcast_id", 980190962]]
+  [1m[36mBroadcast Load (0.2ms)[0m  [1mSELECT  "broadcasts".* FROM "broadcasts"   ORDER BY created_at DESC LIMIT 1 OFFSET 0[0m
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.9ms)
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+BroadcastsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.1ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BroadcastsController#new as HTML
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.8ms)
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+BroadcastsControllerTest: test_should_show_broadcast
+----------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.0ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BroadcastsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.0ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFeed Load (0.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 980190962]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.8ms)
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+UsersControllerTest: test_should_create_user
+--------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"cwl@aber.ac.uks", "firstname"=>"Chris", "grad_year"=>"1985", "jobs"=>false, "phone"=>"622422", "surname"=>"Loftus"}}
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl@aber.ac.uks' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl@aber.ac.uks' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "firstname", "grad_year", "phone", "surname", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-12-07 12:33:40.075822"], ["email", "cwl@aber.ac.uks"], ["firstname", "Chris"], ["grad_year", 1985], ["phone", "622422"], ["surname", "Loftus"], ["updated_at", "2014-12-07 12:33:40.075822"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users/980190963?page=1
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+UsersControllerTest: test_should_destroy_user
+---------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "user_details" WHERE "user_details"."id" = ?  [["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users?page=1
+Completed 302 Found in 9ms (ActiveRecord: 1.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+UsersControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.6ms)
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+UsersControllerTest: test_should_get_index
+------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Processing by UsersController#index as HTML
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY surname, firstname LIMIT 6 OFFSET 0[0m
+  [1m[35mImage Load (0.0ms)[0m  SELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY surname, firstname LIMIT 1 OFFSET 0[0m
+  Rendered users/_users_list.html.erb (7.7ms)
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.8ms)
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Processing by UsersController#new as HTML
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.5ms)
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 21ms (Views: 11.7ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------
+UsersControllerTest: test_should_show_user
+------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.0ms)[0m  SELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/_show.html.erb (0.6ms)
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.6ms)
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+UsersControllerTest: test_should_update_user
+--------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"id"=>"1", "email"=>"cwl@aber.ac.uk", "firstname"=>"Chris", "grad_year"=>"1985", "jobs"=>false, "phone"=>"622422", "surname"=>"Loftus"}, "id"=>"1"}
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.0ms)[0m  SELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+Unpermitted parameters: id
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'cwl@aber.ac.uk' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'cwl@aber.ac.uk' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users/1?page=1
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------------------
+UserTest: test_grad_year_date_range_between_1970_and_this_year
+--------------------------------------------------------------
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl1@aber.ac.uk' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl1@aber.ac.uk' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl1@aber.ac.uk' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl1@aber.ac.uk' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------
+UserTest: test_invalid_with_empty_attributes
+--------------------------------------------
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------
+UserTest: test_unique_email
+---------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl@aber.ac.uk' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "broadcasts"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "broadcasts" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('http://www.porfell.co.uk/assets/PICT0125.jpg All of the Capabara''s', 1, '2014-12-07 12:48:25', '2014-12-07 12:48:25', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "broadcasts" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('http://www.porfell.co.uk/assets/PICT0125.jpg DAWWW', 1, '2014-12-07 12:48:25', '2014-12-07 12:48:25', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "feeds"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('twitter', '2014-12-07 12:48:25', '2014-12-07 12:48:25', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('facebook', '2014-12-07 12:48:25', '2014-12-07 12:48:25', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('email', '2014-12-07 12:48:25', '2014-12-07 12:48:25', 113629430)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('RSS', '2014-12-07 12:48:25', '2014-12-07 12:48:25', 281110143)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('atom', '2014-12-07 12:48:25', '2014-12-07 12:48:25', 1018350795)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "feeds" ("name", "created_at", "updated_at", "id") VALUES ('extension', '2014-12-07 12:48:25', '2014-12-07 12:48:25', 51848956)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "user_details"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_details" ("id", "login", "crypted_password", "user_id") VALUES (1, 'admin', 'password', 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("id", "surname", "firstname", "phone", "grad_year", "jobs", "email", "created_at", "updated_at") VALUES (1, 'Loftus', 'Chris', 622422, 1985, 'f', 'cwl@aber.ac.uk', '2014-12-07 12:48:25', '2014-12-07 12:48:25')[0m
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+BroadcastsControllerTest: test_should_create_broadcast
+------------------------------------------------------
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.2ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.1ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "broadcasts"[0m
+Processing by BroadcastsController#create as HTML
+  Parameters: {"broadcast"=>{"content"=>"http://www.porfell.co.uk/assets/PICT0125.jpg All of the Capabara's", "user_id"=>"1"}, "feeds"=>["twitter"]}
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameters: user_id
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "broadcasts" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "http://www.porfell.co.uk/assets/PICT0125.jpg All of the Capabara's"], ["created_at", "2014-12-07 12:48:25.913496"], ["updated_at", "2014-12-07 12:48:25.913496"], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered broadcasts/new.html.erb within layouts/application (10.0ms)
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (1.7ms)
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 661ms (Views: 132.6ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "broadcasts"
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------
+BroadcastsControllerTest: test_should_destroy_broadcast
+-------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBroadcast Load (0.0ms)[0m  [1mSELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "broadcasts"
+Processing by BroadcastsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.0ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "broadcasts_feeds" WHERE "broadcasts_feeds"."broadcast_id" = ?  [["broadcast_id", 980190962]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "broadcasts" WHERE "broadcasts"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/broadcasts
+Completed 302 Found in 14ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "broadcasts"[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+BroadcastsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.0ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BroadcastsController#index as HTML
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.2ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 298486374]]
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?  [["broadcast_id", 980190962]]
+  [1m[36mBroadcast Load (0.2ms)[0m  [1mSELECT  "broadcasts".* FROM "broadcasts"   ORDER BY created_at DESC LIMIT 1 OFFSET 0[0m
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.8ms)
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+BroadcastsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.0ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BroadcastsController#new as HTML
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.6ms)
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+BroadcastsControllerTest: test_should_show_broadcast
+----------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.0ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BroadcastsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBroadcast Load (0.0ms)[0m  SELECT  "broadcasts".* FROM "broadcasts"  WHERE "broadcasts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFeed Load (0.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" INNER JOIN "broadcasts_feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "broadcasts_feeds"."broadcast_id" = ?[0m  [["broadcast_id", 980190962]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.8ms)
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------
+UserTest: test_grad_year_date_range_between_1970_and_this_year
+--------------------------------------------------------------
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl1@aber.ac.uk' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl1@aber.ac.uk' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl1@aber.ac.uk' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl1@aber.ac.uk' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+UserTest: test_invalid_with_empty_attributes
+--------------------------------------------
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------
+UserTest: test_unique_email
+---------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl@aber.ac.uk' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------
+UsersControllerTest: test_should_create_user
+--------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"cwl@aber.ac.uks", "firstname"=>"Chris", "grad_year"=>"1985", "jobs"=>false, "phone"=>"622422", "surname"=>"Loftus"}}
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl@aber.ac.uks' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cwl@aber.ac.uks' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "firstname", "grad_year", "phone", "surname", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-12-07 12:48:26.646743"], ["email", "cwl@aber.ac.uks"], ["firstname", "Chris"], ["grad_year", 1985], ["phone", "622422"], ["surname", "Loftus"], ["updated_at", "2014-12-07 12:48:26.646743"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/980190963?page=1
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+---------------------------------------------
+UsersControllerTest: test_should_destroy_user
+---------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "user_details" WHERE "user_details"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users?page=1
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+UsersControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.6ms)
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------
+UsersControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Processing by UsersController#index as HTML
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"   ORDER BY surname, firstname LIMIT 6 OFFSET 0
+  [1m[36mImage Load (0.0ms)[0m  [1mSELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"   ORDER BY surname, firstname LIMIT 1 OFFSET 0
+  Rendered users/_users_list.html.erb (17.7ms)
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.8ms)
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+Processing by UsersController#new as HTML
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.7ms)
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+UsersControllerTest: test_should_show_user
+------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mImage Load (0.0ms)[0m  [1mSELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/_show.html.erb (0.6ms)
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/_login.html.erb (0.5ms)
+  [1m[36mUserDetail Load (0.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+UsersControllerTest: test_should_update_user
+--------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserDetail Load (0.0ms)[0m  [1mSELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1[0m  [["id", 1]]
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"id"=>"1", "email"=>"cwl@aber.ac.uk", "firstname"=>"Chris", "grad_year"=>"1985", "jobs"=>false, "phone"=>"622422", "surname"=>"Loftus"}, "id"=>"1"}
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserDetail Load (0.0ms)[0m  SELECT  "user_details".* FROM "user_details"  WHERE "user_details"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mImage Load (0.0ms)[0m  [1mSELECT  "images".* FROM "images"  WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+Unpermitted parameters: id
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'cwl@aber.ac.uk' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'cwl@aber.ac.uk' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/1?page=1
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
