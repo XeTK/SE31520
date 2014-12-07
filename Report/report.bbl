@@ -153,6 +153,15 @@
       \endverb
       \keyw{libs}
     \endentry
+    \entry{bi:2014:online}{online}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{Detect Browser Information}
+      \field{title}{Detect Browser Information}
+      \verb{url}
+      \verb http://www.javascripter.net/faq/browsern.htm
+      \endverb
+      \keyw{web}
+    \endentry
   \endsortlist
 \endrefsection
 \endinput
