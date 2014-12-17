@@ -29,8 +29,8 @@
       \strng{namehash}{abe4b257a567186255c8630f02b01ddc}
       \strng{fullhash}{abe4b257a567186255c8630f02b01ddc}
       \field{sortinit}{0}
-      \field{labeltitle}{Rack CORS Middleware}
-      \field{title}{Rack CORS Middleware}
+      \field{labeltitle}{Rack CORS Middleware [Accessed: 22 Nov 2014]}
+      \field{title}{Rack CORS Middleware [Accessed: 22 Nov 2014]}
       \verb{url}
       \verb https://github.com/cyu/rack-cors
       \endverb
@@ -46,9 +46,9 @@
       \strng{namehash}{2a6d68ecef426170a71f56d791018496}
       \strng{fullhash}{2a6d68ecef426170a71f56d791018496}
       \field{sortinit}{0}
-      \field{labeltitle}{Building Awesome Rails APIs: Part 1}
+      \field{labeltitle}{Building Awesome Rails APIs: Part 1 [Accessed: 8 Nov 2014]}
       \field{month}{06}
-      \field{title}{Building Awesome Rails APIs: Part 1}
+      \field{title}{Building Awesome Rails APIs: Part 1 [Accessed: 8 Nov 2014]}
       \field{year}{2013}
       \verb{url}
       \verb http://collectiveidea.com/blog/archives/2013/06/13/building-awesome-rails-apis-part-1/
@@ -65,9 +65,9 @@
       \strng{namehash}{9b4f6fe43737e24424bebe57aac9a550}
       \strng{fullhash}{9b4f6fe43737e24424bebe57aac9a550}
       \field{sortinit}{0}
-      \field{labeltitle}{SQLite and ActiveRecord}
+      \field{labeltitle}{SQLite and ActiveRecord [Accessed: 8 Nov 2014]}
       \field{month}{10}
-      \field{title}{SQLite and ActiveRecord}
+      \field{title}{SQLite and ActiveRecord [Accessed: 8 Nov 2014]}
       \field{year}{2013}
       \verb{url}
       \verb http://www.integralist.co.uk/posts/sqlite-and-activerecord/
@@ -76,8 +76,8 @@
     \endentry
     \entry{wp:2014:online}{online}{}
       \field{sortinit}{0}
-      \field{labeltitle}{Basic access authentication}
-      \field{title}{Basic access authentication}
+      \field{labeltitle}{Basic access authentication [Accessed: 15 Nov 2014]}
+      \field{title}{Basic access authentication [Accessed: 15 Nov 2014]}
       \verb{url}
       \verb https://en.wikipedia.org/wiki/Basic_access_authentication
       \endverb
@@ -85,8 +85,8 @@
     \endentry
     \entry{bs:2014:online}{online}{}
       \field{sortinit}{0}
-      \field{labeltitle}{Twitter BootStrap}
-      \field{title}{Twitter BootStrap}
+      \field{labeltitle}{Twitter BootStrap [Accessed: 11 Nov 2014]}
+      \field{title}{Twitter BootStrap [Accessed: 11 Nov 2014]}
       \verb{url}
       \verb http://getbootstrap.com
       \endverb
@@ -94,8 +94,8 @@
     \endentry
     \entry{bw:2014:online}{online}{}
       \field{sortinit}{0}
-      \field{labeltitle}{Yeti Bootstrap theme}
-      \field{title}{Yeti Bootstrap theme}
+      \field{labeltitle}{Yeti Bootstrap theme [Accessed: 11 Nov 2014]}
+      \field{title}{Yeti Bootstrap theme [Accessed: 11 Nov 2014]}
       \verb{url}
       \verb http://bootswatch.com/yeti/
       \endverb
@@ -103,8 +103,8 @@
     \endentry
     \entry{jq:2014:online}{online}{}
       \field{sortinit}{0}
-      \field{labeltitle}{jQuery JavaScript libary}
-      \field{title}{jQuery JavaScript libary}
+      \field{labeltitle}{jQuery JavaScript libary [Accessed: 11 Nov 2014]}
+      \field{title}{jQuery JavaScript libary [Accessed: 11 Nov 2014]}
       \verb{url}
       \verb https://jquery.com/
       \endverb
@@ -112,8 +112,8 @@
     \endentry
     \entry{qu:2014:online}{online}{}
       \field{sortinit}{0}
-      \field{labeltitle}{QUnit JavaScript unit testing framework}
-      \field{title}{QUnit JavaScript unit testing framework}
+      \field{labeltitle}{QUnit JavaScript unit testing framework [Accessed: 11 Nov 2014]}
+      \field{title}{QUnit JavaScript unit testing framework [Accessed: 11 Nov 2014]}
       \verb{url}
       \verb http://qunitjs.com/
       \endverb
@@ -129,8 +129,8 @@
       \strng{namehash}{7b9a0bb7ac3fe48ada5dba243dddf49e}
       \strng{fullhash}{7b9a0bb7ac3fe48ada5dba243dddf49e}
       \field{sortinit}{0}
-      \field{labeltitle}{Moment.js JavaScript libary}
-      \field{title}{Moment.js JavaScript libary}
+      \field{labeltitle}{Moment.js JavaScript libary [Accessed: 12 Nov 2014]}
+      \field{title}{Moment.js JavaScript libary [Accessed: 12 Nov 2014]}
       \verb{url}
       \verb http://momentjs.com/
       \endverb
@@ -146,8 +146,8 @@
       \strng{namehash}{8cf716c486585ff932c9c1f1255b6914}
       \strng{fullhash}{8cf716c486585ff932c9c1f1255b6914}
       \field{sortinit}{0}
-      \field{labeltitle}{Alertify.js JavaScript libary}
-      \field{title}{Alertify.js JavaScript libary}
+      \field{labeltitle}{Alertify.js JavaScript libary [Accessed: 16 Nov 2014]}
+      \field{title}{Alertify.js JavaScript libary [Accessed: 16 Nov 2014]}
       \verb{url}
       \verb https://fabien-d.github.io/alertify.js/
       \endverb
@@ -155,8 +155,8 @@
     \endentry
     \entry{bi:2014:online}{online}{}
       \field{sortinit}{0}
-      \field{labeltitle}{Detect Browser Information}
-      \field{title}{Detect Browser Information}
+      \field{labeltitle}{Detect Browser Information [Accessed: 13 Nov 2014]}
+      \field{title}{Detect Browser Information [Accessed: 13 Nov 2014]}
       \verb{url}
       \verb http://www.javascripter.net/faq/browsern.htm
       \endverb

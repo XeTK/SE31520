@@ -335,7 +335,7 @@ Just to confirm that this is a real broadcast and has not broken any of the othe
 
 \subsection{CS-Alumni Rails Application}
 
-For more details on the changes made to CS-Alumni application please see the 'changelog.txt' file in the root of the project directory.
+For more details on the changes made to the CS-Alumni application please see the 'changelog.txt' file in the root of the project directory.
 
 \subsubsection{New Additions}
 
@@ -353,7 +353,7 @@ Using a view allows using the database engine to do all the hard work of getting
 \myparagraph{New RESTful interface}
 On top of the new database view that has been created, I have added a RESTful interface to interact with the data that has been extracted from the database view. \\
 \\
-This enables effective retrieval of the data that we want to work on, The reason for implementing it this way was that I only wanted to make a single REST call to the CS-Alumni application to get all the currently relevant broadcasts with all the information about the user and the time that the broadcast was published.
+This enables effective retrieval of the data that we want to work on. The reason for implementing it this way was that I only wanted to make a single REST call to the CS-Alumni application to get all the currently relevant broadcasts with all the information about the user and the time that the broadcast was published.
 \\ 
 Please refer to page \pageref{sec:technology} and the section titled 'RESTful Interfaces' for more information.
 
@@ -373,27 +373,27 @@ I have also added in the new feed type for publishing exclusively to browser ext
 
 \myparagraph{Changes to Broadcasts}
 
-In the broadcast section of the application I have added in support for posting directly to the the browser extension only, along with disabling the feeds that have not been implemented yet.\\
+In the broadcast section of the application I have added in support for posting directly to the browser extension only, along with disabling the feeds that have not been implemented yet.\\
 \\
 The other changes consist of adding in support for the new RESTful interface that I have added.
 
 \myparagraph{Changes to Security}
 
-There has been some changes to the forgery protection within the application, to enable the use of 3rd party extensions to interact via the RESTful interfaces that have already been setup.\\
+There have been some changes to the forgery protection within the application, to enable the use of 3rd party extensions to interact via the RESTful interfaces that have already been setup.\\
 \\
-To enable the tests to run successfully I have disabled SSL for when the application is within test mode thus enabling the tests to pass correctly without a valid SSL certificate.\\
+To enable the tests to run successfully I have disabled SSL for when the application is within test mode, thus enabling the tests to pass correctly without a valid SSL certificate.\\
 \\
-I have also added in CORS to enable the ability to do cross domain HTTP requests this ensure that the browser extension can work even when not on the same network as the CS-Alumni application, if this was not enabled then the browser extension would be next to useless.
+I have also added in CORS to enable the ability to do cross domain HTTP requests. This ensures that the browser extension can work even when not on the same network as the CS-Alumni application. If this was not enabled then the browser extension would be next to useless.
 
 \myparagraph{Changes to REST implementation}
 
-Some changes have been made to the RESTful interfaces that server the users information, it now if the user is not an administrator it will return the user own object rather than denying them access to the page which means they can still edit there user account with minimum code changes to the client application. 
+Some changes have been made to the RESTful interfaces that server the user's information. Now if the user is not an administrator it will return the user's own object rather than denying them access to the page, which means they can still edit their user account with minimum code changes to the client application. 
 
 \myparagraph{Changes to Tests}
 
 There has had to be some changes made to the test classes due to them not being successful when the CS-Alumni application was distributed to us.\\
 \\
-Some new YAML files have had to be created to add in some missing information for the database to authenticate the user successfully with the application along with some of the changes previously mentioned in the security section of this document.\\
+Some new YAML files have had to be created to add in some missing information for the database to authenticate the user successfully with the application, along with some of the changes previously mentioned in the security section of this document.\\
 \\
 One of the test methods was missing some of the parameters to make the application work as intended.
 
@@ -405,7 +405,7 @@ One of the test methods was missing some of the parameters to make the applicati
 
 For testing the rails application I had to fix the functionality of the included tests to make them work with the rails application. Once theses changes had taken place it was possible to complete the tests successfully.\\
 \\
-One issue I have run into though is on first run of the \"rake test\" one of the tests will fail but on the second execution the tests will work perfectly. My theory behind this is that it is not guaranteed that the tests will run in order and that one of the other tests authenticates with the CS-Alimni application beforehand allowing the transaction to work as intended second time round.
+One issue I have run into though is on first run of the \"rake test\"  one of the tests will fail but on the second execution the tests will work perfectly. My theory behind this is that it is not guaranteed that the tests will run in order and that one of the other tests authenticates with the CS-Alumni application beforehand allowing the transaction to work as intended second time round.
 
 \begin{figure}[H]
 \centering
@@ -467,123 +467,123 @@ This is a small utility library I have written to share commonly used functions 
 
 \subsubsection{HTML}
 
-HTML is a markup language that dictates the layout of the screens that are shown within the browser extension it is the skeleton in which the content is placed and displayed to the end user, it has no style to start with it just is the structure of the screen.
+HTML is a markup language that dictates the layout of the screens that are shown within the browser extension. It is the skeleton in which the content is placed and displayed to the end user. It has no style to start with, as it is just is the structure of the screen.
 
 \subsubsection{CSS}
 
-CSS works tangent with HTML and gives the skeleton of a document some style, it is responsible for colour schemes along with the positioning of various elements on the page and how they are displayed.
+CSS works tangent with HTML and gives the skeleton of a document some style. It is responsible for colour schemes along with the positioning of various elements on the page and how they are displayed.
 
 \subsubsection{JavaScript}
 
-Is the programing language that the browser extension has been written in, Google's definition for JavaScript is 'an object-oriented computer programming language commonly used to create interactive effects within web browsers.'.\\
+Is the programing language that the browser extension has been written in. Google's definition for JavaScript is 'an object-oriented computer programming language commonly used to create interactive effects within web browsers.'\\
 \\
 JavaScript is an integral part of creating an interactive experience for web based content. It interacts with the various libraries we require to make the application work as intended. It works together with the other web based web technologies within the browser extension to give us total control of the content that is presented on the screen.
 
 \subsubsection{Chrome Extensions API}
 
-This is the framework that we must adhere to to make the 3 main web based technologies (HTML, CSS and JavaScript) work as a browser extension, the Chrome Extensions API bundles all of the technologies we need to create a viable and fully working browser extension, it takes in the web technologies plus a few extra configuration files to generate a browser extension that will do what the developer intended.
+This is the framework that we must adhere to to make the 3 main web based technologies (HTML, CSS and JavaScript) work as a browser extension. The Chrome Extension's API bundles all of the technologies we need to create a viable and fully working browser extension. It takes in the web technologies plus a few extra configuration files to generate a browser extension that will do what the developer intended.
 
 \subsubsection{Bootstrap}
 
-Bootstrap I see as an essential tool to creating a modern looking website, it unifies the appearance of the application along with giving the ability to make the pages adaptive and work on any screen size. This means that if we were to run the browser extension as a web page it would work on any screen size or any resolution.\\
+I see Bootstrap as an essential tool to creating a modern looking website. It unifies the appearance of the application along with giving the ability to make the pages adaptive and work on any screen size. This means that if we were to run the browser extension as a web page it would work on any screen size or any resolution.\\
 \\
-I choose to not use the standard Bootstrap theme opting to use a modified one that was supplied by \url{http://bootswatch.com/} (Theme name is Yeti) I choose to modify this further and make it try and more closely fit the Aberystwyth colour scheme.
+I chose to not use the standard Bootstrap theme, opting instead to use a modified one that was supplied by \url{http://bootswatch.com/} (Theme name is Yeti). I chose to modify this further and make it try and more closely fit the Aberystwyth colour scheme.
 
 \subsubsection{jQuery}
 
-Along with Bootstrap I also see jQuery as an essential library to be able to create modern and feature full web applications (If I remember correctly all of the other JavaScript libraries I am using rely on jQuery).\\
+Along with Bootstrap I also see jQuery as an essential library to be able to create modern and feature full web applications. (If I remember correctly all of the other JavaScript libraries I am using rely on jQuery).\\
 \\
-Within the application I use jQuery to handle many bits of the functionality within the screens, the key points being aJax requests this enables very simple REST type responses to the server without much hassle, I also use it to edit DOM elements in real time and make them display the information I want them to display in real time.\\
+Within the application I use jQuery to handle many bits of the functionality within the screens, the key points being aJax requests. This enables very simple REST type responses to the server without much hassle. I also use it to edit DOM elements in real time and make them display the information I want them to display in real time.\\
 \\
 The jQuery library is so vast that I use a lot of the trivial functions for doing all sorts of other work as the method calls and work that is required is greatly reduced.
 
 \subsubsection{Moment.js}
 
-This library simplifies interaction with date objects, its is well known that is quite difficult working with date objects within JavaScript, this library takes all the pain out of modifying the dates and putting them into a format that developer actually wants.\\
+This library simplifies interaction with date objects. It is well known that is quite difficult working with date objects within JavaScript. This library takes all the pain out of modifying the dates and putting them into a format that the developer actually wants.\\
 \\
-I use it for the broadcast times to make them display in the correct way, the objects have been converted into a JSON string and when they are converted back they stay as a string I use moment to convert theses strings into a viable date object that then can be displayed on the screen.
+I use it for the broadcast times to make them display in the correct way. The objects have been converted into a JSON string and when they are converted back they stay as a string. I use moment to convert theses strings into a viable date object that can then be displayed on the screen.
 
 \subsubsection{Alertify.js}
 
-Alertify is a JavaScript library that makes modern user alerts, this gives well designed and easy to use dialogs to present information to the user.\\
+Alertify is a JavaScript library that makes modern user alerts. This gives well designed and easy to use dialogs to present information to the user.\\
 \\ 
-I have used it within the application to notify when a user has not been logged in and redirect them to the login page, along with showing a message confirming that there settings have been saved successfully.
+I have used it within the application to notify when a user has not been logged in and redirect them to the login page, along with showing a message confirming that their settings have been saved successfully.
 
 \subsubsection{Qunit}
 
-Due to doing a test driving development strategy to developing this browser extension I needed a unit test framework for JavaScript, it is developed by the same developers as jQuery and seems to have strong industry recognition.\\
+Due to doing a test driven development strategy to develop this browser extension, I needed a unit test framework for JavaScript. It is developed by the same developers as jQuery and seems to have strong industry recognition.\\
 \\
-I have used this for all my unit testing for the JavaScript libraries that I have written for this project, It has a simple and efficient way of testing the functions along with having a simple and powerful syntax that allows tests to be written without much code.
+I have used this for all my unit testing for the JavaScript libraries that I have written for this project. It has a simple and efficient way of testing the functions along with having a simple and powerful syntax that allows tests to be written without much code.
 
 \subsection{CS-Alumni Rails Application}
 
 \subsubsection{Ruby}
 
-Ruby is a object orientated program language that is dynamically typed which means there is no strict types for objects, development of Ruby was started in the early 1990's as an alternative to Python and Perl which it is heavily influenced by.\\
+Ruby is an object orientated program language that is dynamically typed, which means there is no strict types for objects. Development of Ruby was started in the early 1990's as an alternative to Python and Perl which it is heavily influenced by.\\
 \\
-We needed to use Ruby because the application we were supplied was written using the Ruby on Rails which I will cover in the next section
+We needed to use Ruby because the application that was provided was written using the Ruby on Rails, which I will cover in the next section.
 
 \subsubsection{Ruby on rails}
 
-Ruby on Rails (RoR) is a web framework that allows the use of the Ruby programing language to create web based applications, it has a strong modularity and is easily extended through the use of Ruby Gems which are small library that can be imported to allow extra functionality within the project. RoR is built on strong model view controller principles, this tries to segregate the code out into the functional modules that they are really responsible for, in theory this means that the code should be more modular and thus more portable work in different situations.\\
+Ruby on Rails (RoR) is a web framework that allows the use of the Ruby programing language to create web based applications. It has a strong modularity and is easily extended through the use of Ruby Gems which are a small library that can be imported to allow extra functionality within the project. RoR is built on strong model view controller principles, that tries to segregate the code out into the functional modules that they are really responsible for. In theory this means that the code should be more modular and thus more portable to work in different situations.\\
 \\
 The CS-Alumni application that we were given as a starting point for this project was written in RoR and uses multiple gems to accomplish the functionality that was desired by its original developer.
 
 \subsubsection{Rack CORS Middleware}
 
-Although the RoR CS-Alumni application used many Ruby Gems already, I had to add in the use an external 3rd party library called 'Rack CORS Middleware' \cite[see reference][page \pageref{LastPage}]{cors:2014:online}.\\
+Although the RoR CS-Alumni application used many Ruby Gems already, I had to add in and use an external 3rd party library called 'Rack CORS Middleware' \cite[see reference][page \pageref{LastPage}]{cors:2014:online}.\\
 \\
-This enabled the use of cross domain REST requests without this being enabled it would be impossible to-do cross domain style interactions.
+This enabled the use of cross domain REST requests. Without this being enabled it would be impossible to do cross domain style interactions.
 
 \subsection{Communication Between Applications}
 
 \subsubsection{RESTful Interfaces}
 \label{sec:technology}
 
-For interaction between the CS-Alumni application and my browser extension the most viable method obtaining communication between the two application is to use RESTful web services.\\
+For interaction between the CS-Alumni application and my browser extension the most viable method of obtaining communication between the two applications was to use RESTful web services.\\
 \\
-REST uses the standard HTTP protocol and allows the ability to send various data over text formats(usually JSON or XML) the application should be able to request data and be returned back to over a few HTTP requests. \\
+REST uses the standard HTTP protocol and allows the ability to send various data over text formats (usually JSON or XML). The application should be able to request data and be returned back to over a few HTTP requests. \\
 \\
-Please follow theses references \cite[see reference][page \pageref{LastPage}]{bara:2013:online}, \cite[see reference][page \pageref{LastPage}]{saa:2013:online} for the guides I read to understand how create new RESTful interfaces within the CS-Alumni application.
+Please follow theses references \cite[see reference][page \pageref{LastPage}]{bara:2013:online}, \cite[see reference][page \pageref{LastPage}]{saa:2013:online} for the guides I read to understand how to create new RESTful interfaces within the CS-Alumni application.
 
 \subsubsection{Basic Authentication}
 
 
-To authenticate the browser extension with the CS-Alumni application it was appropriate to use basic authentication to verify if the user had permission to view the data within the application, this basically consists of encoding the username and password using a base64 encoder, and attaching the encoded password as an extra header on the HTTP requests that are being sent to the server to ensure the user is authenticated. \cite[see reference][page \pageref{LastPage}]{wp:2014:online}
+To authenticate the browser extension with the CS-Alumni application it was appropriate to use basic authentication to verify if the user had permission to view the data within the application. This basically consists of encoding the username and password using a base64 encoder, and attaching the encoded password as an extra header on the HTTP requests that are being sent to the server to ensure the user is authenticated. \cite[see reference][page \pageref{LastPage}]{wp:2014:online}.
 
 %-- Evaluation.
 \newpage
 \section{Evaluation}
 
-During the development of the browser extension that interacts with the CS-Alumni applications there were points that were fairly difficult.\\
+During the development of the browser extension that interacts with the CS-Alumni application there were points that were fairly difficult.\\
 \\
-The first was trying to get the Ruby on Rails (RoR) environment functional on my system my platform of choice is Mac OSX and my first attempt at getting a working version of RoR working ending in requiring a whole reinstall of the operating system due to the Ruby installer breaking the ownership and permissions of some of the system files, For a while before I tried installing it again on my main system was running the RoR environment on a Linux based virtual machine while I was trying to get comfortable with the install steps of RoR, second time round the install went successfully on my main system but this had taken about 4-5 hours work by this point.\\
+The first was trying to get the Ruby on Rails (RoR) environment functional on my system. My platform of choice is Mac OSX and my first attempt at getting a working version of RoR ended in requiring a whole reinstall of the operating system due to the Ruby installer breaking the ownership and permissions of some of the system files. For a while before I tried installing it again on my main system I was running the RoR environment on a Linux based virtual machine while I was trying to get comfortable with the install steps of RoR. Second time around the install went successfully on my main system, but this had taken about 4-5 hours work by this point.\\
 \\
-My next major point of difficulty was familiarising my self with the way that handles database objects using active records, I found a very good paper / tutorial on using active record \cite[see reference][page \pageref{LastPage}]{saa:2013:online} this helped me greatly and spurred on development greatly.\\
+My next major point of difficulty was familiarising myself with the way that handles database objects using active records. I found a very good paper / tutorial on using active record \cite[see reference][page \pageref{LastPage}]{saa:2013:online}. This helped me greatly and spurred on development.\\
 \\
-Coming from a background of Node.js (Using the Express.js library) and PL-SQL (Via Oracle APEX) the way that RoR deals with the implementation of RESTful interfaces was a bit alien so required a lot of reading to fully understand how to implement a new RESTful interface. I have included the reference i used most for the REST interfaces \cite[see reference][page \pageref{LastPage}]{bara:2013:online}.\\
+Coming from a background of Node.js (Using the Express.js library) and PL-SQL (Via Oracle APEX) the way that RoR deals with the implementation of RESTful interfaces was a bit alien so required a lot of reading to fully understand how to implement a new RESTful interface. I have included the reference I used most for the REST interfaces \cite[see reference][page \pageref{LastPage}]{bara:2013:online}.\\
 \\
-For a while there was not many stumbling points with the implementation the browser extension design and implementation was very painless as it was basically the same as implementing a website, biggest issue that arouse during the development of the browser extension was the authentication with the CS-Alumni application but a lot of the work to get this working was dealing with the various security settings within RoR its self.\\
+For a while there was not many stumbling points with the implementation. The browser extension design and implementation was very painless as it was basically the same as implementing a website. The biggest issue that arouse during the development of the browser extension was the authentication with the CS-Alumni application. But a lot of the work to get this functional was dealing with the various security settings within RoR itself.\\
 \\
-The only other sticking point for the browser extension was the implementation of pagination as I had failed to implement it correctly the first time round and had opted to write my own system than just use a off the shelf library to do it.\\
+The only other sticking point for the browser extension was the implementation of pagination as I had failed to implement it correctly the first time round and had opted to write my own system rather than just using an off the shelf library to do it.\\
 \\
 One of the more interesting points of RoR and Ruby that I liked was the strong use of Model, View, Controller (MVC) which made it quite easy to find where various sections of functionality were separated out into. This also helped with the configuration of the RoR application as the settings that you would need to edit were quite easy to find due to the structure that RoR seems to impose upon the developer.\\
 \\
-As a developer with not much prior knowledge to web based applications I have learned a great deal from implementing new features into a language that I have not had any prior knowledge of, It was enjoyable to make a small feature rich application that interacts with a much larger and interesting application and getting to learn some new technologies along the way.\\
+As a developer with not much prior knowledge of web based applications I have learned a great deal from implementing new features into a language that I have not had any prior knowledge of. It was enjoyable to make a small feature rich application that interacts with a much larger and interesting application and getting to learn some new technologies along the way.\\
 \\
 This is a URL to screencast \url{http://youtu.be/bMKITRHoGO4}
 
 \newpage
 \section{Something Extra}
 
-This is something extra and is out of the scope of the assignment but just out of curiosity I wanted to see how simple it would be to design a smart watch application and did some reading of the SDK for the Pebble smart watch and they have a JavaScript based SDK that allows the use of of AJAX type requests to a server, there was a simple example on interactions with a REST based weather service.\\
+This is something extra and is out of the scope of the assignment, but just out of curiosity I wanted to see how simple it would be to design a smart watch application. I did some reading of the SDK for the Pebble smart watch and they have a JavaScript based SDK that allows the use of AJAX type requests to a server. There was a simple example on interactions with a REST based weather service.\\
 \\
-I took this example and modified it to work with the RESTful interfaces that I had written for the the CS-Alumni application and the screen shot below shows this simple prototype working.
+I took this example and modified it to work with the RESTful interfaces that I had written for the CS-Alumni application and the screen shot below shows this simple prototype working.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\textwidth]{pebble}
-\caption{Above is a image of the Pebble smartwatch running the CSA application.}
+\caption{Above is an image of the Pebble smartwatch running the CSA application.}
 \end{figure}
 
 \begin{figure}[H]
@@ -627,7 +627,7 @@ Expected Letter Grade: A 75\%+\\
 \\
 And why?\\
 \\
-Time and effort put into the assignment, thinking of something outside of the box I don't think any other students have done a browser extension.\\
+Time and effort put into the assignment. Thinking of something outside of the box as I don't think any other students have done a browser extension.\\
 \\
 What did you Learn? 
 \\

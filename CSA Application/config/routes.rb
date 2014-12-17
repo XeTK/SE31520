@@ -1,5 +1,6 @@
 Csa::Application.routes.draw do
 
+  # Add in new restful interface in.
   namespace :rest do
     resource :extensions
   end

@@ -20,6 +20,7 @@ class BroadcastService
         when "facebook"
         when "RSS"
         when "atom"
+          # Added in the new extension type.
         when "extension"
           result.concat(via_extension(broadcast))
       end
@@ -29,6 +30,7 @@ class BroadcastService
 
   private
 
+  # Added in the new feeds type.
   def self.via_extension(broadcast)
      add_feed(broadcast, 'extension')
      return []

@@ -23,6 +23,7 @@ module Csa
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
+    # Added in the support for CORS.
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
         origins '*'

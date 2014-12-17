@@ -3,6 +3,8 @@ require 'test_helper'
 class BroadcastsControllerTest < ActionController::TestCase
   setup do
     @user = users(:one)
+
+    # Fixed sessions support.
     @user_details = user_details(:one)
     @broadcast = broadcasts(:one)
     @request.session[:user_id] = @user.id
@@ -19,6 +21,7 @@ class BroadcastsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  # Added in the parameter for the extra feeds.
   test "should create broadcast" do
     assert_difference('Broadcast.count') do
       post :create, broadcast: { content: @broadcast.content, user_id: @broadcast.user_id }, feeds: ["twitter"] 
@@ -33,6 +36,8 @@ class BroadcastsControllerTest < ActionController::TestCase
     get :show, id: @broadcast
     assert_response :success
   end
+
+  # Bye Bye Scafold code.
 
   #test "should get edit" do
   #  get :edit, id: @broadcast

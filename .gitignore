@@ -15,6 +15,10 @@ CSA Application/db/*.sqlite3-journal
 CSA Application/log/*.log
 CSA Application/tmp
 
-SE31520.safariextension/data/res
+Browser Extension/data/res
+
+*.zip
+*.pdf
+*.mov
 
 .DS_Store

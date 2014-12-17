@@ -38,6 +38,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    # Added in the ability to navigate to the users if not admin.
     if is_admin?
       @users = User.paginate(page: params[:page],
                              per_page: params[:per_page])

@@ -1,5 +1,5 @@
 class ExtensionFeed < ActiveRecord::Base
-
+# This is the class attrabutes.
 begin
 	validates_presence_of :name, :email, :content
 
